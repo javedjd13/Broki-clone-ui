@@ -135,21 +135,22 @@ const Home = () => {
           </div>
 
           {/*  Right Side Image */}
-          <div className="hidden xl:block relative mt-12 -left-12 h-[36rem] max-w-[476px]">
+          <div className="hidden xl:block relative mt-12 -left-12 h-[36rem] w-[476px]">
+            {/* Background Image */}
             <img
               src={HeroImg}
               alt="Photographer"
-              className="h-auto rounded-md"
+              className="h-full w-full object-cover rounded-md"
               loading="lazy"
             />
-            <div className="bounce-y shadow-custom absolute left-1/2 -translate-x-1/2 bg-white rounded-xl p-2 shadow-lg bottom-32 text-center max-w-[18.75rem]">
-              <div className="flex justify-center">
-                <img
-                  src={SubImg}
-                  alt="Broki Logo"
-                  className="rounded-full w-[17.25rem] h-36 object-cover"
-                />
-              </div>
+
+            {/* Centered Overlay Image with transition */}
+            <div className="bounce-y absolute  left-1/2 -translate-x-1/2 bg-white rounded-xl p-2 shadow-lg text-center transition-transform duration-300 ease-out bottom-5">
+              <img
+                src={SubImg}
+                alt="Broki Logo"
+                className="rounded-full w-[17.25rem] h-36 object-cover"
+              />
             </div>
           </div>
         </div>

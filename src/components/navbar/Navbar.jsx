@@ -58,7 +58,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-6 ">
             <a
               href="/"
-              className="relative px-6 py-3 text-sm font-semibold text-white rounded-xl bg-black border border-black"
+              className="relative px-6 py-3 text-sm font-semibold text-white rounded-xl bg-black border border-black cursor-pointer"
             >
               List Your Outlet
               <FontAwesomeIcon
@@ -68,7 +68,7 @@ const Navbar = () => {
             </a>
             <button
               onClick={() => setShowModal(true)}
-              className="flex items-center space-x-2 text-black font-normal"
+              className="flex items-center space-x-2 text-black font-normal cursor-pointer"
             >
               <FontAwesomeIcon icon={faUserCircle} className="text-lg" />
               <span>Login / Register</span>

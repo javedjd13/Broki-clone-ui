@@ -65,7 +65,7 @@ const Footer = () => {
 
         <div className="space-y-6">
           {/* Contact Info */}
-          <div className="text-xs text-[#cbd5e1] flex justify-between">
+          <div className="text-xs text-[#bebdbd] flex justify-between">
             <span>Chat With Us At</span>
             <span>Need Live Support?</span>
           </div>
@@ -132,7 +132,7 @@ const Footer = () => {
         <div>© Broki Services Private Limited 2025 - All rights reserved</div>
         <div className="flex flex-wrap gap-4">
           {links.map((link, i) => (
-            <a key={i} href="#" className="hover:text-white">
+            <a key={i} href="#" className="hover:text-[#20c997]">
               {link}
             </a>
           ))}
