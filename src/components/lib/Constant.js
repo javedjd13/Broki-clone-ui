@@ -20,6 +20,7 @@ import {
     faInstagram,
     faLinkedinIn,
     faWhatsapp,
+    faApple, faGooglePlay
 } from "@fortawesome/free-brands-svg-icons";
 
 import {
@@ -210,7 +211,7 @@ export const socialLinks = [
 ];
 
 
-// Month names in Hinglish
+// Month names
 export const monthNames = [
     "January",
     "February",
@@ -226,25 +227,23 @@ export const monthNames = [
     "December",
 ];
 
-// Yaha se Niche ki sabhi icon add karna hai Static karna hai
 export const appLinks = [
-    {
-        href: "/",
-        alt: "Apple logo icon in white on dark background",
-        imgSrc:
-            "https://storage.googleapis.com/a1aa/image/82fa5794-d364-45ba-e6bc-d9c9aa13bafa.jpg",
-        smallText: "Download on the",
-        boldText: "Apple Store",
-    },
-    {
-        href: "/",
-        alt: "Google Play icon in white on dark background",
-        imgSrc:
-            "https://storage.googleapis.com/a1aa/image/de940496-d90e-4560-d30f-2b59825b4084.jpg",
-        smallText: "Get it on",
-        boldText: "Google Play",
-    },
+  {
+    href: "/",
+    alt: "Apple logo icon in white on dark background",
+    smallText: "Download on the",
+    boldText: "Apple Store",
+    icon: faApple,
+  },
+  {
+    href: "/",
+    alt: "Google Play icon in white on dark background",
+    smallText: "Get it on",
+    boldText: "Google Play",
+    icon: faGooglePlay,
+  },
 ];
+
 
 export const links = ["Privacy", "Terms", "Refund", "Sitemap"];
 

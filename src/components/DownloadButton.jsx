@@ -4,7 +4,7 @@ const DownloadButton = ({ href, icon, smallText, boldText }) => {
   return (
     <a
       href={href}
-      className="flex items-center gap-4 bg-[#0c2340] text-white rounded-xl px-6 py-4 w-full sm:w-auto max-w-xs"
+      className="flex  items-center gap-4 bg-[#0c2340] text-white rounded-xl px-6 py-4 w-full sm:w-auto max-w-xs"
       target="_blank"
       rel="noopener noreferrer"
     >
