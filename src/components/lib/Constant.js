@@ -30,14 +30,13 @@ import {
     faShieldAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
-// Navbar links
 export const navLinks = [
-    { label: "Home", href: "#", active: true },
-    { label: "Listings", href: "#" },
-    { label: "Our Team", href: "#" },
-    { label: "Services", href: "#" },
-    { label: "Blogs", href: "#" },
-    { label: "Contact Us", href: "#" },
+    { label: "Home", href: "/", active: true },
+    { label: "Listings", href: "/listings", active: false },
+    { label: "Our Team", href: "/our-team", active: false },
+    { label: "Services", href: "/services", active: false },
+    { label: "Blogs", href: "/blogs", active: false },
+    { label: "Contact Us", href: "/contact-us", active: false },
 ];
 
 export const tabs = [
@@ -228,20 +227,20 @@ export const monthNames = [
 ];
 
 export const appLinks = [
-  {
-    href: "/",
-    alt: "Apple logo icon in white on dark background",
-    smallText: "Download on the",
-    boldText: "Apple Store",
-    icon: faApple,
-  },
-  {
-    href: "/",
-    alt: "Google Play icon in white on dark background",
-    smallText: "Get it on",
-    boldText: "Google Play",
-    icon: faGooglePlay,
-  },
+    {
+        href: "/",
+        alt: "Apple logo icon in white on dark background",
+        smallText: "Download on the",
+        boldText: "Apple Store",
+        icon: faApple,
+    },
+    {
+        href: "/",
+        alt: "Google Play icon in white on dark background",
+        smallText: "Get it on",
+        boldText: "Google Play",
+        icon: faGooglePlay,
+    },
 ];
 
 
