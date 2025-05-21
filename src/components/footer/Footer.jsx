@@ -80,7 +80,7 @@ const Footer = () => {
           {/* Subscribe Form */}
           <div>
             <h3 className="font-semibold text-white mb-2">
-              Keep Yourself Up to Date
+              Keep Yourself Up to Date.
             </h3>
             <form
               onSubmit={handleSubmit}
