@@ -1,0 +1,17 @@
+@import "tailwindcss";
+* {
+  box-sizing: border-box;
+}
+
+@keyframes bounceY {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-11.8222px);
+  }
+}
+
+.bounce-y {
+  animation: bounceY 6s ease-in-out infinite;
+}
