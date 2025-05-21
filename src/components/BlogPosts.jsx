@@ -2,7 +2,7 @@ import { monthNames } from "./lib/Constant";
 
 
 function BlogPosts({ post }) {
-  // Format date in Hinglish style: date phir month
+
   const day = post.date.getDate();
   const month = monthNames[post.date.getMonth()];
 

@@ -41,7 +41,6 @@ const Footer = () => {
 
       {/* Main Grid */}
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-10 text-sm">
-        {/* Column 1: Popular Searches */}
         <div>
           <h3 className="font-semibold text-white mb-4">Popular Searches</h3>
           <ul className="space-y-2">
@@ -53,7 +52,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Column 2: Other Searches */}
         <div>
           <h3 className="font-semibold text-white mb-4">Other Searches</h3>
           <ul className="space-y-2">
@@ -65,7 +63,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Column 3: Contact Info + Form + Apps */}
         <div className="space-y-6">
           {/* Contact Info */}
           <div className="text-xs text-[#cbd5e1] flex justify-between">
@@ -80,7 +77,7 @@ const Footer = () => {
           {/* Subscribe Form */}
           <div>
             <h3 className="font-semibold text-white mb-2">
-              Keep Yourself Up to Date
+              Keep Yourself Up to Date.
             </h3>
             <form
               onSubmit={handleSubmit}
@@ -105,15 +102,18 @@ const Footer = () => {
             {/* App Links */}
             <h3 className="font-semibold text-white mb-4">Apps</h3>
             <div className="space-y-4">
-              {appLinks.map(({ href, alt, imgSrc, smallText, boldText }) => (
+              {appLinks.map(({ href, smallText, boldText, icon }) => (
                 <a
                   key={boldText}
                   href={href}
-                  className="flex items-center space-x-4 bg-[#1f2128] rounded-lg px-5 py-4 max-w-[240px] hover:bg-[#2c2f38]"
+                  className="flex items-center space-x-4 bg-[#1f2128] rounded-lg px-5 py-4 max-w-[240px] hover:bg-[#0dcaf0]"
                 >
-                  <img src={imgSrc} alt={alt} className="w-6 h-6" />
+                  <FontAwesomeIcon
+                    icon={icon}
+                    className="w-6 h-6 text-white text-3xl"
+                  />
                   <div>
-                    <div className="text-xs text-gray-400">{smallText}</div>
+                    <div className="text-sm text-white">{smallText}</div>
                     <div className="font-bold text-white text-sm">
                       {boldText}
                     </div>
