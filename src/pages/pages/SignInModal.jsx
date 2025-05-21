@@ -47,7 +47,7 @@ const SignInModal = ({ onClose }) => {
         <div className="flex space-x-8 mb-6 font-semibold text-sm flex-wrap text-gray-700">
           <button
             onClick={() => setIsSignIn(true)}
-            className={`pb-1 ${
+            className={`cursor-pointer pb-1 ${
               isSignIn ? "border-b-2 border-black" : "text-gray-400"
             }`}
           >
@@ -55,7 +55,7 @@ const SignInModal = ({ onClose }) => {
           </button>
           <button
             onClick={() => setIsSignIn(false)}
-            className={`pb-1 ${
+            className={`cursor-pointer pb-1 ${
               !isSignIn ? "border-b-2 border-black" : "text-gray-400"
             }`}
           >
@@ -125,7 +125,7 @@ const SignInModal = ({ onClose }) => {
               type="submit"
               className="w-full bg-[#2ac1a7] hover:bg-[#27a994] text-white font-bold py-3 rounded-lg flex justify-center items-center space-x-2 cursor-pointer"
             >
-              <span>Sign Up</span>
+              <span className="cursor-pointer">Sign Up</span>
               <FontAwesomeIcon
                 icon={faSquareArrowUpRight}
                 className="h-4 w-4 text-white"
