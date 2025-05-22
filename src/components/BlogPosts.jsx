@@ -1,4 +1,4 @@
-import { monthNames } from "./lib/Constant";
+import { monthNames } from "../lib/Constant";
 
 
 function BlogPosts({ post }) {

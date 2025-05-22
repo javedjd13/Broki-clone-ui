@@ -1,15 +1,10 @@
-import Footer from "./components/footer/Footer";
-import Navbar from "./components/navbar/Navbar";
-import Home from "./pages/Home";
+import { RouterProvider } from "react-router-dom";
+import router from "./routes/Index";
 
 const App = () => {
   return (
     <div>
-      <Navbar />
-      <main className="min-h-[80vh]">
-        <Home />
-      </main>
-      <Footer />
+      <RouterProvider router={router} />
     </div>
   );
 };

@@ -1,8 +1,7 @@
-// import { useState } from "react";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
-import { locationOptions, outletOptions } from "./lib/Constant";
+import { locationOptions, outletOptions } from "../lib/Constant";
 import FormImg from "../assets/images/form.webp";
 
 //  Reusable Input Component
