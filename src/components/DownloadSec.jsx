@@ -1,4 +1,4 @@
-import { appImages } from "./lib/Constant";
+import { appImages } from "../lib/Constant";
 import DownloadButton from "./DownloadButton";
 import { faApple, faGooglePlay } from "@fortawesome/free-brands-svg-icons";
 

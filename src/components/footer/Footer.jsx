@@ -5,7 +5,7 @@ import {
   otherSearches,
   popularSearches,
   socialLinks,
-} from "../lib/Constant";
+} from "../../lib/Constant";
 import Logo from "../../assets/images/BrokiLogo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

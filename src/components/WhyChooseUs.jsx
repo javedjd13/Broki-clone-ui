@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { features } from "./lib/Constant";
+import { features } from "../lib/Constant";
 import HeroImg from "../assets/images/hero-img.webp";
 
 const WhyChooseUs = () => {

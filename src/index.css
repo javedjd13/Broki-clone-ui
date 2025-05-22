@@ -21,6 +21,6 @@
   transition: opacity 0.15s linear;
 }
 
-.box-shadow{
-      box-shadow: 0 10px 40px rgba(24, 26, 32, .05);
+.box-shadow {
+  box-shadow: 0 10px 40px rgba(24, 26, 32, 0.05);
 }

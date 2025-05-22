@@ -11,8 +11,7 @@ import BlogPosts from "../components/BlogPosts";
 import DownloadSec from "../components/DownloadSec";
 import HeroImg from "../assets/images/hero-img.webp";
 import SubImg from "../assets/images/sub-hero-img.webp";
-
-import { blogPost, categories, cities, tabs } from "../components/lib/Constant";
+import { blogPost, categories, cities, tabs } from "../lib/Constant";
 import PhotoSec from "../assets/images/photosec.webp";
 
 const Home = () => {
@@ -125,7 +124,8 @@ const Home = () => {
                   </div>
                   <button
                     type="submit"
-                    className="bg-[#22b99a] rounded-xl p-3 w-12 h-12 flex items-center justify-center text-white hover:bg-[#1e9a85] transition"
+                    name="search-btn"
+                    className="bg-[#22b99a] rounded-xl p-3 w-12 h-12 flex items-center justify-center text-white hover:bg-[#1e9a85] transition cursor-pointer"
                   >
                     <FontAwesomeIcon icon={faSearch} />
                   </button>

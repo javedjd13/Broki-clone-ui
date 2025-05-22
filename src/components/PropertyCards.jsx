@@ -1,4 +1,4 @@
-import { properties } from "./lib/Constant";
+import { properties } from "../lib/Constant";
 import PropertyCard from "./PropertyCard";
 
 

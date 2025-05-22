@@ -1,20 +1,20 @@
-import SliderOne from "../../assets/images/sliderone.webp"
-import SliderTwo from "../../assets/images/slidertwo.webp"
-import SliderThree from "../../assets/images/sliderthree.webp"
-import SliderFour from "../../assets/images/sliderfour.webp"
-import SliderFive from "../../assets/images/sliderfive.webp"
-import SliderSix from "../../assets/images/slidersix.webp"
-import SliderSeven from "../../assets/images/sliderseven.webp"
-import SliderEight from "../../assets/images/slidereight.webp"
-import SliderNine from "../../assets/images/slidernine.webp"
-import SliderTen from "../../assets/images/sliderten.webp"
-import PropertyOne from "../../assets/images/propertyone.webp";
-import PropertyTwo from "../../assets/images/propertytwo.jpeg";
-import PropertyThree from "../../assets/images/propertythree.png";
-import BlogOne from "../../assets/images/blogone.webp";
-import BlogTwo from "../../assets/images/blogtwo.webp";
-import BlogThree from "../../assets/images/blogthree.webp";
-import DownloadImg from "../../assets/images/download-img.webp";
+import SliderOne from "../assets/images/sliderone.webp"
+import SliderTwo from "../assets/images/slidertwo.webp"
+import SliderThree from "../assets/images/sliderthree.webp"
+import SliderFour from "../assets/images/sliderfour.webp"
+import SliderFive from "../assets/images/sliderfive.webp"
+import SliderSix from "../assets/images/slidersix.webp"
+import SliderSeven from "../assets/images/sliderseven.webp"
+import SliderEight from "../assets/images/slidereight.webp"
+import SliderNine from "../assets/images/slidernine.webp"
+import SliderTen from "../assets/images/sliderten.webp"
+import PropertyOne from "../assets/images/propertyone.webp";
+import PropertyTwo from "../assets/images/propertytwo.jpeg";
+import PropertyThree from "../assets/images/propertythree.png";
+import BlogOne from "../assets/images/blogone.webp";
+import BlogTwo from "../assets/images/blogtwo.webp";
+import BlogThree from "../assets/images/blogthree.webp";
+import DownloadImg from "../assets/images/download-img.webp";
 import {
     faFacebookF,
     faInstagram,
@@ -24,19 +24,21 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import {
+    faAngleRight,
     faCogs,
     faFlask,
     faKey,
     faShieldAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
+
 export const navLinks = [
-    { label: "Home", href: "/", active: true },
-    { label: "Listings", href: "/listings", active: false },
-    { label: "Our Team", href: "/our-team", active: false },
-    { label: "Services", href: "/services", active: false },
-    { label: "Blogs", href: "/blogs", active: false },
-    { label: "Contact Us", href: "/contact-us", active: false },
+    { label: "Home", to: "/" },
+    { label: "Listings", to: "/listings", icon: faAngleRight },
+    { label: "Our Team", to: "/our-team" },
+    { label: "Services", to: "/services", icon: faAngleRight },
+    { label: "Blogs", to: "/blogs" },
+    { label: "Contact Us", to: "/contact-us" },
 ];
 
 export const tabs = [

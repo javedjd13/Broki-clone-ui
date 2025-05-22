@@ -1,5 +1,5 @@
 import Marquee from "react-fast-marquee";
-import { logos } from "./lib/Constant";
+import { logos } from "../lib/Constant";
 
 const AutoScroll = () => {
   return (
