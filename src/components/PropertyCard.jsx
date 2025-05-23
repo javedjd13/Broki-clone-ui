@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const PropertyCard = ({ property }) => {
   return (
-    <div className="bg-white shadow-md rounded-lg p-4">
+    <div className="bg-white shadow-md rounded-lg p-4 cursor-pointer">
       <img
         className="w-full h-[220px] object-cover rounded-lg"
         src={property.imgSrc}
@@ -17,8 +17,8 @@ const PropertyCard = ({ property }) => {
         {property.title}
       </h3>
       <p className="mt-2 text-sm text-gray-900 flex items-center gap-2 font-normal">
-         <FontAwesomeIcon icon={faObjectGroup} />
-         {property.sqft}
+        <FontAwesomeIcon icon={faObjectGroup} />
+        {property.sqft}
       </p>
     </div>
   );

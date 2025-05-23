@@ -109,11 +109,11 @@ const Navbar = () => {
                 data-bs-dismiss="offcanvas"
                 aria-label="Close"
               >
-                <div className="far fa-times text-white bg-[#26c4a0] rounded-full h-10 w-10 flex items-center justify-center">
+                <div className="far fa-times text-white bg-[#26c4a0] rounded-full h-10 w-10 flex items-center justify-center ">
                   <FontAwesomeIcon
                     onClick={() => setSidebarOpen(false)}
                     icon={faXmark}
-                    className="text-sm"
+                    className="text-sm "
                   />
                 </div>
               </div>

@@ -7,7 +7,7 @@ function BlogPosts({ post }) {
   const month = monthNames[post.date.getMonth()];
 
   return (
-<article className="relative rounded-xl w-full max-w-sm mx-auto">
+<article className="relative rounded-xl w-full max-w-sm mx-auto cursor-pointer">
       <img
         src={post.image}
         alt={`${post.category} blog image showing related content`}
