@@ -98,9 +98,10 @@ const Navbar = () => {
           onClick={() => setSidebarOpen(false)}
         >
           <div
-            className="bg-white w-72 md:w-96 h-full shadow-md "
+            className="bg-white w-72 md:w-96 h-full shadow-md flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
+            {/* Header - Not Scrollable */}
             <div className="hsidebar-header flex justify-between items-center bg-[hsla(8,79%,62%,0.07)] border-b border-[#ddd] pt-[25px] pr-[20px] pb-[15px] pl-[30px]">
               <h4 className="title">Welcome to Broki</h4>
               <div
@@ -118,8 +119,8 @@ const Navbar = () => {
               </div>
             </div>
 
-            {/* Used NavLink in Sidebar also */}
-            <div className="h-screen overflow-y-auto p-6 flex flex-col">
+            {/* Scrollable content */}
+            <div className="overflow-y-auto flex-1 p-6">
               <div className="flex flex-col flex-grow">
                 {navLinks.map(({ label, to, icon }) => (
                   <NavLink
@@ -139,9 +140,9 @@ const Navbar = () => {
                   </NavLink>
                 ))}
 
-                {/* Scrollable section below */}
+                {/* Extra Info Section */}
                 <div className="mt-10 text-sm text-black">
-                  {/* Row 1: Left + Right Text */}
+                  {/* Row 1 */}
                   <div className="flex flex-col md:flex-row justify-between mb-2 text-sm font-semibold">
                     <div>Total Free Customer Care</div>
                     <div className="md:text-right mt-1 md:mt-0">
@@ -149,7 +150,7 @@ const Navbar = () => {
                     </div>
                   </div>
 
-                  {/* Row 2: Phone + Email */}
+                  {/* Row 2 */}
                   <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
                     <div className="font-bold text-base flex items-center">
                       <FontAwesomeIcon icon={faPhone} className="mr-2" />
