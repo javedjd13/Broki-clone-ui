@@ -26,7 +26,7 @@
 }
 
 /* Home Slider Style  */
-input[type='range']::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 16px;
   width: 16px;
@@ -36,7 +36,7 @@ input[type='range']::-webkit-slider-thumb {
   border: 2px solid white;
   box-shadow: 0 0 2px #000;
 }
-input[type='range']::-moz-range-thumb {
+input[type="range"]::-moz-range-thumb {
   height: 16px;
   width: 16px;
   background: #22b99a;
