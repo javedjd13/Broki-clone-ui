@@ -25,26 +25,16 @@ const SignInForm = ({ onClose }) => {
 
   return (
     <form className="space-y-4" onSubmit={handleLoginSubmit}>
-      <label htmlFor="phone" className="text-sm font-semibold">
-        Enter Phone Number
+      <label htmlFor="email" className="text-sm font-semibold">
+        Enter Email
       </label>
       <div className="flex gap-[10px] flex-wrap">
-        <select
-          defaultValue="+91"
-          name="countryCode"
-          id="countryCode"
-          className="border rounded-lg px-4 py-3 w-[calc(50%-5px)] text-sm text-gray-600"
-        >
-          <option value="+91">+91 - India</option>
-          <option value="+44">+44 - UK</option>
-          <option value="+1">+1 - USA</option>
-        </select>
         <input
-          type="tel"
-          name="phone"
-          id="phone"
-          placeholder="Enter Phone Number"
-          className="border rounded-lg px-4 py-3 w-[calc(50%-5px)] text-sm text-gray-600"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter Email"
+          className="border rounded-lg px-4 py-3 w-[calc(100%-5px)] text-sm text-gray-600"
           required
         />
       </div>

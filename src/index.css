@@ -24,3 +24,23 @@
 .box-shadow {
   box-shadow: 0 10px 40px rgba(24, 26, 32, 0.05);
 }
+
+/* Home Slider Style  */
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  background: #22b99a;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 0 2px #000;
+}
+input[type='range']::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  background: #22b99a;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+}

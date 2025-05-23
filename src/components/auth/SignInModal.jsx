@@ -29,7 +29,7 @@ const SignInModal = ({ onClose }) => {
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 text-gray-600 hover:text-gray-900"
+          className="absolute top-5 right-5 text-gray-600 hover:text-gray-900 cursor-poi"
         >
           <FontAwesomeIcon icon={faXmark} className="w-6 h-6" />
         </button>
