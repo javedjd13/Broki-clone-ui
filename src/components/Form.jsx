@@ -169,7 +169,7 @@ const Form = () => {
 
             <button
               type="submit"
-              className="w-full bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 rounded-md text-center flex items-center justify-center space-x-2"
+              className="w-full bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 rounded-md text-center flex items-center justify-center space-x-2 cursor-pointer"
             >
               <span>Submit</span>
               <FontAwesomeIcon

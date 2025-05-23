@@ -29,9 +29,10 @@ const SignInModal = ({ onClose }) => {
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 text-gray-600 hover:text-gray-900 cursor-poi"
+          className="absolute top-5 right-5 text-gray-600 hover:text-gray-900 cursor-pointer"
+          aria-label="Close"
         >
-          <FontAwesomeIcon icon={faXmark} className="w-6 h-6" />
+          <FontAwesomeIcon icon={faXmark} className="w-6 h-6 cursor-pointer" />
         </button>
 
         <h2 className="text-lg font-bold mb-6">Welcome to Broki</h2>
