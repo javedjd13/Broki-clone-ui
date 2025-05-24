@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 function PhotographySec({
   titleParts,
@@ -28,12 +29,14 @@ function PhotographySec({
         <p className="text-base sm:text-lg font-normal text-white/90 mb-8 leading-relaxed">
           {description}
         </p>
-        <button
-          type="button"
-          className="bg-[#2bb89a] font-semibold text-white rounded-lg px-6 py-3 hover:bg-[#27a386] transition-colors duration-300 cursor-pointer"
-        >
-          {buttonText}
-        </button>
+        <Link to="/listings">
+          <button
+            type="button"
+            className="bg-[#2bb89a] font-semibold text-white rounded-lg px-6 py-3 hover:bg-[#27a386] transition-colors duration-300 cursor-pointer"
+          >
+            {buttonText}
+          </button>
+        </Link>
       </div>
       <div className="flex-shrink-0">
         <img
