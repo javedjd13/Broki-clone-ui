@@ -11,7 +11,6 @@ const AutoScroll = () => {
       <Marquee
         direction="left"
         speed={40}
-        pauseOnHover
         gradient={false}
         className="overflow-hidden"
       >

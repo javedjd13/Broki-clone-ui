@@ -285,3 +285,148 @@ export const appImages = [
         className: "w-full h-auto rounded-2xl shadow-lg",
     },
 ];
+
+
+export const listingsData = [
+    {
+        price: "₹8 Lakh",
+        title: "Restaurant for sale in Ghaziabad",
+        location: "Ghaziabad",
+        size: "350 sqft",
+        img: "	https://admin.broki.in/storage/1264/7248.jpeg",
+    },
+    {
+        price: "₹10 Lakh",
+        title: "Cloud kitchen set up for sale in Powai",
+        location: "Mumbai",
+        size: "180 sqft",
+        img: "	https://admin.broki.in/storage/1264/7248.jpeg",
+        featured: true,
+    },
+    {
+        price: "₹22 Lakh",
+        title: "Luxury Cafe Space in Delhi",
+        location: "Delhi",
+        size: "400 sqft",
+        img: "	https://admin.broki.in/storage/1264/7248.jpeg",
+        featured: true,
+    },
+    {
+        price: "₹6 Lakh",
+        title: "Takeaway Joint in Pune",
+        location: "Pune",
+        size: "150 sqft",
+        img: "	https://admin.broki.in/storage/1264/7248.jpeg",
+    },
+    {
+        price: "₹8 Lakh",
+        title: "Restaurant for sale in Ghaziabad",
+        location: "Ghaziabad",
+        size: "350 sqft",
+        img: "	https://admin.broki.in/storage/1264/7248.jpeg",
+    },
+    {
+        price: "₹10 Lakh",
+        title: "Cloud kitchen set up for sale in Powai",
+        location: "Mumbai",
+        size: "180 sqft",
+        img: "	https://admin.broki.in/storage/1264/7248.jpeg",
+        featured: true,
+    },
+    {
+        price: "₹22 Lakh",
+        title: "Luxury Cafe Space in Delhi",
+        location: "Delhi",
+        size: "400 sqft",
+        img: "	https://admin.broki.in/storage/1264/7248.jpeg",
+        featured: true,
+    },
+    {
+        price: "₹6 Lakh",
+        title: "Takeaway Joint in Pune",
+        location: "Pune",
+        size: "150 sqft",
+        img: "	https://admin.broki.in/storage/1264/7248.jpeg",
+    },
+    {
+        price: "₹8 Lakh",
+        title: "Restaurant for sale in Ghaziabad",
+        location: "Ghaziabad",
+        size: "350 sqft",
+        img: "	https://admin.broki.in/storage/1264/7248.jpeg",
+    },
+    {
+        price: "₹10 Lakh",
+        title: "Cloud kitchen set up for sale in Powai",
+        location: "Mumbai",
+        size: "180 sqft",
+        img: "	https://admin.broki.in/storage/1264/7248.jpeg",
+        featured: true,
+    },
+    {
+        price: "₹22 Lakh",
+        title: "Luxury Cafe Space in Delhi",
+        location: "Delhi",
+        size: "400 sqft",
+        img: "	https://admin.broki.in/storage/1264/7248.jpeg",
+        featured: true,
+    },
+    {
+        price: "₹6 Lakh",
+        title: "Takeaway Joint in Pune",
+        location: "Pune",
+        size: "150 sqft",
+        img: "	https://admin.broki.in/storage/1264/7248.jpeg",
+    },
+];
+
+export const servicesLinks = [
+    {
+        title: "Food Photography by Anamika",
+        provider: "Anamika Vaishnav",
+        price: 500,
+        image:
+            "https://www.broki.in/_next/image?url=https%3A%2F%2Fservices.broki.in%2Fstorage%2F400%2FScreenshot-2024-12-20-at-1.00.24%E2%80%AFPM.png&w=384&q=75",
+        featured: true,
+    },
+    {
+        title: "Food Photography by Indraneil",
+        provider: "Indraneil Tomar",
+        price: 2667,
+        image:
+            "https://www.broki.in/_next/image?url=https%3A%2F%2Fservices.broki.in%2Fstorage%2F375%2FScreenshot-2024-12-05-at-6.04.42%E2%80%AFPM.png&w=384&q=75",
+        featured: true,
+    },
+    {
+        title: "Food Photography by Manjula",
+        provider: "Dr. Manjula Viljh",
+        price: 2500,
+        image:
+            "https://www.broki.in/_next/image?url=https%3A%2F%2Fservices.broki.in%2Fstorage%2F400%2FScreenshot-2024-12-20-at-1.00.24%E2%80%AFPM.png&w=384&q=75",
+        featured: true,
+    },
+    {
+        title: "Food Photography by Dev",
+        provider: "Dev Patel",
+        price: 1000,
+        image:
+            "https://www.broki.in/_next/image?url=https%3A%2F%2Fservices.broki.in%2Fstorage%2F375%2FScreenshot-2024-12-05-at-6.04.42%E2%80%AFPM.png&w=384&q=75",
+        featured: true,
+    },
+    {
+        title: "Food Photography by Riya",
+        provider: "Riya Sharma",
+        price: 15000,
+        image:
+            "https://www.broki.in/_next/image?url=https%3A%2F%2Fservices.broki.in%2Fstorage%2F400%2FScreenshot-2024-12-20-at-1.00.24%E2%80%AFPM.png&w=384&q=75",
+        featured: false,
+    },
+    {
+        title: "Food Photography by Kabir",
+        provider: "Kabir Mehta",
+        price: 1750,
+        image:
+            "https://www.broki.in/_next/image?url=https%3A%2F%2Fservices.broki.in%2Fstorage%2F375%2FScreenshot-2024-12-05-at-6.04.42%E2%80%AFPM.png&w=384&q=75",
+        featured: true,
+    },
+];
