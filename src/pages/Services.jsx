@@ -5,8 +5,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { servicesLinks } from "../lib/Constant";
+import { useState } from "react";
 
 const Services = () => {
+  const [viewMode, setViewMode] = useState("grid"); // grid or list
+
   return (
     <div className="container mx-auto py-12 px-4 md:px-8 bg-white">
       <h2 className="text-3xl font-bold mb-1 text-gray-900">
@@ -20,20 +23,54 @@ const Services = () => {
           <label className="text-sm text-gray-600">Sort by</label>
           <select className="border rounded px-2 py-1 text-sm">
             <option>Newest</option>
+            <option>Price High</option>
+            <option>Price Low</option>
           </select>
-          <button className="text-sm underline text-gray-700">Grid</button>
-          <button className="text-sm text-gray-500">List</button>
+          <button
+            className={`text-sm underline ${
+              viewMode === "grid" ? "text-gray-700" : "text-gray-500"
+            }`}
+            onClick={() => setViewMode("grid")}
+          >
+            Grid
+          </button>
+          <button
+            className={`text-sm underline ${
+              viewMode === "list" ? "text-gray-700" : "text-gray-500"
+            }`}
+            onClick={() => setViewMode("list")}
+          >
+            List
+          </button>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div
+        className={`${
+          viewMode === "grid"
+            ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            : "grid grid-cols-1 md:grid-cols-2 gap-6"
+        }`}
+      >
         {servicesLinks.map((service, idx) => (
-          <div key={idx} className="bg-white rounded-xl shadow overflow-hidden">
-            <div className="relative">
+          <div
+            key={idx}
+            className={`bg-white rounded-xl shadow overflow-hidden ${
+              viewMode === "list" ? "flex" : ""
+            }`}
+          >
+            {/* Image Section */}
+            <div
+              className={`relative ${
+                viewMode === "list" ? "w-1/2 max-h-48" : ""
+              }`}
+            >
               <img
                 src={service.image}
                 alt={service.title}
-                className="w-full h-48 object-cover"
+                className={`object-cover ${
+                  viewMode === "list" ? "w-full h-full" : "w-full h-48"
+                }`}
               />
               {service.featured && (
                 <span className="absolute top-2 left-2 bg-emerald-500 text-white text-xs font-semibold px-2 py-1 rounded">
@@ -45,7 +82,15 @@ const Services = () => {
                 {service.price} /item
               </span>
             </div>
-            <div className="p-4 border-t">
+
+            {/* Text Section */}
+            <div
+              className={`p-4 border-t ${
+                viewMode === "list"
+                  ? "w-1/2 border-t-0 border-l flex flex-col justify-between"
+                  : ""
+              }`}
+            >
               <h3 className="text-md font-semibold text-gray-900 mb-1">
                 {service.title}
               </h3>
@@ -67,8 +112,8 @@ const Services = () => {
         ))}
       </div>
 
+      {/* Pagination */}
       <div className="flex flex-col items-center mt-8">
-        {/* Pagination Buttons */}
         <div className="flex space-x-2 items-center">
           <button className="w-8 h-8 rounded-full bg-white border text-gray-700 flex items-center justify-center shadow">
             &lt;
@@ -80,8 +125,6 @@ const Services = () => {
             &gt;
           </button>
         </div>
-
-        {/* Info text below buttons */}
         <p className="text-sm text-gray-600 mt-2">1–10 of 120 available</p>
       </div>
     </div>
