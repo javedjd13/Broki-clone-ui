@@ -5,6 +5,7 @@ import { useMutation } from "@tanstack/react-query";
 import { useDispatch } from "react-redux";
 import { signIn } from "../../apiAction/login/Index";
 import { setUser } from "../../redux/authSlice";
+import { Link } from "react-router";
 
 const SignInForm = ({ onClose }) => {
   const dispatch = useDispatch();
@@ -22,7 +23,7 @@ const SignInForm = ({ onClose }) => {
   const handleLoginSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
-    // OTP send logic yahan lagayein
+    // OTP send logic apply here
     console.log("Sending OTP to:", email);
     setOtpSent(true); // Show OTP input after sending OTP
   };
@@ -30,7 +31,7 @@ const SignInForm = ({ onClose }) => {
   const handleOtpVerify = (e) => {
     e.preventDefault();
     const otp = e.target.otp.value;
-    // Verify OTP logic yahan lagayein
+    // Verify OTP
     console.log("Verifying OTP:", otp);
     // loginMutation.mutate(phoneOrEmail); <-- Real login logic
   };
@@ -82,12 +83,15 @@ const SignInForm = ({ onClose }) => {
             className="border rounded-lg px-4 py-3 w-full text-sm text-gray-600"
             required
           />
-          <button
-            type="submit"
-            className="w-full bg-[#2ac1a7] hover:bg-[#27a994] text-white font-bold py-3 rounded-lg cursor-pointer"
-          >
-            Verify OTP
-          </button>
+          <Link to="/">
+            <button
+              type="submit"
+              className="w-full bg-[#2ac1a7] hover:bg-[#27a994] text-white font-bold py-3 rounded-lg cursor-pointer"
+              onClick={onClose}
+            >
+              Verify OTP
+            </button>
+          </Link>
         </>
       )}
     </form>

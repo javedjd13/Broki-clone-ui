@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -21,121 +21,190 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="w-full min-h-screen bg-white">
-      <div className="relative w-full h-[500px]">
+    <div className="relative w-full">
+      {/* Google Map Embed */}
+      <div className="absolute top-0 left-0 w-full h-[600px] z-0">
         <iframe
-          className="absolute top-0 left-0 w-full h-full"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7001.718189637755!2d77.17111969389337!3d28.640687542242993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d030a0ba60ad3%3A0xb133f70c4e0e6c06!2sBroki%20Services%20Private%20Limited!5e0!3m2!1sen!2sin!4v1716560000000!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.4006632054!2d77.0688994424711!3d28.527582007847342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03072bb27f2f%3A0x9bc88a4f034fdf3e!2sBroki%20Services%20Private%20Limited!5e0!3m2!1sen!2sin!4v1716540893883!5m2!1sen!2sin"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
+      </div>
 
-        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center px-4">
-          <div className="bg-white shadow-lg rounded-xl p-6 w-full max-w-md z-10">
+      {/* Overlay Box */}
+      <div className="absolute top-5 left-5 z-10 bg-white shadow-lg rounded-md p-3 text-xs max-w-xs">
+        <strong>Broki Services Private Limited</strong>
+        <br />
+        Rattan Jyoti Building, G-1/18, 18,
+        <br />
+        Rajendra Place, New Delhi, Delhi 110008
+        <br />
+        <span className="text-yellow-500">★★★★★</span> 6 reviews
+        <br />
+        <a
+          href="https://www.google.com/maps"
+          className="text-blue-500 underline text-xs"
+        >
+          View larger map
+        </a>
+      </div>
+
+      {/* Content Section */}
+      <div className="relative z-10 px-4 md:px-10 py-[140px] max-sm:top-[600px]">
+        {/* Tablet & Desktop Layout */}
+        <div className="hidden md:grid md:grid-cols-2 gap-10 items-end">
+          {/* Form */}
+          <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
             <h2 className="text-lg font-semibold mb-4">
               Have questions? Get in touch!
             </h2>
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="space-y-4">
               <div>
-                <label className="block text-sm font-medium mb-1">
-                  Your Name
-                </label>
+                <label className="block text-sm font-medium">Your Name</label>
                 <input
                   type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
+                  className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1"
                   placeholder="Your Name"
-                  className="w-full border border-gray-300 rounded px-3 py-2"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-1">
+                <label className="block text-sm font-medium">
                   Phone Number
                 </label>
                 <input
                   type="text"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
+                  className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1"
                   placeholder="Your Phone Number"
-                  className="w-full border border-gray-300 rounded px-3 py-2"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-1">Email</label>
+                <label className="block text-sm font-medium">Email</label>
                 <input
                   type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
+                  className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1"
                   placeholder="Your Email ID"
-                  className="w-full border border-gray-300 rounded px-3 py-2"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-1">
-                  Outlet Type
-                </label>
-                <select
-                  name="outletType"
-                  value={formData.outletType}
-                  onChange={handleChange}
-                  className="w-full border border-gray-300 rounded px-3 py-2"
-                >
-                  <option value="">Select...</option>
-                  <option value="Dine-In">Dine-In</option>
-                  <option value="Takeaway">Takeaway</option>
+                <label className="block text-sm font-medium">Outlet Type</label>
+                <select className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1">
+                  <option>Select...</option>
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium mb-1">
-                  Location
-                </label>
-                <select
-                  name="location"
-                  value={formData.location}
-                  onChange={handleChange}
-                  className="w-full border border-gray-300 rounded px-3 py-2"
-                >
-                  <option value="">Select...</option>
-                  <option value="Delhi">Delhi</option>
-                  <option value="Mumbai">Mumbai</option>
+                <label className="block text-sm font-medium">Location</label>
+                <select className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1">
+                  <option>Select...</option>
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium mb-1">
-                  Brand Name
-                </label>
+                <label className="block text-sm font-medium">Brand Name</label>
                 <input
                   type="text"
-                  name="brand"
-                  value={formData.brand}
-                  onChange={handleChange}
+                  className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1"
                   placeholder="E.g. Flashback Cafe Or NA"
-                  className="w-full border border-gray-300 rounded px-3 py-2"
                 />
               </div>
+              <button className="w-full bg-emerald-500 text-white py-2 rounded-md mt-2 font-semibold hover:bg-emerald-600 transition-all">
+                Submit ↗
+              </button>
+            </div>
+          </div>
+
+          {/* Text Section */}
+          <div className="flex items-end justify-center md:justify-start">
+            <div className="text-black md:text-gray-900 md:bg-transparent bg-white bg-opacity-90 p-6 rounded-lg max-w-md">
+              <h2 className="text-2xl font-bold mb-2">
+                We’d Love To Hear From You.
+              </h2>
+              <p className="text-sm">
+                We are here to answer any question you may have. Let’s start the
+                conversation and make something amazing together!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Layout: Form below map */}
+        <div className="md:hidden mt-10 space-y-6">
+          {/* Text Section */}
+          <div className="text-black bg-white bg-opacity-90 p-6 rounded-lg shadow max-w-md mx-auto">
+            <h2 className="text-2xl font-bold mb-2">
+              We’d Love To Hear From You.
+            </h2>
+            <p className="text-sm">
+              We are here to answer any question you may have. Let’s start the
+              conversation and make something amazing together!
+            </p>
+          </div>
+
+          {/* Form */}
+          <div className="bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto">
+            <h2 className="text-lg font-semibold mb-4">
+              Have questions? Get in touch!
+            </h2>
+            <form className="space-y-4" onSubmit={handleSubmit}>
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
+                className="w-full border border-gray-300 rounded-md px-3 py-2"
+              />
+              <input
+                type="text"
+                name="phone"
+                placeholder="Your Phone Number"
+                value={formData.phone}
+                onChange={handleChange}
+                className="w-full border border-gray-300 rounded-md px-3 py-2"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email ID"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full border border-gray-300 rounded-md px-3 py-2"
+              />
+              <select
+                name="outletType"
+                value={formData.outletType}
+                onChange={handleChange}
+                className="w-full border border-gray-300 rounded-md px-3 py-2"
+              >
+                <option value="">Select Outlet Type...</option>
+              </select>
+              <select
+                name="location"
+                value={formData.location}
+                onChange={handleChange}
+                className="w-full border border-gray-300 rounded-md px-3 py-2"
+              >
+                <option value="">Select Location...</option>
+              </select>
+              <input
+                type="text"
+                name="brand"
+                placeholder="E.g. Flashback Cafe Or NA"
+                value={formData.brand}
+                onChange={handleChange}
+                className="w-full border border-gray-300 rounded-md px-3 py-2"
+              />
               <button
                 type="submit"
-                className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-2 rounded"
+                className="w-full bg-emerald-500 text-white py-2 rounded-md font-semibold hover:bg-emerald-600"
               >
                 Submit ↗
               </button>
             </form>
           </div>
         </div>
-      </div>
-
-      <div className="text-center mt-16 px-4 md:px-0">
-        <h2 className="text-2xl md:text-3xl font-bold">
-          We’d Love To Hear From You.
-        </h2>
-        <p className="mt-2 text-sm text-gray-600 max-w-xl mx-auto">
-          We are here to answer any question you may have. Let’s start the
-          conversation and make something amazing together!
-        </p>
       </div>
     </div>
   );
