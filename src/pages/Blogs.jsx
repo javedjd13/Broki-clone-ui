@@ -9,7 +9,7 @@ const blogPosts = [
     description:
       "Leasing the right property is one of the most crucial decisions when starting a restaurant business ...",
     image:
-      "https://www.broki.in/_next/image?url=https%3A%2F%2Fadmin.broki.in%2Fstorage%2F1263%2FThings-to-keep-in-mind-before-leasing-a-restaurant-property-in-India.jpg&w=828&q=75", // Replace with real image URLs
+      "https://www.broki.in/_next/image?url=https%3A%2F%2Fadmin.broki.in%2Fstorage%2F617%2FSales-2-1240x720.jpg&w=1920&q=75",
     date: "May 22",
     year: "2025",
   },
@@ -27,7 +27,7 @@ const blogPosts = [
     title: "7 Essential Steps to Successfully Set Up a Cloud Kitchen in India",
     category: "Cloud Kitchen",
     image:
-      "https://www.broki.in/_next/image?url=https%3A%2F%2Fadmin.broki.in%2Fstorage%2F1263%2FThings-to-keep-in-mind-before-leasing-a-restaurant-property-in-India.jpg&w=828&q=75",
+      "https://www.broki.in/_next/image?url=https%3A%2F%2Fadmin.broki.in%2Fstorage%2F618%2FCloud-kitchen-1240x720.png&w=1920&q=75", // Replace with real image URLs
     date: "Feb 15",
     year: "2024",
   },

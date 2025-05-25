@@ -300,7 +300,7 @@ export const listingsData = [
         title: "Cloud kitchen set up for sale in Powai",
         location: "Mumbai",
         size: "180 sqft",
-        img: "	https://admin.broki.in/storage/1264/7248.jpeg",
+        img: "	https://admin.broki.in/storage/1239/7247.jpeg",
         featured: true,
     },
     {
@@ -308,7 +308,7 @@ export const listingsData = [
         title: "Luxury Cafe Space in Delhi",
         location: "Delhi",
         size: "400 sqft",
-        img: "	https://admin.broki.in/storage/1264/7248.jpeg",
+        img: "	https://admin.broki.in/storage/1245/1000296914.jpg",
         featured: true,
     },
     {
@@ -323,7 +323,7 @@ export const listingsData = [
         title: "Restaurant for sale in Ghaziabad",
         location: "Ghaziabad",
         size: "350 sqft",
-        img: "	https://admin.broki.in/storage/1264/7248.jpeg",
+        img: "	https://admin.broki.in/storage/1245/1000296914.jpg",
     },
     {
         price: "₹10 Lakh",
@@ -346,7 +346,7 @@ export const listingsData = [
         title: "Takeaway Joint in Pune",
         location: "Pune",
         size: "150 sqft",
-        img: "	https://admin.broki.in/storage/1264/7248.jpeg",
+        img: "	https://admin.broki.in/storage/1245/1000296914.jpg",
     },
     {
         price: "₹8 Lakh",
@@ -360,7 +360,7 @@ export const listingsData = [
         title: "Cloud kitchen set up for sale in Powai",
         location: "Mumbai",
         size: "180 sqft",
-        img: "	https://admin.broki.in/storage/1264/7248.jpeg",
+        img: "	https://admin.broki.in/storage/1245/1000296914.jpg",
         featured: true,
     },
     {
@@ -376,7 +376,7 @@ export const listingsData = [
         title: "Takeaway Joint in Pune",
         location: "Pune",
         size: "150 sqft",
-        img: "	https://admin.broki.in/storage/1264/7248.jpeg",
+        img: "	https://admin.broki.in/storage/1245/1000296914.jpg",
     },
 ];
 
