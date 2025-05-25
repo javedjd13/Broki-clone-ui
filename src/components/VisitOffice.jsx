@@ -1,5 +1,5 @@
 import React from "react";
-
+import ContactHelp from "./ContactHelp"; // Assuming you have a ContactHelp component
 const officeData = [
   {
     city: "New Delhi",
@@ -55,24 +55,7 @@ const VisitOffice = () => {
       </div>
 
       {/* Contact Box */}
-      <div className="mt-16 bg-gray-100 rounded-xl p-6 md:p-10 max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between">
-        <div className="text-center md:text-left mb-4 md:mb-0">
-          <h3 className="text-xl font-semibold text-gray-900">
-            Need help? Talk to our expert.
-          </h3>
-          <p className="text-sm text-gray-600">
-            Talk to our experts or Browse through more properties.
-          </p>
-        </div>
-        <div className="flex flex-col sm:flex-row gap-2 mt-4 md:mt-0">
-          <button className="border border-gray-300 px-4 py-2 rounded-md text-sm hover:bg-gray-200 transition">
-            Contact Us ↗
-          </button>
-          <button className="bg-gray-800 text-white font-semibold px-4 py-2 rounded-md text-sm">
-            📞 +91 964 353 1845
-          </button>
-        </div>
-      </div>
+    <ContactHelp/>
     </div>
   );
 };

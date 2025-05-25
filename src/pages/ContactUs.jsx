@@ -115,8 +115,11 @@ const ContactUs = () => {
                     placeholder="E.g. Flashback Cafe Or NA"
                   />
                 </div>
-                <button className="w-full bg-emerald-500 text-white py-2 rounded-md mt-2 font-semibold hover:bg-emerald-600 transition-all">
-                  Submit ↗
+                <button
+                  className="w-full bg-[#26c4a0] text-white py-2 rounded-md mt-2 font-semibold hover:bg-[#1fae8c] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#26c4a0] focus:ring-opacity-50
+                 transition-all"
+                >
+                  Submit
                 </button>
               </div>
             </div>
@@ -204,9 +207,9 @@ const ContactUs = () => {
                 />
                 <button
                   type="submit"
-                  className="w-full bg-emerald-500 text-white py-2 rounded-md font-semibold hover:bg-emerald-600"
+                  className="w-full bg-[#26c4a0] text-white py-2 rounded-md font-semibold ho    ver:bg-[#1fae8c] transition-all"
                 >
-                  Submit ↗
+                  Submit
                 </button>
               </form>
             </div>
