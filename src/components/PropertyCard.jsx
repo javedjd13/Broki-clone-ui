@@ -1,9 +1,19 @@
 import { faObjectGroup } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate } from "react-router";
 
 const PropertyCard = ({ property }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/property/${property.id}`, { state: { property } });
+  };
+
   return (
-    <div className="bg-white shadow-md rounded-lg p-4 cursor-pointer">
+    <div
+      onClick={handleClick}
+      className="bg-white shadow-md rounded-lg p-4 cursor-pointer"
+    >
       <img
         className="w-full h-[220px] object-cover rounded-lg"
         src={property.imgSrc}
