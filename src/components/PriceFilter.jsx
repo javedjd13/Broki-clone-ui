@@ -1,3 +1,5 @@
+// Updated PriceFilter component with proper responsive input alignment
+
 import { useState } from "react";
 
 const PriceFilter = () => {
@@ -26,10 +28,8 @@ const PriceFilter = () => {
 
         {/* Sliders */}
         <div className="relative h-10 mb-4 flex items-center">
-          {/* Background bar */}
           <div className="absolute w-full h-2 bg-gray-300 rounded-md z-0" />
 
-          {/* Highlighted range */}
           <div
             className="absolute h-2 bg-[#22b99a] rounded-md z-10"
             style={{
@@ -38,7 +38,6 @@ const PriceFilter = () => {
             }}
           />
 
-          {/* Min Price Slider */}
           <input
             type="range"
             min={minLimit}
@@ -49,7 +48,6 @@ const PriceFilter = () => {
             style={{ zIndex: minPrice >= maxPrice ? 40 : 30 }}
           />
 
-          {/* Max Price Slider */}
           <input
             type="range"
             min={minLimit}
@@ -61,20 +59,24 @@ const PriceFilter = () => {
           />
         </div>
 
-        {/* Display Input Values - read only */}
-        <div className="flex gap-4 justify-between">
-          <input
-            type="text"
-            value={`₹${minPrice.toLocaleString()}`}
-            readOnly
-            className="flex-1 px-4 py-2 border rounded-lg text-sm border-gray-300 bg-gray-100 text-gray-700"
-          />
-          <input
-            type="text"
-            value={`₹${maxPrice.toLocaleString()}`}
-            readOnly
-            className="flex-1 px-4 py-2 border rounded-lg text-sm border-gray-300 bg-gray-100 text-gray-700"
-          />
+        {/* Input fields */}
+        <div className="flex flex-row gap-4 w-full">
+          <div className="flex-1">
+            <input
+              type="text"
+              value={`₹${minPrice.toLocaleString()}`}
+              readOnly
+              className="w-full px-4 py-2 border rounded-lg text-sm border-gray-300 bg-gray-100 text-gray-700"
+            />
+          </div>
+          <div className="flex-1">
+            <input
+              type="text"
+              value={`₹${maxPrice.toLocaleString()}`}
+              readOnly
+              className="w-full px-4 py-2 border rounded-lg text-sm border-gray-300 bg-gray-100 text-gray-700"
+            />
+          </div>
         </div>
       </div>
     </div>
