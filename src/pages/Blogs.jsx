@@ -56,11 +56,13 @@ const Blogs = () => {
               className="bg-white rounded-xl overflow-hidden shadow-sm"
             >
               <div className="relative">
-                <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full h-auto object-cover"
-                />
+                <div className="overflow-hidden">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-auto object-cover img-animattion"
+                  />
+                </div>
                 <div className="absolute bottom-3 right-3 bg-white text-gray-900 text-xs font-semibold rounded p-1 text-center shadow">
                   <p className="leading-none">{post.date}</p>
                   <p className="leading-none text-[10px]">{post.year}</p>
@@ -100,11 +102,13 @@ const Blogs = () => {
             <ul className="space-y-4">
               {latestBlogs.map((blog) => (
                 <li key={blog.id} className="flex space-x-3 text-sm">
-                  <img
-                    src={blog.image}
-                    alt={blog.title}
-                    className="w-12 h-12 object-cover rounded"
-                  />
+                  <div className="overflow-hidden">
+                    <img
+                      src={blog.image}
+                      alt={blog.title}
+                      className="w-12 h-12 object-cover rounded img-animattion"
+                    />
+                  </div>
                   <div className="flex-1">
                     <p className="font-semibold text-gray-800 line-clamp-2">
                       {blog.title}

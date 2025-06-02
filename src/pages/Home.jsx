@@ -14,6 +14,7 @@ import SubImg from "../assets/images/sub-hero-img.webp";
 import { blogPost, categories, cities, tabs } from "../lib/Constant";
 import PhotoSec from "../assets/images/photosec.webp";
 import PriceFilter from "../components/PriceFilter";
+import { Link } from "react-router";
 
 const Home = () => {
   // States
@@ -66,12 +67,12 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-6 py-6 md:py-16 flex flex-col xl:flex-row items-start xl:items-center justify-between gap-8">
           {/* Left Content */}
           <div className="w-full xl:w-1/2">
-            <h1 className="text-3xl md:text-4xl font-semibold text-[#0f1f25] leading-tight mb-8">
+            <h1 className="animate-up-5 text-3xl md:text-4xl font-semibold text-[#0f1f25] leading-tight mb-8">
               One Stop Solution For All <br /> Your FnB Business Need
             </h1>
 
             {/* Tabs + Forms */}
-            <div className="bg-[#d9f4f0] rounded-xl shadow-md w-full">
+            <div className="bg-[#d9f4f0] rounded-xl shadow-md w-full animate-up-5  ">
               {/* Tabs */}
               <div className="flex border-b border-gray-200 rounded-t-xl max-w-60 bg-white">
                 {tabs.map((tab) => (
@@ -153,14 +154,15 @@ const Home = () => {
                         Advanced
                       </span>
                     </button>
-
-                    <button
-                      type="submit"
-                      name="search-btn"
-                      className="bg-[#22b99a] rounded-xl p-3 w-12 h-12 flex items-center justify-center text-white hover:bg-[#1e9a85] transition cursor-pointer"
-                    >
-                      <FontAwesomeIcon icon={faSearch} />
-                    </button>
+                    <Link to={"/listings"}>
+                      <button
+                        type="submit"
+                        name="search-btn"
+                        className="bg-[#22b99a] rounded-xl p-3 w-12 h-12 flex items-center justify-center text-white hover:bg-[#1e9a85] transition cursor-pointer"
+                      >
+                        <FontAwesomeIcon icon={faSearch} />
+                      </button>
+                    </Link>
                   </div>
                 </form>
               )}

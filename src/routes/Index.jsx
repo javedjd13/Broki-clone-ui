@@ -7,7 +7,11 @@ import Services from "../pages/Services";
 import ContactUs from "../pages/ContactUs";
 import { createBrowserRouter } from "react-router-dom";
 import ProductDetail from "../pages/ProductDetail";
-
+import BlogsPostsCard from "../components/BlogsPostsCard";
+import BlogPosts from "../components/BlogPosts";
+import MyBookings from "../pages/dashboard/MyBookings";
+import MyProperties from "../pages/dashboard/MyProperties";
+import AddProperty from "../pages/dashboard/AddProperty";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -44,6 +48,26 @@ const router = createBrowserRouter([
       {
         path: "/property/:id",
         element: <ProductDetail />,
+      },
+      {
+        path: "/blogs-post",
+        element: <BlogPosts />,
+      },
+      {
+        path: "/blogs-posts-card/:id",
+        element: <BlogsPostsCard />,
+      },
+      {
+        path: "/bookings",
+        element: <MyBookings />,
+      },
+      {
+        path: "/properties",
+        element: <MyProperties />,
+      },
+      {
+        path: "/add-property",
+        element: <AddProperty />,
       },
     ],
   },

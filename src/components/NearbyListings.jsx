@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropertyCards from "./PropertyCards"; // import this
 
 const NearbyListings = () => {
   const [activeTab, setActiveTab] = useState("rent");
@@ -17,32 +18,33 @@ const NearbyListings = () => {
         </div>
 
         {/* Right side toggle buttons */}
-        <div className="flex gap-3 ">
+        <div className="flex gap-3">
           <button
             onClick={() => setActiveTab("rent")}
-            className={`px-6 py-2 md:px-4 md:py-1.5 sm:px-3 sm:py-1 rounded-md font-semibold text-sm transition cursor-pointer
-    ${
-      activeTab === "rent"
-        ? "bg-gray-900 text-white"
-        : "border border-gray-400 text-gray-900 bg-white"
-    }`}
+            className={`px-6 py-2 rounded-md font-semibold text-sm transition cursor-pointer ${
+              activeTab === "rent"
+                ? "bg-gray-900 text-white"
+                : "border border-gray-400 text-gray-900 bg-white"
+            }`}
           >
             For Rent
           </button>
 
           <button
             onClick={() => setActiveTab("sale")}
-            className={`px-6 py-2 md:px-4 md:py-1.5 sm:px-3 sm:py-1 rounded-md font-semibold text-sm transition cursor-pointer
-    ${
-      activeTab === "sale"
-        ? "bg-gray-900 text-white"
-        : "border border-gray-400 text-gray-900 bg-white"
-    }`}
+            className={`px-6 py-2 rounded-md font-semibold text-sm transition cursor-pointer ${
+              activeTab === "sale"
+                ? "bg-gray-900 text-white"
+                : "border border-gray-400 text-gray-900 bg-white"
+            }`}
           >
             For Sale
           </button>
         </div>
       </div>
+
+      {/* Render property cards based on active tab */}
+      <PropertyCards activeTab={activeTab} />
     </section>
   );
 };

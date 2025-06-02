@@ -4,12 +4,14 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import SignInForm from "./SignInForm";
 import SignUpForm from "./SignUpForm";
 
-const SignInModal = ({ onClose }) => {
+const SignInModal = ({   onClose, setIsLoggedIn  }) => {
   const [isSignIn, setIsSignIn] = useState(true);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
-    return () => (document.body.style.overflow = "auto");
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, []);
 
   const handleOverlayClick = (e) => {
@@ -29,10 +31,10 @@ const SignInModal = ({ onClose }) => {
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 text-gray-600 hover:text-gray-900 cursor-pointer"
-          aria-label="Close"
+          className="absolute top-5 right-5 text-gray-600 hover:text-gray-900"
+          aria-label="Close modal"
         >
-          <FontAwesomeIcon icon={faXmark} className="w-6 h-6 cursor-pointer" />
+          <FontAwesomeIcon icon={faXmark} className="w-6 h-6" />
         </button>
 
         <h2 className="text-lg font-bold mb-6">Welcome to Broki</h2>
@@ -56,8 +58,9 @@ const SignInModal = ({ onClose }) => {
             New Account
           </button>
         </div>
+
         {isSignIn ? (
-          <SignInForm onClose={onClose} />
+          <SignInForm  onClose={onClose} setIsLoggedIn={setIsLoggedIn} />
         ) : (
           <SignUpForm onClose={onClose} />
         )}

@@ -18,7 +18,7 @@ const founders = [
   {
     name: "Akash Malhotra",
     role: "Founder - CTO",
-    img: "	https://www.broki.in/images/team/jatin_image.jpeg",
+    img: "	https://www.broki.in/images/team/akash_image.jpeg",
     description:
       "Akash, with 11 years of industry experience, leads all technical implementations at Broki. An MBA graduate from IIM Lucknow, he excels in bridging technical and business needs. Known for his strategic vision and innovative solutions, Akash is a pivotal figure in driving technological advancements.",
     socials: {
@@ -41,11 +41,11 @@ const OurTeam = () => {
               key={idx}
               className="bg-white rounded-xl shadow p-6 w-full md:w-1/2 lg:w-1/3 mx-auto"
             >
-              <div className="flex justify-center mb-4">
+              <div className="overflow-hidden rounded-full ">
                 <img
                   src={founder.img}
                   alt={founder.name}
-                  className="rounded-full w-32 h-32 object-cover border"
+                  className="rounded-full w-32 h-32 object-cover border m-auto"
                 />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-1">
@@ -83,7 +83,7 @@ const OurTeam = () => {
           ))}
         </div>
       </div>
-    <ContactHelp/>
+      <ContactHelp />
     </>
   );
 };
