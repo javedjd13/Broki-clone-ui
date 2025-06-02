@@ -5,11 +5,57 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { servicesLinks } from "../lib/Constant";
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { listingsData, defaultFilters } from "../lib/Constant";
+import Pagination from "../components/Pagination";
 
 const Services = () => {
   const [viewMode, setViewMode] = useState("grid"); // grid or list
+  const [currentPage, setCurrentPage] = useState(1);
+  const [listings, setListings] = useState([]);
+  const [filters, setFilters] = useState(defaultFilters);
+  const [sortBy, setSortBy] = useState("Newest");
 
+  const handleFilterChange = (key, value) => {
+    setFilters((prev) => ({ ...prev, [key]: value }));
+    setCurrentPage(1);
+  };
+  
+  const resetFilters = () => {
+    setFilters(defaultFilters);
+    setCurrentPage(1);
+  };
+  const listingsPerPage = 6;
+  
+
+  const indexOfLast = currentPage * listingsPerPage;
+  const indexOfFirst = indexOfLast - listingsPerPage;
+  const filteredListings = useMemo(() => {
+    const min = parseInt(filters.minPrice.replace(/[^\d]/g, "")) || 0;
+    const max = parseInt(filters.maxPrice.replace(/[^\d]/g, "")) || Infinity;
+
+    let result = listings.filter((listing) => {
+      const price = parseInt(listing.price.replace(/[^\d]/g, ""));
+      return (
+        (filters.location === "All Locations" ||
+          listing.location === filters.location) &&
+        price >= min &&
+        price <= max
+      );
+    });
+
+    if (sortBy === "Newest") {
+      result = result.reverse(); // Assuming latest are at the end
+    }
+
+    return result;
+  }, [listings, filters, sortBy]);
+    const totalPages = Math.ceil(filteredListings.length / listingsPerPage);
+
+  const currentListings = filteredListings.slice(indexOfFirst, indexOfLast);
+  useEffect(() => {
+    setListings(listingsData);
+  }, []);
   return (
     <div className="container mx-auto py-12 px-4 md:px-8 bg-white">
       <h2 className="text-3xl font-bold mb-1 text-gray-900">
@@ -65,16 +111,18 @@ const Services = () => {
                 viewMode === "list" ? "w-1/2 max-h-48" : ""
               }`}
             >
-              <img
-                src={service.image}
-                alt={service.title}
-                className={`object-cover ${
-                  viewMode === "list" ? "w-full h-full" : "w-full h-48"
-                }`}
-              />
+              <div className="overflow-hidden">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className={`img-animattion object-cover ${
+                    viewMode === "list" ? "w-full h-full" : "w-full h-48"
+                  }`}
+                />
+              </div>
               {service.featured && (
-                <span className="absolute top-2 left-2 bg-emerald-500 text-white text-xs font-semibold px-2 py-1 rounded">
-                  <FontAwesomeIcon icon={faBolt} className="mr-1" /> FEATURED
+                <span className="absolute top-2 left-2 bg-green-600 text-white text-[10px] font-semibold px-2 py-1 rounded">
+                  FEATURED
                 </span>
               )}
               <span className="absolute bottom-2 left-2 bg-white text-black text-xs font-bold px-2 py-1 rounded shadow">
@@ -113,20 +161,11 @@ const Services = () => {
       </div>
 
       {/* Pagination */}
-      <div className="flex flex-col items-center mt-8">
-        <div className="flex space-x-2 items-center">
-          <button className="w-8 h-8 rounded-full bg-white border text-gray-700 flex items-center justify-center shadow">
-            &lt;
-          </button>
-          <button className="w-8 h-8 rounded-full bg-emerald-400 text-white font-semibold flex items-center justify-center shadow">
-            1
-          </button>
-          <button className="w-8 h-8 rounded-full bg-white border text-gray-700 flex items-center justify-center shadow">
-            &gt;
-          </button>
-        </div>
-        <p className="text-sm text-gray-600 mt-2">1–10 of 120 available</p>
-      </div>
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={setCurrentPage}
+      />
     </div>
   );
 };

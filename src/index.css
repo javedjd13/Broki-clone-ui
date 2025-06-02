@@ -44,3 +44,50 @@ input[type="range"]::-moz-range-thumb {
   cursor: pointer;
   border: 2px solid white;
 }
+
+.img-animattion {
+  transition: all 0.4s ease;
+}
+
+.img-animattion:hover {
+  transform: scale(1.1) rotate(-1deg);
+}
+
+@media (min-width: 1440px) and (max-width: 1440px) {
+  .ml-at-1440 {
+    margin-left: 6rem; /* Tailwind's ml-24 = 6rem = 96px */
+  }
+}
+
+
+/* Navbar Style Animation */
+@keyframes slideInDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slideInDown {
+  animation-name: slideInDown;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+/* Animation */
+
+.animate-up-5 {
+  animation-delay: 0.5s;
+  animation-name: fadeInUp;
+  animation-fill-mode: both;
+  animation-duration: 0.5s;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+      transform: translateY(0px);
+
+}
+

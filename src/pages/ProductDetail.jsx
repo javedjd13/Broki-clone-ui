@@ -92,7 +92,7 @@ const ProductDetail = () => {
               <img
                 src={property.imgSrc || listing.images[0]}
                 alt="Main"
-                className="rounded-lg w-full"
+                className="rounded-lg w-full "
               />
               <div className="flex gap-2 overflow-x-auto mt-2">
                 {[1, 2, 3, 4].map((i) => (
@@ -209,10 +209,10 @@ const ProductDetail = () => {
                 Schedule a site visit
               </h3>
               <div className="flex gap-2 mb-4">
-                <button className="flex-1 py-2 bg-gray-100 rounded">
+                <button className="flex-1 py-2 bg-gray-100 rounded border border-[#181a20]">
                   In Person
                 </button>
-                <button className="flex-1 py-2 bg-gray-100 rounded">
+                <button className="flex-1 py-2 bg-gray-100 rounded border border-[#181a20]">
                   Video Chat
                 </button>
               </div>
@@ -243,7 +243,7 @@ const ProductDetail = () => {
                 ></textarea>
                 <button
                   type="submit"
-                  className="w-full bg-green-500 text-white py-2 rounded"
+                  className="w-full bg-[#26c4a0] text-white py-2 rounded hover:bg-[#1a9f85] cursor-pointer"
                 >
                   Submit a Tour Request
                 </button>
@@ -264,7 +264,7 @@ const ProductDetail = () => {
                   <p className="text-xs text-gray-500">📞 +91 9643531845</p>
                 </div>
               </div>
-              <button className="w-full border rounded py-2 mt-2">
+              <button className="w-full border rounded py-2 mt-2 hover:bg-[#181a20] hover:text-white cursor-pointer transition-all duration-300 ease-in">
                 Contact Us
               </button>
             </div>

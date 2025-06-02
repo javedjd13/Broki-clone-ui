@@ -98,6 +98,7 @@ export const properties = [
         id: 1,
         priceBold: "₹1.75 Lakh",
         priceNormal: "/mo",
+        type: "rent", // or "sale"
         title:
             "Fine Dining Restaurant for Rent in Geeta colony, Delhi - 31 , New Delhi,Delhi",
         sqft: "800 sqft",
@@ -109,6 +110,7 @@ export const properties = [
         id: 2,
         priceBold: "₹10 Lakh",
         priceNormal: "/mo",
+        type: "sale",
         title: "Restaurant Space for lease In Connaught Place",
         sqft: "3300 sqft",
         imgSrc: PropertyTwo,
@@ -118,6 +120,7 @@ export const properties = [
         id: 3,
         priceBold: "₹1.10 Lakh",
         priceNormal: "/mo",
+        type: "rent", // or "sale"
         title: "Space available on lease in Rajinder Nagar",
         sqft: "270 sqft",
         imgSrc: PropertyThree,
@@ -127,6 +130,49 @@ export const properties = [
         id: 4,
         priceBold: "₹90 Thousand",
         priceNormal: "/mo",
+        type: "sale",
+        title: "Space available on lease in old Rajinder Nagar",
+        sqft: "125 sqft",
+        imgSrc: PropertyOne,
+        imgAlt: "For Lease sign on gray building with windows",
+    },
+    {
+        id: 5,
+        priceBold: "₹1.75 Lakh",
+        priceNormal: "/mo",
+        type: "rent", // or "sale"
+        title:
+            "Fine Dining Restaurant for Rent in Geeta colony, Delhi - 31 , New Delhi,Delhi",
+        sqft: "800 sqft",
+        imgSrc: PropertyOne,
+        imgAlt:
+            "Fine Dining Restaurant Interior with orange balloons and tables arranged in rows",
+    },
+    {
+        id: 6,
+        priceBold: "₹10 Lakh",
+        priceNormal: "/mo",
+        type: "sale",
+        title: "Restaurant Space for lease In Connaught Place",
+        sqft: "3300 sqft",
+        imgSrc: PropertyTwo,
+        imgAlt: "Retail Restaurant Space For Lease sign on building window",
+    },
+    {
+        id: 7,
+        priceBold: "₹1.10 Lakh",
+        priceNormal: "/mo",
+        type: "rent", // or "sale"
+        title: "Space available on lease in Rajinder Nagar",
+        sqft: "270 sqft",
+        imgSrc: PropertyThree,
+        imgAlt: "For Lease sign on gray building with windows",
+    },
+    {
+        id: 8,
+        priceBold: "₹90 Thousand",
+        priceNormal: "/mo",
+        type: "sale",
         title: "Space available on lease in old Rajinder Nagar",
         sqft: "125 sqft",
         imgSrc: PropertyOne,
@@ -429,4 +475,87 @@ export const servicesLinks = [
             "https://www.broki.in/_next/image?url=https%3A%2F%2Fservices.broki.in%2Fstorage%2F375%2FScreenshot-2024-12-05-at-6.04.42%E2%80%AFPM.png&w=384&q=75",
         featured: true,
     },
+];
+
+// Listing Page Data
+
+export const defaultFilters = {
+    status: "All",
+    type: "All Types",
+    minPrice: "",
+    maxPrice: "",
+    location: "All Locations",
+};
+
+export const filterOptions = [
+    {
+        label: "Listing Status",
+        key: "status",
+        options: ["All", "For Sale"],
+    },
+    {
+        label: "Property Type",
+        key: "type",
+        options: ["All Types", "Restaurant", "Cloud Kitchen"],
+    },
+    {
+        label: "Location",
+        key: "location",
+        options: ["All Locations", "Ghaziabad", "Mumbai", "Delhi", "Pune"],
+    },
+];
+
+// Dashboard
+export const bookingsData = [
+  {
+    id: "BKG001",
+    service: "Home Cleaning",
+    date: "2025-05-20",
+    user: "John Doe",
+    provider: "CleanCo",
+    status: "Confirmed",
+    amount: "₹1500",
+    payment: "Paid",
+  },
+  {
+    id: "BKG002",
+    service: "Plumbing",
+    date: "2025-05-18",
+    user: "Jane Smith",
+    provider: "PipeFixers",
+    status: "Completed",
+    amount: "₹800",
+    payment: "Paid",
+  },
+  {
+    id: "BKG003",
+    service: "AC Repair",
+    date: "2025-05-15",
+    user: "Bob Martin",
+    provider: "CoolServ",
+    status: "Pending",
+    amount: "₹1200",
+    payment: "Unpaid",
+  },
+];
+
+export const propertiesData = [
+  {
+    details: "2BHK Flat in Green Valley",
+    for: "Rent",
+    status: "Active",
+    action: "Edit",
+  },
+  {
+    details: "3BHK Villa in Lakeview",
+    for: "Sale",
+    status: "Pending",
+    action: "Edit",
+  },
+  {
+    details: "Studio Apartment in Downtown",
+    for: "Rent",
+    status: "Inactive",
+    action: "Edit",
+  },
 ];

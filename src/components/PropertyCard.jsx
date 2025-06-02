@@ -12,13 +12,18 @@ const PropertyCard = ({ property }) => {
   return (
     <div
       onClick={handleClick}
-      className="bg-white shadow-md rounded-lg p-4 cursor-pointer"
+      className="bg-white shadow-md rounded-lg cursor-pointer"
     >
+      <div className="overflow-hidden rounded-t-lg">
+
       <img
-        className="w-full h-[220px] object-cover rounded-lg"
+        className="w-full h-[230px] object-cover rounded-lg img-animattion"
         src={property.imgSrc}
         alt={property.imgAlt}
-      />
+        />
+        </div>
+        <div className="p-4">
+
       <div className="mt-4 text-base leading-5 text-gray-900 font-semibold">
         <span className="font-extrabold">{property.priceBold}</span>
         <span className="font-normal italic"> {property.priceNormal}</span>
@@ -30,6 +35,7 @@ const PropertyCard = ({ property }) => {
         <FontAwesomeIcon icon={faObjectGroup} />
         {property.sqft}
       </p>
+        </div>
     </div>
   );
 };
