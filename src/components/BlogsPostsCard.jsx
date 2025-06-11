@@ -4,14 +4,18 @@ import {
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useLocation } from "react-router-dom"; // import Here to use the location hook
 
 const BlogsPostsCard = () => {
+  const location = useLocation(); // use the useLocation hook to access the location object
+  const { post } = location.state || {}; // safely access the post data from the location state
+  console.log(post);
+
   const blogPostsData = {
-    title: "12 Key Things to Check Before Leasing a Restaurant Property",
-    author: "Team Broki",
+    title: post.title || "12 Essential Tips for Leasing a Restaurant Property",
+    author: post.category,
     date: "May 2025",
-    image:
-      "https://www.broki.in/_next/image?url=https%3A%2F%2Fadmin.broki.in%2Fstorage%2F1263%2FThings-to-keep-in-mind-before-leasing-a-restaurant-property-in-India.jpg&w=1920&q=75",
+    image: post.image,
     introParagraphs: [
       "Leasing the right property can make or break your restaurant business. Before signing any lease, it’s crucial to consider these 12 key points to ensure your investment is sound and future-proof.",
       "Here’s what every aspiring restaurateur should look out for before locking in a restaurant location.",
@@ -132,8 +136,8 @@ const BlogsPostsCard = () => {
       {/* Title */}
       <div className="text-center mb-6">
         <h1 className="text-3xl font-bold">{blogPostsData.title}</h1>
-        <p className="text-sm text-gray-500 mt-2">
-          {blogPostsData.author} | {blogPostsData.date}
+        <p className="text-sm text-gray-500 mt-2 text-start">
+          {blogPostsData.author} &nbsp;|&nbsp; May 27, 2025
         </p>
       </div>
 

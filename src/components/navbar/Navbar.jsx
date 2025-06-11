@@ -228,7 +228,6 @@ const Navbar = () => {
           setIsLoggedIn={setIsLoggedIn}
         />
       )}
-      {/* {showModal && <SignInModal onClose={() => setShowModal(false)} />} */}
     </nav>
   );
 };

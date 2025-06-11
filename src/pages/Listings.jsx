@@ -65,7 +65,7 @@ const Listing = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 max-w-[1200px] mx-auto">
           {/* Sidebar */}
-          <div className="md:col-span-3">
+          <div className="md:col-span-3 ">
             <FilterSidebar
               filters={filters}
               onChange={handleFilterChange}
@@ -124,8 +124,13 @@ const Listing = () => {
                   : "flex flex-col gap-4"
               }`}
             >
-              {listingsData.map((item, idx) => (
-                <ListingCard key={idx} data={item} type="listing" viewType={viewType} />
+              {listingsData.map((item) => (
+                <ListingCard
+                  key={item.id}
+                  data={item}
+                  type="listing"
+                  viewType={viewType}
+                />
               ))}
             </div>
 

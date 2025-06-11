@@ -11,7 +11,7 @@ export default function MyProperties() {
 
   return (
     <div className="flex">
-      <div className="hidden lg:block">
+      <div className="">
         <Sidebar onLogout={handleLogout} />
       </div>
       <div className="flex-1 px-4 md:px-15 bg-gray-100 min-h-screen">
@@ -19,8 +19,8 @@ export default function MyProperties() {
           <h1 className="text-3xl font-bold mb-3">My Properties</h1>
           <p className="text-gray-500">We are glad to see you again!</p>
         </div>
-        <div className="bg-white rounded-lg shadow p-6">
-          <table className="min-w-full table-auto text-sm">
+        {/* <div className="bg-white rounded-lg shadow p-6 ">
+          <table className="min-w-full table-auto text-sm ">
             <thead className="bg-gray-100 text-gray-700 font-semibold">
               <tr>
                 <th className="text-left px-6 py-4">Listing Details</th>
@@ -52,6 +52,46 @@ export default function MyProperties() {
               )}
             </tbody>
           </table>
+        </div> */}
+        <div className="bg-white rounded-lg shadow p-6">
+          <div className="bg-white rounded-lg shadow p-6 overflow-x-auto">
+            <table className="w-[800px] table-auto text-sm">
+              <thead className="bg-gray-100 text-gray-700 font-semibold">
+                <tr>
+                  <th className="text-left px-6 py-4 min-w-[200px]">
+                    Listing Details
+                  </th>
+                  <th className="text-left px-6 py-4 min-w-[150px]">
+                    Property For
+                  </th>
+                  <th className="text-left px-6 py-4 min-w-[150px]">Status</th>
+                  <th className="text-left px-6 py-4 min-w-[150px]">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {properties.length === 0 ? (
+                  <tr>
+                    <td colSpan="4" className="text-gray-600 py-6">
+                      No properties listed.
+                    </td>
+                  </tr>
+                ) : (
+                  properties.map((property, idx) => (
+                    <tr key={idx} className="border-t hover:bg-gray-50">
+                      <td className="px-6 py-4">{property.details}</td>
+                      <td className="px-6 py-4">{property.for}</td>
+                      <td className="px-6 py-4">{property.status}</td>
+                      <td className="px-6 py-4">
+                        <button className="text-blue-600 hover:underline">
+                          {property.action}
+                        </button>
+                      </td>
+                    </tr>
+                  ))
+                )}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

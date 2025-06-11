@@ -6,7 +6,11 @@ const BlogPosts = ({ post }) => {
 
   return (
     <article className="relative rounded-xl w-full max-w-sm mx-auto cursor-pointer">
-      <Link to={`/blogs-posts-card/${post.id}`}>
+      <Link
+        to={`/blogs-posts-card/${post.id}`}
+        state={{ post }}
+        // navigate dynamically to the blog post detail page
+      >
         <div className="overflow-hidden rounded-tl-xl rounded-bl-xl">
           <img
             src={post.image}

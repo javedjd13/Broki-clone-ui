@@ -1,12 +1,28 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot, faRupeeSign } from "@fortawesome/free-solid-svg-icons";
-
+import { useNavigate } from "react-router-dom";
 const ListingCard = ({ data, type = "listing", viewType = "grid" }) => {
+  const navigate = useNavigate();
   const isService = type === "service";
-
+  const handleCardClick = () => {
+    navigate(`/property/${data.id}`, {
+      state: {
+        property: {
+          title: data.title,
+          imgSrc: data.img,
+          priceBold: `${data.price}`,
+          sqft: isService ? "" : "₹120/sqft", // optional
+          location: data.location,
+          code: data.code,
+          age: data.age,
+        },
+      },
+    });
+  };
   return (
     <div
-      className={`bg-white rounded-xl shadow overflow-hidden ${
+      onClick={handleCardClick}
+      className={`bg-white rounded-xl shadow overflow-hidden cursor-pointer w-96 ${
         viewType === "list" ? "flex" : ""
       }`}
     >

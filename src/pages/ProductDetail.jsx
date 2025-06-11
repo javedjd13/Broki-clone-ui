@@ -1,40 +1,20 @@
 import { useLocation, useParams } from "react-router";
 import NearbyListings from "../components/NearbyListings";
 import PropertyCards from "../components/PropertyCards";
+import { listingProductDetail } from "../lib/Constant";
 
 const ProductDetail = () => {
   const location = useLocation();
   const property = location.state?.property;
-  const listing = {
-    title: "Fine Dining Restaurant for Rent in Geeta Colony",
-    location: {
-      city: "New Delhi",
-      full: "Geeta Colony, Delhi - 31, New Delhi, India",
-    },
-    age: "3 Years",
-    code: "BR-outlet-7099",
-    size: "800 sqft",
-    price: 175000,
-    pricePerSqft: 219,
-    yearBuilt: 2022,
-    monthlySales: "₹400000",
-    currentRental: "₹160000",
-    propertyStatus: "For Rent",
-    propertyType: "Restaurant",
-    images: [
-      "https://admin.broki.in/storage/843/1000064828.jpg",
-      "https://admin.broki.in/storage/845/1000064829.jpg",
-      "	https://admin.broki.in/storage/844/1000064830.jpg",
-      "https://admin.broki.in/storage/843/1000064828.jpg",
-    ],
-  };
+
+
 
   return (
     <>
       <div className="p-4 md:p-8 max-w-7xl mx-auto space-y-8">
         {/* Top Breadcrumb and Header */}
         <nav className="text-sm text-gray-500 mb-2">
-          Home / Listings / {listing.location.city}
+          Home / Listings / {listingProductDetail.location.city}
         </nav>
 
         {/* Header Section */}
@@ -42,32 +22,32 @@ const ProductDetail = () => {
           <div className="flex flex-col justify-between flex-1">
             <div>
               <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-                {property.title || listing.title}
+                {property.title || listingProductDetail.title}
               </h1>
               <h2 className="text-xl text-gray-700 mb-4">
-                {listing.location.full}
+                {listingProductDetail.location.full}
               </h2>
               <div className="flex flex-wrap items-center text-sm text-gray-600 space-x-4 mb-2">
-                <span>{listing.location.city}</span>
+                <span>{listingProductDetail.location.city}</span>
                 <span className="text-green-500 font-medium">• For Rent</span>
                 <span className="flex items-center space-x-1">
-                  <span>• {listing.age} Old</span>
+                  <span>• {listingProductDetail.age} Old</span>
                 </span>
-                <span>• {listing.code}</span>
+                <span>• {listingProductDetail.code}</span>
               </div>
               <div className="flex items-center text-sm text-gray-700 space-x-4">
                 <span>🍽️ Restaurant</span>
-                <span>📏 {listing.size}</span>
+                <span>📏 {listingProductDetail.size}</span>
               </div>
             </div>
 
             {/* Pricing info for smaller screens (<= md) - bottom left */}
             <div className="block md:hidden mt-4">
               <div className="text-xl font-bold text-gray-800">
-                ₹{listing.price.toLocaleString()} /Mon
+                ₹{listingProductDetail.price.toLocaleString()} /Mon
               </div>
               <div className="text-sm text-gray-500">
-                ₹{listing.pricePerSqft} / sq ft
+                ₹{listingProductDetail.pricePerSqft} / sq ft
               </div>
             </div>
           </div>
@@ -90,7 +70,7 @@ const ProductDetail = () => {
             {/* Images */}
             <div>
               <img
-                src={property.imgSrc || listing.images[0]}
+                src={property.imgSrc || listingProductDetail.images[0]}
                 alt="Main"
                 className="rounded-lg w-full "
               />
@@ -99,7 +79,7 @@ const ProductDetail = () => {
                   <img
                     key={i}
                     src={
-                      listing.images[i - 1] || "https://via.placeholder.com/150"
+                      listingProductDetail.images[i - 1] || "https://via.placeholder.com/150"
                     }
                     alt={`thumb-${i}`}
                     className="rounded-md w-24 h-20 object-cover"
@@ -112,15 +92,15 @@ const ProductDetail = () => {
             <div className="bg-white p-4 rounded-lg shadow flex flex-wrap justify-between">
               <div className="flex flex-col items-center w-1/3">
                 <span className="text-sm text-gray-500">Year Built</span>
-                <span className="font-semibold">{listing.yearBuilt}</span>
+                <span className="font-semibold">{listingProductDetail.yearBuilt}</span>
               </div>
               <div className="flex flex-col items-center w-1/3">
                 <span className="text-sm text-gray-500">Sqft</span>
-                <span className="font-semibold">{listing.size}</span>
+                <span className="font-semibold">{listingProductDetail.size}</span>
               </div>
               <div className="flex flex-col items-center w-1/3">
                 <span className="text-sm text-gray-500">Property Type</span>
-                <span className="font-semibold">{listing.propertyType}</span>
+                <span className="font-semibold">{listingProductDetail.propertyType}</span>
               </div>
             </div>
 
@@ -136,28 +116,28 @@ const ProductDetail = () => {
 
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
-                  <strong>Property ID:</strong> {listing.code}
+                  <strong>Property ID:</strong> {listingProductDetail.code}
                 </div>
                 <div>
-                  <strong>Age of Property:</strong> {listing.age} old
+                  <strong>Age of Property:</strong> {listingProductDetail.age} old
                 </div>
                 <div>
-                  <strong>Price:</strong> ₹{listing.price.toLocaleString()}
+                  <strong>Price:</strong> ₹{listingProductDetail.price.toLocaleString()}
                 </div>
                 <div>
-                  <strong>Property Type:</strong> {listing.propertyType}
+                  <strong>Property Type:</strong> {listingProductDetail.propertyType}
                 </div>
                 <div>
-                  <strong>Property Size:</strong> {listing.size}
+                  <strong>Property Size:</strong> {listingProductDetail.size}
                 </div>
                 <div>
-                  <strong>Property Status:</strong> {listing.propertyStatus}
+                  <strong>Property Status:</strong> {listingProductDetail.propertyStatus}
                 </div>
                 <div>
-                  <strong>Monthly Sales:</strong> {listing.monthlySales}
+                  <strong>Monthly Sales:</strong> {listingProductDetail.monthlySales}
                 </div>
                 <div>
-                  <strong>Current Rental:</strong> {listing.currentRental}
+                  <strong>Current Rental:</strong> {listingProductDetail.currentRental}
                 </div>
               </div>
             </div>
@@ -167,7 +147,7 @@ const ProductDetail = () => {
               <h4 className="font-semibold mb-2">Address</h4>
               <div className="text-sm text-gray-600 space-y-1">
                 <p>
-                  <strong>City:</strong> {listing.location.city}
+                  <strong>City:</strong> {listingProductDetail.location.city}
                 </p>
                 <p>
                   <strong>State:</strong> Delhi
