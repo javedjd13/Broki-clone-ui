@@ -20,13 +20,12 @@ const Services = () => {
     setFilters((prev) => ({ ...prev, [key]: value }));
     setCurrentPage(1);
   };
-  
+
   const resetFilters = () => {
     setFilters(defaultFilters);
     setCurrentPage(1);
   };
   const listingsPerPage = 6;
-  
 
   const indexOfLast = currentPage * listingsPerPage;
   const indexOfFirst = indexOfLast - listingsPerPage;
@@ -50,7 +49,7 @@ const Services = () => {
 
     return result;
   }, [listings, filters, sortBy]);
-    const totalPages = Math.ceil(filteredListings.length / listingsPerPage);
+  const totalPages = Math.ceil(filteredListings.length / listingsPerPage);
 
   const currentListings = filteredListings.slice(indexOfFirst, indexOfLast);
   useEffect(() => {
@@ -98,6 +97,7 @@ const Services = () => {
             : "grid grid-cols-1 md:grid-cols-2 gap-6"
         }`}
       >
+        {/* Card Section */}
         {servicesLinks.map((service, idx) => (
           <div
             key={idx}

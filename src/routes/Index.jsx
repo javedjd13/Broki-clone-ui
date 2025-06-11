@@ -1,4 +1,5 @@
 import Home from "../pages/Home";
+import Payment from "../pages/Payment";
 import MainLayout from "../Layouts/MainLayout/MainLayout";
 import Blogs from "../pages/Blogs";
 import Listings from "../pages/Listings";
@@ -12,10 +13,12 @@ import BlogPosts from "../components/BlogPosts";
 import MyBookings from "../pages/dashboard/MyBookings";
 import MyProperties from "../pages/dashboard/MyProperties";
 import AddProperty from "../pages/dashboard/AddProperty";
+import ServicesDetail from "../pages/ServicesDetail";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+
     children: [
       {
         index: true,
@@ -68,6 +71,14 @@ const router = createBrowserRouter([
       {
         path: "/add-property",
         element: <AddProperty />,
+      },
+      {
+        path: "/payment",
+        element: <Payment />,
+      },
+      {
+        path: "/services-detail",
+        element: <ServicesDetail />,
       },
     ],
   },

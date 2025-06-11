@@ -318,8 +318,11 @@ export const blogPost = [
         image:
             BlogThree,
         date: new Date(2023, 7, 1), // August 1
+        
     },
 ];
+
+
 
 export const appImages = [
     {
@@ -335,6 +338,7 @@ export const appImages = [
 
 export const listingsData = [
     {
+        id: 1,
         price: "₹8 Lakh",
         title: "Restaurant for sale in Ghaziabad",
         location: "Ghaziabad",
@@ -342,6 +346,7 @@ export const listingsData = [
         img: "	https://admin.broki.in/storage/1264/7248.jpeg",
     },
     {
+        id: 2,
         price: "₹10 Lakh",
         title: "Cloud kitchen set up for sale in Powai",
         location: "Mumbai",
@@ -350,6 +355,7 @@ export const listingsData = [
         featured: true,
     },
     {
+        id: 3,
         price: "₹22 Lakh",
         title: "Luxury Cafe Space in Delhi",
         location: "Delhi",
@@ -358,6 +364,7 @@ export const listingsData = [
         featured: true,
     },
     {
+        id: 4,
         price: "₹6 Lakh",
         title: "Takeaway Joint in Pune",
         location: "Pune",
@@ -365,6 +372,7 @@ export const listingsData = [
         img: "	https://admin.broki.in/storage/1264/7248.jpeg",
     },
     {
+        id: 5,
         price: "₹8 Lakh",
         title: "Restaurant for sale in Ghaziabad",
         location: "Ghaziabad",
@@ -372,6 +380,7 @@ export const listingsData = [
         img: "	https://admin.broki.in/storage/1245/1000296914.jpg",
     },
     {
+        id  : 6,
         price: "₹10 Lakh",
         title: "Cloud kitchen set up for sale in Powai",
         location: "Mumbai",
@@ -380,6 +389,7 @@ export const listingsData = [
         featured: true,
     },
     {
+        id: 7,
         price: "₹22 Lakh",
         title: "Luxury Cafe Space in Delhi",
         location: "Delhi",
@@ -388,6 +398,7 @@ export const listingsData = [
         featured: true,
     },
     {
+        id: 8,
         price: "₹6 Lakh",
         title: "Takeaway Joint in Pune",
         location: "Pune",
@@ -395,6 +406,7 @@ export const listingsData = [
         img: "	https://admin.broki.in/storage/1245/1000296914.jpg",
     },
     {
+        id: 9,
         price: "₹8 Lakh",
         title: "Restaurant for sale in Ghaziabad",
         location: "Ghaziabad",
@@ -402,6 +414,7 @@ export const listingsData = [
         img: "	https://admin.broki.in/storage/1264/7248.jpeg",
     },
     {
+        id: 10,
         price: "₹10 Lakh",
         title: "Cloud kitchen set up for sale in Powai",
         location: "Mumbai",
@@ -410,6 +423,7 @@ export const listingsData = [
         featured: true,
     },
     {
+        id: 11,
         price: "₹22 Lakh",
         title: "Luxury Cafe Space in Delhi",
         location: "Delhi",
@@ -418,6 +432,7 @@ export const listingsData = [
         featured: true,
     },
     {
+        id: 12,
         price: "₹6 Lakh",
         title: "Takeaway Joint in Pune",
         location: "Pune",
@@ -559,3 +574,32 @@ export const propertiesData = [
     action: "Edit",
   },
 ];
+
+  export const listingProductDetail = {
+    title: "Fine Dining Restaurant for Rent in Geeta Colony",
+    location: {
+      city: "New Delhi",
+      full: "Geeta Colony, Delhi - 31, New Delhi, India",
+    },
+    age: "3 Years",
+    code: "BR-outlet-7099",
+    size: "800 sqft",
+    price: 175000,
+    pricePerSqft: 219,
+    yearBuilt: 2022,
+    monthlySales: "₹400000",
+    currentRental: "₹160000",
+    propertyStatus: "For Rent",
+    propertyType: "Restaurant",
+    images: [
+      "https://admin.broki.in/storage/843/1000064828.jpg",
+      "https://admin.broki.in/storage/845/1000064829.jpg",
+      "	https://admin.broki.in/storage/844/1000064830.jpg",
+      "https://admin.broki.in/storage/843/1000064828.jpg",
+    ],
+  };
+
+//   Services Detail Data
+
+
+

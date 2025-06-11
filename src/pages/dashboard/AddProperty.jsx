@@ -42,10 +42,10 @@ const AddProperty = () => {
   };
   return (
     <div className="flex">
-      <div className="hidden lg:block">
+      <div className="">
         <Sidebar onLogout={handleLogout} />
       </div>
-      <div className="flex-1 px-4 py-4 md:px-15 bg-[#fff] min-h-screen">
+      <div className="flex-1 px-4 py-2 md:px-15 bg-[#fff] min-h-screen">
         <div className="py-12">
           <h1 className="text-3xl font-bold mb-3">Add New Property</h1>
           <p className="text-gray-500">We are glad to see you again!</p>
