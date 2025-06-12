@@ -13,7 +13,7 @@ import BlogPosts from "../components/BlogPosts";
 import MyBookings from "../pages/dashboard/MyBookings";
 import MyProperties from "../pages/dashboard/MyProperties";
 import AddProperty from "../pages/dashboard/AddProperty";
-import ServicesDetail from "../pages/ServicesDetail";
+import ServicesDetail from "../components/ServicesPage/ServicesDetail";
 const router = createBrowserRouter([
   {
     path: "/",
