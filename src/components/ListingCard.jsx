@@ -1,9 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot, faRupeeSign } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
+
 const ListingCard = ({ data, type = "listing", viewType = "grid" }) => {
   const navigate = useNavigate();
   const isService = type === "service";
+
   const handleCardClick = () => {
     navigate(`/property/${data.id}`, {
       state: {
@@ -11,7 +13,7 @@ const ListingCard = ({ data, type = "listing", viewType = "grid" }) => {
           title: data.title,
           imgSrc: data.img,
           priceBold: `${data.price}`,
-          sqft: isService ? "" : "₹120/sqft", // optional
+          sqft: isService ? "" : "₹120/sqft",
           location: data.location,
           code: data.code,
           age: data.age,
@@ -19,16 +21,19 @@ const ListingCard = ({ data, type = "listing", viewType = "grid" }) => {
       },
     });
   };
+
   return (
     <div
       onClick={handleCardClick}
-      className={`bg-white rounded-xl shadow overflow-hidden cursor-pointer w-96 ${
+      className={`bg-white rounded-xl shadow overflow-hidden cursor-pointer w-full ${
         viewType === "list" ? "flex" : ""
       }`}
     >
       {/* Image */}
       <div
-        className={`relative ${viewType === "list" ? "w-1/2 max-h-48" : ""}`}
+        className={`relative ${
+          viewType === "list" ? "w-[300px] max-h-48" : ""
+        }`}
       >
         <div className="overflow-hidden">
           <img

@@ -318,7 +318,7 @@ export const blogPost = [
         image:
             BlogThree,
         date: new Date(2023, 7, 1), // August 1
-        
+
     },
 ];
 
@@ -343,7 +343,7 @@ export const listingsData = [
         title: "Restaurant for sale in Ghaziabad",
         location: "Ghaziabad",
         size: "350 sqft",
-        img: "	https://admin.broki.in/storage/1264/7248.jpeg",
+        img: "https://admin.broki.in/storage/1284/1000011235.jpg",
     },
     {
         id: 2,
@@ -360,7 +360,7 @@ export const listingsData = [
         title: "Luxury Cafe Space in Delhi",
         location: "Delhi",
         size: "400 sqft",
-        img: "	https://admin.broki.in/storage/1245/1000296914.jpg",
+        img: "	https://admin.broki.in/storage/1224/7239.jpeg",
         featured: true,
     },
     {
@@ -369,7 +369,7 @@ export const listingsData = [
         title: "Takeaway Joint in Pune",
         location: "Pune",
         size: "150 sqft",
-        img: "	https://admin.broki.in/storage/1264/7248.jpeg",
+        img: "	https://admin.broki.in/storage/1219/7238.jpeg",
     },
     {
         id: 5,
@@ -377,10 +377,10 @@ export const listingsData = [
         title: "Restaurant for sale in Ghaziabad",
         location: "Ghaziabad",
         size: "350 sqft",
-        img: "	https://admin.broki.in/storage/1245/1000296914.jpg",
+        img: "https://admin.broki.in/storage/1236/7245.jpeg",
     },
     {
-        id  : 6,
+        id: 6,
         price: "₹10 Lakh",
         title: "Cloud kitchen set up for sale in Powai",
         location: "Mumbai",
@@ -394,7 +394,7 @@ export const listingsData = [
         title: "Luxury Cafe Space in Delhi",
         location: "Delhi",
         size: "400 sqft",
-        img: "	https://admin.broki.in/storage/1264/7248.jpeg",
+        img: "https://admin.broki.in/storage/1236/7245.jpeg",
         featured: true,
     },
     {
@@ -419,43 +419,35 @@ export const listingsData = [
         title: "Cloud kitchen set up for sale in Powai",
         location: "Mumbai",
         size: "180 sqft",
-        img: "	https://admin.broki.in/storage/1245/1000296914.jpg",
+        img: "	https://admin.broki.in/storage/1219/7238.jpeg",
         featured: true,
     },
     {
         id: 11,
-        price: "₹22 Lakh",
-        title: "Luxury Cafe Space in Delhi",
+        price: "₹6 Lakh",
+        title: "Takeaway Joint in Pune",
         location: "Delhi",
         size: "400 sqft",
-        img: "	https://admin.broki.in/storage/1264/7248.jpeg",
+        img: "	https://admin.broki.in/storage/1224/7239.jpeg",
         featured: true,
     },
     {
         id: 12,
-        price: "₹6 Lakh",
-        title: "Takeaway Joint in Pune",
+        price: "₹22 Lakh",
+        title: " Luxury Cafe Space in Delhi",
         location: "Pune",
         size: "150 sqft",
-        img: "	https://admin.broki.in/storage/1245/1000296914.jpg",
+
+        img: "https://admin.broki.in/storage/1284/1000011235.jpg",
     },
 ];
-
 export const servicesLinks = [
     {
         title: "Food Photography by Anamika",
         provider: "Anamika Vaishnav",
         price: 500,
         image:
-            "https://www.broki.in/_next/image?url=https%3A%2F%2Fservices.broki.in%2Fstorage%2F400%2FScreenshot-2024-12-20-at-1.00.24%E2%80%AFPM.png&w=384&q=75",
-        featured: true,
-    },
-    {
-        title: "Food Photography by Indraneil",
-        provider: "Indraneil Tomar",
-        price: 2667,
-        image:
-            "https://www.broki.in/_next/image?url=https%3A%2F%2Fservices.broki.in%2Fstorage%2F375%2FScreenshot-2024-12-05-at-6.04.42%E2%80%AFPM.png&w=384&q=75",
+            "https://www.broki.in/_next/image?url=https%3A%2F%2Fservices.broki.in%2Fstorage%2F403%2FScreenshot-2025-01-20-at-11.52.14%E2%80%AFAM.png&w=828&q=75",
         featured: true,
     },
     {
@@ -463,7 +455,15 @@ export const servicesLinks = [
         provider: "Dr. Manjula Viljh",
         price: 2500,
         image:
-            "https://www.broki.in/_next/image?url=https%3A%2F%2Fservices.broki.in%2Fstorage%2F400%2FScreenshot-2024-12-20-at-1.00.24%E2%80%AFPM.png&w=384&q=75",
+            "https://www.broki.in/_next/image?url=https%3A%2F%2Fservices.broki.in%2Fstorage%2F378%2FScreenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png&w=828&q=75",
+        featured: true,
+    },
+    {
+        title: "Food Photography by Indraneil",
+        provider: "Indraneil Tomar",
+        price: 2667,
+        image:
+            "https://www.broki.in/_next/image?url=https%3A%2F%2Fservices.broki.in%2Fstorage%2F389%2FDSC_0077.jpg&w=828&q=75",
         featured: true,
     },
     {
@@ -471,7 +471,7 @@ export const servicesLinks = [
         provider: "Dev Patel",
         price: 1000,
         image:
-            "https://www.broki.in/_next/image?url=https%3A%2F%2Fservices.broki.in%2Fstorage%2F375%2FScreenshot-2024-12-05-at-6.04.42%E2%80%AFPM.png&w=384&q=75",
+            "https://www.broki.in/_next/image?url=https%3A%2F%2Fservices.broki.in%2Fstorage%2F381%2FScreenshot-2024-12-05-at-6.08.11%E2%80%AFPM.png&w=828&q=75",
         featured: true,
     },
     {
@@ -479,7 +479,7 @@ export const servicesLinks = [
         provider: "Riya Sharma",
         price: 15000,
         image:
-            "https://www.broki.in/_next/image?url=https%3A%2F%2Fservices.broki.in%2Fstorage%2F400%2FScreenshot-2024-12-20-at-1.00.24%E2%80%AFPM.png&w=384&q=75",
+            "https://www.broki.in/_next/image?url=https%3A%2F%2Fservices.broki.in%2Fstorage%2F382%2FScreenshot-2024-12-05-at-6.09.21%E2%80%AFPM.png&w=828&q=75",
         featured: false,
     },
     {
@@ -522,64 +522,64 @@ export const filterOptions = [
 
 // Dashboard
 export const bookingsData = [
-  {
-    id: "BKG001",
-    service: "Home Cleaning",
-    date: "2025-05-20",
-    user: "John Doe",
-    provider: "CleanCo",
-    status: "Confirmed",
-    amount: "₹1500",
-    payment: "Paid",
-  },
-  {
-    id: "BKG002",
-    service: "Plumbing",
-    date: "2025-05-18",
-    user: "Jane Smith",
-    provider: "PipeFixers",
-    status: "Completed",
-    amount: "₹800",
-    payment: "Paid",
-  },
-  {
-    id: "BKG003",
-    service: "AC Repair",
-    date: "2025-05-15",
-    user: "Bob Martin",
-    provider: "CoolServ",
-    status: "Pending",
-    amount: "₹1200",
-    payment: "Unpaid",
-  },
+    {
+        id: "BKG001",
+        service: "Home Cleaning",
+        date: "2025-05-20",
+        user: "John Doe",
+        provider: "CleanCo",
+        status: "Confirmed",
+        amount: "₹1500",
+        payment: "Paid",
+    },
+    {
+        id: "BKG002",
+        service: "Plumbing",
+        date: "2025-05-18",
+        user: "Jane Smith",
+        provider: "PipeFixers",
+        status: "Completed",
+        amount: "₹800",
+        payment: "Paid",
+    },
+    {
+        id: "BKG003",
+        service: "AC Repair",
+        date: "2025-05-15",
+        user: "Bob Martin",
+        provider: "CoolServ",
+        status: "Pending",
+        amount: "₹1200",
+        payment: "Unpaid",
+    },
 ];
 
 export const propertiesData = [
-  {
-    details: "2BHK Flat in Green Valley",
-    for: "Rent",
-    status: "Active",
-    action: "Edit",
-  },
-  {
-    details: "3BHK Villa in Lakeview",
-    for: "Sale",
-    status: "Pending",
-    action: "Edit",
-  },
-  {
-    details: "Studio Apartment in Downtown",
-    for: "Rent",
-    status: "Inactive",
-    action: "Edit",
-  },
+    {
+        details: "2BHK Flat in Green Valley",
+        for: "Rent",
+        status: "Active",
+        action: "Edit",
+    },
+    {
+        details: "3BHK Villa in Lakeview",
+        for: "Sale",
+        status: "Pending",
+        action: "Edit",
+    },
+    {
+        details: "Studio Apartment in Downtown",
+        for: "Rent",
+        status: "Inactive",
+        action: "Edit",
+    },
 ];
 
-  export const listingProductDetail = {
+export const listingProductDetail = {
     title: "Fine Dining Restaurant for Rent in Geeta Colony",
     location: {
-      city: "New Delhi",
-      full: "Geeta Colony, Delhi - 31, New Delhi, India",
+        city: "New Delhi",
+        full: "Geeta Colony, Delhi - 31, New Delhi, India",
     },
     age: "3 Years",
     code: "BR-outlet-7099",
@@ -592,12 +592,12 @@ export const propertiesData = [
     propertyStatus: "For Rent",
     propertyType: "Restaurant",
     images: [
-      "https://admin.broki.in/storage/843/1000064828.jpg",
-      "https://admin.broki.in/storage/845/1000064829.jpg",
-      "	https://admin.broki.in/storage/844/1000064830.jpg",
-      "https://admin.broki.in/storage/843/1000064828.jpg",
+        "https://admin.broki.in/storage/843/1000064828.jpg",
+        "https://admin.broki.in/storage/845/1000064829.jpg",
+        "	https://admin.broki.in/storage/844/1000064830.jpg",
+        "https://admin.broki.in/storage/843/1000064828.jpg",
     ],
-  };
+};
 
 //   Home Data
 
@@ -612,8 +612,8 @@ import BlogImg3 from "../assets/images/blogthree.webp";
 
 // ✅ Tabs for switching between Real Estate and Services
 export const tabss = [
-  { id: "real-estate", label: "Real Estate" },
-  { id: "services", label: "Services" },
+    { id: "real-estate", label: "Real Estate" },
+    { id: "services", label: "Services" },
 ];
 
 // ✅ Cities for dropdown
@@ -622,24 +622,380 @@ export const citiess = ["Mumbai", "Delhi", "Bangalore", "Pune", "Hyderabad"];
 // ✅ Categories
 export const categoriess = ["Residential", "Commercial", "Plot", "Farmhouse", "Villa"];
 
-// ✅ Blog post data
-// export const blogPost = [
+// Services Section Data Below 
+
+
+import {
+    faHouse,
+    faCalendar,
+    faUserTie,
+} from "@fortawesome/free-solid-svg-icons";
+import EYS_img1 from "../assets/images/servicesDetail-img.png";
+import EYS_img2 from "../assets/images/servicesDetail-img.png";
+import EYS_img3 from "../assets/images/servicesDetail-img.png";
+
+// Placeholder for fallback
+export const PLACEHOLDER_IMAGE = "https://via.placeholder.com/600x400";
+
+// Static service type
+export const SERVICE_TYPE = "On-Site Service";
+
+// Overview section fields
+export const getOverviewData = (price, category) => [
+    { label: "Price", value: `₹${price}`, icon: faHouse },
+    { label: "Category", value: category, icon: faCalendar },
+    { label: "Service Type", value: SERVICE_TYPE, icon: faUserTie },
+];
+
+// Price breakdown fields
+export const getPriceBreakdown = (price, addOnsTotal, tax) => [
+    { label: "Base Price", amount: price },
+    { label: "Base Discount (0%)", amount: 0 },
+    { label: "Addons Total", amount: addOnsTotal },
+    { label: "Tax (18%)", amount: tax },
+];
+
+// Add-on icons (if not embedded directly in data)
+export const ADDON_ICONS = {
+    "Extra item": EYS_img1,
+    "Props/Crockery/Styling": EYS_img2,
+    "Additional Setup Fee": EYS_img3,
+};
+
+export const OVERVIEW_FIELDS = [
+    { label: "Price", icon: "faHouse" },
+    { label: "Category", icon: "faCalendar" },
+    { label: "Service Type", value: "On-Site Service", icon: "faUserTie" },
+];
+
+export const DEFAULT_SERVICE = {
+    name: "Unnamed",
+    price: 0,
+    category: "General",
+    itemsCovered: 1,
+    images: [],
+    addOns: [],
+};
+
+export const PRICE_LABELS = {
+    basePrice: "Base Price",
+    discount: "Base Discount (0%)",
+    addons: "Addons Total",
+    tax: "Tax (18%)",
+    total: "Total Price",
+};
+const food1 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
+const anamika2 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
+const anamika3 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
+const manish1 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
+const manish2 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
+const ishant1 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
+const MonkeyDluffy = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
+const indra1 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
+const indra2 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
+const indra3 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
+const indra4 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
+const Krishnendu1 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
+const Krishnendu2 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
+const manjula1 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
+const manjula2 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
+const manjula3 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
+
+export const servicesData = [
+    {
+        serviceId: "AN001",
+        name: "Anamika",
+        price: 500,
+        category: "Food Photography",
+        itemsCovered: 1,
+        image: food1,
+        images: [food1, anamika2, anamika3],
+        addOns: [
+            { title: "Extra item", price: 200 },
+            { title: "Props/Crockery/Styling", price: 350 },
+            { title: "Additional Setup Fee", price: 500 },
+        ],
+    },
+    {
+        serviceId: "EX005",
+        name: "Manish",
+        price: 1800,
+        category: "Food Photography",
+        itemsCovered: 2,
+        image: manish1,
+        images: [manish1, manish2],
+        addOns: [
+            { title: "Extra item", price: 450 },
+            { title: "Props/Crockery/Styling", price: 900 },
+            { title: "Additional Setup Fee", price: 1200 },
+        ],
+    },
+    {
+        serviceId: "EX006",
+        name: "Ishant",
+        price: 900,
+        category: "Food Photography",
+        itemsCovered: 1,
+        image: ishant1,
+        images: [ishant1],
+        addOns: [
+            { title: "Extra item", price: 250 },
+            { title: "Props/Crockery/Styling", price: 400 },
+            { title: "Additional Setup Fee", price: 600 },
+        ],
+    },
+    {
+        serviceId: "EX007",
+        name: "MonkeyDluffy",
+        price: 2100,
+        category: "Food Photography",
+        itemsCovered: 3,
+        image: MonkeyDluffy,
+        images: [food1],
+        addOns: [
+            { title: "Extra item", price: 500 },
+            { title: "Props/Crockery/Styling", price: 1200 },
+            { title: "Additional Setup Fee", price: 1800 },
+        ],
+    },
+    {
+        serviceId: "IN002",
+        name: "Indraneil",
+        price: 2667,
+        category: "Food Photography",
+        itemsCovered: 2,
+        image: indra1,
+        images: [indra1, indra2, indra3, indra4],
+        addOns: [
+            { title: "Extra item", price: 400 },
+            { title: "Props/Crockery/Styling", price: 900 },
+            { title: "Additional Setup Fee", price: 1500 },
+        ],
+    },
+    {
+        serviceId: "KR004",
+        name: "Krishnendu",
+        price: 1000,
+        category: "Food Photography",
+        itemsCovered: 1,
+        image: Krishnendu1,
+        images: [Krishnendu1, Krishnendu2],
+        addOns: [
+            { title: "Extra item", price: 300 },
+            { title: "Props/Crockery/Styling", price: 600 },
+            { title: "Additional Setup Fee", price: 800 },
+        ],
+    },
+    {
+        serviceId: "MJ003",
+        name: "Manjula",
+        price: 2500,
+        category: "Food Photography",
+        itemsCovered: 1,
+        image: manjula1,
+        images: [manjula1, manjula2, manjula3],
+        addOns: [
+            { title: "Extra item", price: 350 },
+            { title: "Props/Crockery/Styling", price: 850 },
+            { title: "Additional Setup Fee", price: 1000 },
+        ],
+    },
+];
+
+// export const listingsData = [
 //   {
-//     id: 1,
-//     title: "Top 10 Tips for Better Property Photos",
-//     excerpt: "Improve your listing visibility with these expert photography tips...",
-//     image: BlogImg1,
+//     id: "BR-outlet-001",
+//     price: "₹8 Lakh",
+//     title: "Restaurant for sale in Ghaziabad",
+//     location: "Ghaziabad",
+//     size: "350 sqft",
+//     type: "Restaurant",
+
+//     status: "For Sale",
+//     age: "3 years old",
+//     builtYear: 2021,
+//     monthlySales: "₹3,00,000",
+//     currentRental: "₹30,000",
+//     description:
+//       "Well-running family restaurant with stable monthly revenue and great footfall.",
+//     img: "https://admin.broki.in/storage/1264/7248.jpeg",
 //   },
 //   {
-//     id: 2,
-//     title: "Why Hire a Professional Photographer?",
-//     excerpt: "Here's why you should consider hiring a pro for your property shoots...",
-//     image: BlogImg2,
+//     id: "BR-outlet-002",
+//     price: "₹10 Lakh",
+//     title: "Cloud kitchen set up for sale in Powai",
+//     location: "Mumbai",
+//     size: "180 sqft",
+//     type: "Cloud Kitchen",
+//     status: "For Sale",
+//     age: "2 years old",
+//     builtYear: 2022,
+//     monthlySales: "₹2,00,000",
+//     currentRental: "₹25,000",
+//     description:
+//       "Modern cloud kitchen in a prime location with all essential kitchen equipment.",
+//     img: "https://admin.broki.in/storage/1239/7247.jpeg",
+//     featured: true,
 //   },
 //   {
-//     id: 3,
-//     title: "Interior Design Trends in 2025",
-//     excerpt: "Get inspired by the latest styles shaping modern homes...",
-//     image: BlogImg3,
+//     id: "BR-outlet-003",
+//     price: "₹22 Lakh",
+//     title: "Luxury Cafe Space in Delhi",
+//     location: "Delhi",
+//     size: "400 sqft",
+//     type: "Restaurant",
+//     status: "For Rent",
+//     age: "1 year old",
+//     builtYear: 2023,
+//     monthlySales: "₹5,00,000",
+//     currentRental: "₹70,000",
+//     description:
+//       "Premium cafe in South Delhi with designer interiors and steady clientele.",
+//     img: "https://admin.broki.in/storage/1245/1000296914.jpg",
+//     featured: true,
 //   },
+//   {
+//     id: "BR-outlet-004",
+//     price: "₹6 Lakh",
+//     title: "Takeaway Joint in Pune",
+//     location: "Pune",
+//     size: "150 sqft",
+//     type: "Take Away",
+//     status: "For Sale",
+//     age: "2.5 years old",
+//     builtYear: 2021,
+//     monthlySales: "₹1,50,000",
+//     currentRental: "₹15,000",
+//     description:
+//       "Small yet efficient takeaway outlet in a high-traffic commercial area.",
+//     img: "https://admin.broki.in/storage/1264/7248.jpeg",
+//   },
+//   {
+//     id: "BR-outlet-005",
+//     price: "₹8 Lakh",
+//     title: "Restaurant for sale in Ghaziabad",
+//     location: "Ghaziabad",
+//     size: "350 sqft",
+//     type: "Restaurant",
+//     status: "For Sale",
+//     age: "3 years old",
+//     builtYear: 2021,
+//     monthlySales: "₹3,00,000",
+//     currentRental: "₹30,000",
+//     description:
+//       "Duplicate entry with alternate photo. Great potential for dine-in setup.",
+//     img: "https://admin.broki.in/storage/1245/1000296914.jpg",
+//   },
+//   {
+//     id: "BR-outlet-006",
+//     price: "₹10 Lakh",
+//     title: "Cloud kitchen set up for sale in Powai",
+//     location: "Mumbai",
+//     size: "180 sqft",
+//     type: "Cloud Kitchen",
+//     status: "For Sale",
+//     age: "2 years old",
+//     builtYear: 2022,
+//     monthlySales: "₹2,00,000",
+//     currentRental: "₹25,000",
+//     description: "Fully equipped cloud kitchen in thriving delivery zone.",
+//     img: "https://admin.broki.in/storage/1264/7248.jpeg",
+//     featured: true,
+//   },
+//   {
+//     id: "BR-outlet-007",
+//     price: "₹22 Lakh",
+//     title: "Luxury Cafe Space in Delhi",
+//     location: "Delhi",
+//     size: "400 sqft",
+//     type: "Cloud Kitchen",
+//     status: "For Sale",
+//     age: "1.5 years old",
+//     builtYear: 2023,
+//     monthlySales: "₹4,50,000",
+//     currentRental: "₹60,000",
+//     description:
+//       "Spacious kitchen with potential for dine-in or cloud use in central Delhi.",
+//     img: "https://admin.broki.in/storage/1264/7248.jpeg",
+//     featured: true,
+//   },
+//   {
+//     id: "BR-outlet-008",
+//     price: "₹6 Lakh",
+//     title: "Takeaway Joint in Pune",
+//     location: "Pune",
+//     size: "150 sqft",
+//     type: "Take Away",
+//     status: "For Sale",
+//     age: "2.5 years old",
+//     builtYear: 2021,
+//     monthlySales: "₹1,50,000",
+//     currentRental: "₹15,000",
+//     description: "Great opportunity for a startup food venture in IT zone.",
+//     img: "https://admin.broki.in/storage/1245/1000296914.jpg",
+//   },
+//   {
+//     id: "BR-outlet-009",
+//     price: "₹8 Lakh",
+//     title: "Restaurant for sale in Ghaziabad",
+//     location: "Ghaziabad",
+//     size: "350 sqft",
+//     type: "Restaurant",
+//     status: "For Sale",
+//     age: "3 years old",
+//     builtYear: 2021,
+//     monthlySales: "₹3,00,000",
+//     currentRental: "₹30,000",
+//     description:
+//       "Compact and efficient restaurant layout with regular footfall.",
+//     img: "https://admin.broki.in/storage/1264/7248.jpeg",
+//   },
+//   {
+//     id: "BR-outlet-010",
+//     price: "₹10 Lakh",
+//     title: "Cloud kitchen set up for sale in Powai",
+//     location: "Mumbai",
+//     size: "180 sqft",
+//     type: "Cloud Kitchen",
+//     status: "For Rent",
+//     age: "2 years old",
+//     builtYear: 2022,
+//     monthlySales: "₹2,00,000",
+//     currentRental: "₹22,000",
+//     description:
+//       "Rent-based running cloud kitchen ideal for delivery-only brands.",
+//     img: "https://admin.broki.in/storage/1245/1000296914.jpg",
+//     featured: true,
+//   },
+//   {
+//     id: "BR-outlet-011",
+//     price: "₹22 Lakh",
+//     title: "Luxury Cafe Space in Delhi",
+//     location: "Delhi",
+//     size: "400 sqft",
+//     type: "Restaurant",
+//     status: "For Sale",
+//     age: "1 year old",
+//     builtYear: 2023,
+//     monthlySales: "₹5,00,000",
+//     currentRental: "₹65,000",
+//     description: "Elegant and luxurious cafe space for premium clientele.",
+//     img: "https://admin.broki.in/storage/1264/7248.jpeg",
+//     featured: true,
+//   },
+//   {
+//     id: "BR-outlet-012",
+//     price: "₹6 Lakh",
+//     title: "Takeaway Joint in Pune",
+//     location: "Pune",
+//     size: "150 sqft",
+//     type: "Take Away",
+//     status: "For Sale",
+//     age: "2.5 years old",
+//     builtYear: 2021,
+//     monthlySales: "₹1,50,000",
+//     currentRental: "₹15,000",
+//     description: "Consistent customer base from nearby offices and hostels.",
+//     img: "https://admin.broki.in/storage/1245/1000296914.jpg",
+//   },
 // ];

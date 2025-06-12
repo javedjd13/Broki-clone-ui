@@ -18,7 +18,7 @@ const FilterSidebar = ({ filters, onChange, onReset }) => {
     if (value >= minPrice) setMaxPrice(value);
   };
   return (
-    <aside className="bg-gray-50 p-4 rounded-xl shadow space-y-6 sticky top-6">
+    <aside className="bg-gray-50 p-4 rounded-xl shadow space-y-6 sticky top-6 ">
       {filterOptions.map(({ label, key, options }) => (
         <>
           <div key={key}>

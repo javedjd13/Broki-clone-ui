@@ -59,7 +59,6 @@ input[type="range"]::-moz-range-thumb {
   }
 }
 
-
 /* Navbar Style Animation */
 @keyframes slideInDown {
   0% {
@@ -87,7 +86,19 @@ input[type="range"]::-moz-range-thumb {
   animation-duration: 0.5s;
   -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
-      transform: translateY(0px);
-
+  transform: translateY(0px);
 }
 
+/* Listing Crads */
+@media (width: 768px) {
+  .listing-layout-md-exact {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 769px) {
+  .listing-layout-md-exact {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+}
