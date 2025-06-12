@@ -1,5 +1,3 @@
-// Updated PriceFilter component with proper responsive input alignment
-
 import { useState } from "react";
 
 const PriceFilter = () => {

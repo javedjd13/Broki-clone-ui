@@ -599,7 +599,47 @@ export const propertiesData = [
     ],
   };
 
-//   Services Detail Data
+//   Home Data
 
 
 
+// src/lib/constants.js
+
+// ✅ Static imports for images
+import BlogImg1 from "../assets//images/blogone.webp";
+import BlogImg2 from "../assets/images/blogtwo.webp";
+import BlogImg3 from "../assets/images/blogthree.webp";
+
+// ✅ Tabs for switching between Real Estate and Services
+export const tabss = [
+  { id: "real-estate", label: "Real Estate" },
+  { id: "services", label: "Services" },
+];
+
+// ✅ Cities for dropdown
+export const citiess = ["Mumbai", "Delhi", "Bangalore", "Pune", "Hyderabad"];
+
+// ✅ Categories
+export const categoriess = ["Residential", "Commercial", "Plot", "Farmhouse", "Villa"];
+
+// ✅ Blog post data
+// export const blogPost = [
+//   {
+//     id: 1,
+//     title: "Top 10 Tips for Better Property Photos",
+//     excerpt: "Improve your listing visibility with these expert photography tips...",
+//     image: BlogImg1,
+//   },
+//   {
+//     id: 2,
+//     title: "Why Hire a Professional Photographer?",
+//     excerpt: "Here's why you should consider hiring a pro for your property shoots...",
+//     image: BlogImg2,
+//   },
+//   {
+//     id: 3,
+//     title: "Interior Design Trends in 2025",
+//     excerpt: "Get inspired by the latest styles shaping modern homes...",
+//     image: BlogImg3,
+//   },
+// ];
