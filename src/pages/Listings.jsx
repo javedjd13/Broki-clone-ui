@@ -56,7 +56,7 @@ const Listing = () => {
   return (
     <div className="p-4 sm:p-6 bg-white min-h-screen font-sans">
       <section>
-        <div className="ml-at-1440 lg:ml-24">
+        <div className="ml-at-1440 lg:ml-44 px-6 max-w-[1200px]">
           <h1 className="text-3xl font-bold mb-1 text-gray-900">
             Find the best listing for your brand
           </h1>
@@ -64,9 +64,12 @@ const Listing = () => {
         </div>
 
         {/* Layout wrapper */}
-        <div className="listing-layout-md-exact gap-10 max-w-[1300px] w-full mx-auto">
+        <div
+          className="listing-layout-md-exact px-6 max-w-[1200px]  mx-auto row gx-xl-5
+"
+        >
           {/* Sidebar */}
-          <div className="w-full listing-form">
+          <div className=" listing-form px-6 min-w-[370px] col-lg-4 d-none d-lg-block">
             <FilterSidebar
               filters={filters}
               onChange={handleFilterChange}
@@ -121,7 +124,7 @@ const Listing = () => {
 
             {/* Listing cards with 2-column layout in both views */}
             <div
-              className={`w-full grid gap-12 mt-6 ${
+              className={`w-full grid gap-6 col-lg-8 px-6 mt-6 ${
                 viewType === "grid" || viewType === "list"
                   ? "grid-cols-1 sm:grid-cols-2"
                   : ""

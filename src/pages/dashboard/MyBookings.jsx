@@ -11,7 +11,6 @@ export default function MyBookings() {
     console.log("Logging out...");
   };
 
-  
   const totalItems = 25;
   const pageSize = 5;
   const totalPages = Math.ceil(totalItems / pageSize);
@@ -71,7 +70,7 @@ export default function MyBookings() {
               </tbody>
             </table>
           </div>
-           <Pagination
+          <Pagination
             currentPage={currentPage}
             totalPages={totalPages}
             pageSize={pageSize}
@@ -79,7 +78,7 @@ export default function MyBookings() {
             onPageChange={setCurrentPage}
           />
         </div>
-         <ServicesFooter/>
+        <ServicesFooter />
       </div>
     </div>
   );

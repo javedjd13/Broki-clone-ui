@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const blogPosts = [
   {
@@ -55,6 +56,9 @@ const Blogs = () => {
               key={post.id}
               className="bg-white rounded-xl overflow-hidden shadow-sm cursor-pointer"
             >
+              <Link 
+              // to={`/blogs-posts-card/${post.id}`}
+              >
               <div className="relative">
                 <div className="overflow-hidden">
                   <img
@@ -77,6 +81,7 @@ const Blogs = () => {
                   <p className="text-sm text-gray-600">{post.description}</p>
                 )}
               </div>
+              </Link>
             </div>
           ))}
         </div>
