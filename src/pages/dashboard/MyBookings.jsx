@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { bookingsData } from "../../lib/Constant";
 import Sidebar from "../../components/dashboard/Sidebar";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import ServicesFooter from "../../components/dashboard/ServicesFooter";
+import Pagination from "../../components/common/pagination/Pagination";
 
 export default function MyBookings() {
   const [bookings] = useState(bookingsData);
@@ -11,6 +11,11 @@ export default function MyBookings() {
     console.log("Logging out...");
   };
 
+  
+  const totalItems = 25;
+  const pageSize = 5;
+  const totalPages = Math.ceil(totalItems / pageSize);
+  const [currentPage, setCurrentPage] = useState(1);
   return (
     <div className="flex">
       <div className="">
@@ -51,7 +56,7 @@ export default function MyBookings() {
                   </tr>
                 ) : (
                   bookings.map((booking, idx) => (
-                    <tr key={idx} className="border-t hover:bg-gray-50">
+                    <tr key={idx} className="border-b border-[#dee2e6]">
                       <td className="px-6 py-4">{booking.id}</td>
                       <td className="px-6 py-4">{booking.service}</td>
                       <td className="px-6 py-4">{booking.date}</td>
@@ -66,7 +71,15 @@ export default function MyBookings() {
               </tbody>
             </table>
           </div>
+           <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            pageSize={pageSize}
+            totalItems={totalItems}
+            onPageChange={setCurrentPage}
+          />
         </div>
+         <ServicesFooter/>
       </div>
     </div>
   );

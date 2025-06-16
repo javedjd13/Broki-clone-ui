@@ -105,7 +105,7 @@ const Navbar = () => {
                   </div>
 
                   {isDropdownOpen && (
-                    <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg z-10 p-4">
+                    <div className="absolute right-0  w-48 bg-white rounded-lg shadow-lg z-10 p-4">
                       <ul className="space-y-2">
                         <li className="hover:font-semibold cursor-pointer">
                           <Link to={"/properties"}>My Listings</Link>

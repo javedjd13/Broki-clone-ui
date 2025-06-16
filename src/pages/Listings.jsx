@@ -92,6 +92,8 @@ const Listing = () => {
                   onChange={(e) => setSortBy(e.target.value)}
                 >
                   <option>Newest</option>
+                  <option>Price High</option>
+                  <option>Price Low</option>
                 </select>
 
                 <button

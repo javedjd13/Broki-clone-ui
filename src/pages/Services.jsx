@@ -8,6 +8,7 @@ import { servicesLinks } from "../lib/Constant";
 import { useEffect, useMemo, useState } from "react";
 import { listingsData, defaultFilters } from "../lib/Constant";
 import Pagination from "../components/Pagination";
+import { Link, useNavigate } from "react-router";
 
 const Services = () => {
   const [viewMode, setViewMode] = useState("grid"); // grid or list
@@ -55,6 +56,9 @@ const Services = () => {
   useEffect(() => {
     setListings(listingsData);
   }, []);
+
+  const navigate = useNavigate();
+
   return (
     <div className="container mx-auto py-12 px-4 md:px-8 bg-white">
       <h2 className="text-3xl font-bold mb-1 text-gray-900">
@@ -98,64 +102,75 @@ const Services = () => {
         }`}
       >
         {/* Card Section */}
-        {servicesLinks.map((service, idx) => (
+        {servicesLinks.map((service) => (
           <div
-            key={idx}
-            className={`bg-white rounded-xl shadow overflow-hidden ${
+            className={`bg-white cursor-pointer rounded-xl shadow overflow-hidden ${
               viewMode === "list" ? "flex" : ""
             }`}
           >
-            {/* Image Section */}
-            <div
-              className={`relative ${
-                viewMode === "list" ? "w-1/2 max-h-48" : ""
-              }`}
+            <Link
+              to={{
+                pathname: `/services/${service.id}`,
+                state: { serviceId: service.id, serviceData: service }
+              }}
             >
-              <div className="overflow-hidden">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className={`img-animattion object-cover ${
-                    viewMode === "list" ? "w-full h-full" : "w-full h-48"
-                  }`}
-                />
-              </div>
-              {service.featured && (
-                <span className="absolute top-2 left-2 bg-green-600 text-white text-[10px] font-semibold px-2 py-1 rounded">
-                  FEATURED
+              {/* Image Section */}
+              <div
+                className={`relative ${
+                  viewMode === "list" ? "w-1/2 max-h-48" : ""
+                }`}
+              >
+                <div className="overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className={`img-animattion object-cover ${
+                      viewMode === "list" ? "w-full h-full" : "w-full h-48"
+                    }`}
+                  />
+                </div>
+                {service.featured && (
+                  <span className="absolute top-2 left-2 bg-[#26c4a0] text-white text-[10px] font-semibold px-2 py-1 rounded">
+                    FEATURED
+                  </span>
+                )}
+                <span className="absolute bottom-2 left-2 bg-white text-black text-xs font-bold px-2 py-1 rounded shadow">
+                  <FontAwesomeIcon icon={faRupeeSign} className="mr-1" />
+                  {service.price} /item
                 </span>
-              )}
-              <span className="absolute bottom-2 left-2 bg-white text-black text-xs font-bold px-2 py-1 rounded shadow">
-                <FontAwesomeIcon icon={faRupeeSign} className="mr-1" />
-                {service.price} /item
-              </span>
-            </div>
+              </div>
 
-            {/* Text Section */}
-            <div
-              className={`p-4 border-t ${
-                viewMode === "list"
-                  ? "w-1/2 border-t-0 border-l flex flex-col justify-between"
-                  : ""
-              }`}
-            >
-              <h3 className="text-md font-semibold text-gray-900 mb-1">
-                {service.title}
-              </h3>
-              <div className="text-sm text-gray-600 flex items-center mb-2">
-                <FontAwesomeIcon
-                  icon={faLocationDot}
-                  className="mr-1 text-gray-500"
-                />
-                {service.provider} &nbsp; • &nbsp; Food Photography
+              {/* Text Section */}
+              <div
+                className={`p-4 border-t ${
+                  viewMode === "list"
+                    ? "w-1/2 border-t-0 border-l flex flex-col justify-between"
+                    : ""
+                }`}
+              >
+                <h3 className="text-md font-semibold text-gray-900 mb-1">
+                  {service.title}
+                </h3>
+                <div className="text-sm text-gray-600 flex justify-between items-center mb-2">
+                  <div className=" hover:text-[#26c4a0] transition-colors duration-200 cursor-pointer">
+                    <FontAwesomeIcon
+                      icon={faLocationDot}
+                      className="mr-1 text-gray-500  hover:text-[#26c4a0] transition-colors duration-200 "
+                    />
+                    {service.provider}
+                  </div>
+                  <div className=" hover:text-[#26c4a0] transition-colors duration-200 cursor-pointer">
+                    Food Photography
+                  </div>
+                </div>
+                <div className="border-t pt-3 flex items-center justify-between text-sm text-gray-700">
+                  <span>On-Site Service</span>
+                  <button className="text-[#181a20] font-semibold hover:text-[#26c4a0]     transition-colors duration-200 cursor-pointer">
+                    Book Now
+                  </button>
+                </div>
               </div>
-              <div className="border-t pt-3 flex items-center justify-between text-sm text-gray-700">
-                <span>On-Site Service</span>
-                <button className="text-[#181a20] font-semibold hover:underline">
-                  Book Now
-                </button>
-              </div>
-            </div>
+            </Link>
           </div>
         ))}
       </div>

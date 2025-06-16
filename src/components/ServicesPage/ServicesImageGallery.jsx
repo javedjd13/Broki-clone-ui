@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { useLocation, useParams } from "react-router";
 
-const ServicesImageGallery = ({serviceData, images = [] }) => {
-  const [selectedImage, setSelectedImage] = useState(images[0] || "https://via.placeholder.com/600x400");
-  const { name, category,image } = serviceData || {};
+const ServicesImageGallery = ({ servicesData,image, images = [] }) => {
+  const [selectedImage, setSelectedImage] = useState(
+    images[0] || "https://via.placeholder.com/600x400"
+  );
+  
   return (
     <div className="bg-white rounded-xl shadow-md p-6 border border-gray-200">
       {/* Main Image */}
@@ -14,7 +17,7 @@ const ServicesImageGallery = ({serviceData, images = [] }) => {
 
       {/* Thumbnails */}
       <div className="flex gap-3 mt-4 overflow-x-auto">
-        {images.length > 0 ? (
+        {selectedImage.length > 0 ? (
           images.map((src, idx) => (
             <img
               key={idx}

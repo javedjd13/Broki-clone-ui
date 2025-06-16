@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { propertiesData } from "../../lib/Constant";
 import Sidebar from "../../components/dashboard/Sidebar";
+import Pagination from "../../components/common/pagination/Pagination";
+import ServicesFooter from "../../components/dashboard/ServicesFooter";
 
 export default function MyProperties() {
   const [properties] = useState(propertiesData);
@@ -8,6 +10,10 @@ export default function MyProperties() {
   const handleLogout = () => {
     console.log("Logging out...");
   };
+  const totalItems = 25;
+  const pageSize = 5;
+  const totalPages = Math.ceil(totalItems / pageSize);
+  const [currentPage, setCurrentPage] = useState(1);
 
   return (
     <div className="flex">
@@ -19,43 +25,10 @@ export default function MyProperties() {
           <h1 className="text-3xl font-bold mb-3">My Properties</h1>
           <p className="text-gray-500">We are glad to see you again!</p>
         </div>
-        {/* <div className="bg-white rounded-lg shadow p-6 ">
-          <table className="min-w-full table-auto text-sm ">
-            <thead className="bg-gray-100 text-gray-700 font-semibold">
-              <tr>
-                <th className="text-left px-6 py-4">Listing Details</th>
-                <th className="text-left px-6 py-4">Property For</th>
-                <th className="text-left px-6 py-4">Status</th>
-                <th className="text-left px-6 py-4">Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              {properties.length === 0 ? (
-                <tr>
-                  <td colSpan="4" className="text-gray-600 py-6">
-                    No properties listed.
-                  </td>
-                </tr>
-              ) : (
-                properties.map((property, idx) => (
-                  <tr key={idx} className="border-t hover:bg-gray-50">
-                    <td className="px-6 py-4">{property.details}</td>
-                    <td className="px-6 py-4">{property.for}</td>
-                    <td className="px-6 py-4">{property.status}</td>
-                    <td className="px-6 py-4">
-                      <button className="text-blue-600 hover:underline">
-                        {property.action}
-                      </button>
-                    </td>
-                  </tr>
-                ))
-              )}
-            </tbody>
-          </table>
-        </div> */}
-        <div className="bg-white rounded-lg shadow p-6">
-          <div className="bg-white rounded-lg shadow p-6 overflow-x-auto">
-            <table className="w-[800px] table-auto text-sm">
+
+        <div className=" bg-[#ffff] shadow rounded-lg p-6">
+          <div className=" rounded-lg overflow-x-auto">
+            <table className="w-full table-auto text-sm">
               <thead className="bg-gray-100 text-gray-700 font-semibold">
                 <tr>
                   <th className="text-left px-6 py-4 min-w-[200px]">
@@ -77,7 +50,7 @@ export default function MyProperties() {
                   </tr>
                 ) : (
                   properties.map((property, idx) => (
-                    <tr key={idx} className="border-t hover:bg-gray-50">
+                    <tr key={idx} className="border-b border-[#dee2e6]">
                       <td className="px-6 py-4">{property.details}</td>
                       <td className="px-6 py-4">{property.for}</td>
                       <td className="px-6 py-4">{property.status}</td>
@@ -92,7 +65,15 @@ export default function MyProperties() {
               </tbody>
             </table>
           </div>
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            pageSize={pageSize}
+            totalItems={totalItems}
+            onPageChange={setCurrentPage}
+          />
         </div>
+        <ServicesFooter />
       </div>
     </div>
   );
