@@ -14,6 +14,7 @@ import MyBookings from "../pages/dashboard/MyBookings";
 import MyProperties from "../pages/dashboard/MyProperties";
 import AddProperty from "../pages/dashboard/AddProperty";
 import ServicesDetail from "../components/ServicesPage/ServicesDetail";
+import ServicesBooking from "../pages/ServicesBooking";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -39,7 +40,10 @@ const router = createBrowserRouter([
       {
         path: "/services/:serviceId",
         element: <ServicesDetail />,
-        // <Route path="" element={< />} />
+      },
+      {
+        path: "/service-booking/:serviceId",
+        element: <ServicesBooking />,
       },
       {
         path: "/blogs",

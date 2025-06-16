@@ -675,7 +675,7 @@ export const OVERVIEW_FIELDS = [
 ];
 
 export const DEFAULT_SERVICE = {
-    name: "Unnamed",
+    name: "Harry Bhai",
     price: 0,
     category: "General",
     itemsCovered: 1,
