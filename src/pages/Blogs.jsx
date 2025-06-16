@@ -53,7 +53,7 @@ const Blogs = () => {
           {blogPosts.map((post) => (
             <div
               key={post.id}
-              className="bg-white rounded-xl overflow-hidden shadow-sm"
+              className="bg-white rounded-xl overflow-hidden shadow-sm cursor-pointer"
             >
               <div className="relative">
                 <div className="overflow-hidden">

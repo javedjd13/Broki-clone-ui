@@ -37,6 +37,11 @@ const router = createBrowserRouter([
         element: <Services />,
       },
       {
+        path: "/services/:serviceId",
+        element: <ServicesDetail />,
+        // <Route path="" element={< />} />
+      },
+      {
         path: "/blogs",
         element: <Blogs />,
       },

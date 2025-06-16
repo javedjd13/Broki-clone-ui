@@ -1,8 +1,10 @@
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import { servicesData, servicesLinks } from "../../lib/Constant";
 
-const ServiceHeader = ({ name, price, category, itemsCovered, serviceId }) => {
+const ServiceHeader = ({ serviceData }) => {
+  const { serviceId, name, price, category, itemsCovered } = servicesData || {};
   const pricePerItem = itemsCovered > 0 ? Math.floor(price / itemsCovered) : 0;
 
   return (
@@ -19,10 +21,7 @@ const ServiceHeader = ({ name, price, category, itemsCovered, serviceId }) => {
             <span className="mx-1">/</span>
           </li>
           <li>
-            <Link
-              to="/services"
-              className="hover:text-[#26c4a0] "
-            >
+            <Link to="/services" className="hover:text-[#26c4a0] ">
               Services
             </Link>
           </li>

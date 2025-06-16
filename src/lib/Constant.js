@@ -443,6 +443,7 @@ export const listingsData = [
 ];
 export const servicesLinks = [
     {
+        id: 1,
         title: "Food Photography by Anamika",
         provider: "Anamika Vaishnav",
         price: 500,
@@ -451,6 +452,7 @@ export const servicesLinks = [
         featured: true,
     },
     {
+        id: 2,
         title: "Food Photography by Manjula",
         provider: "Dr. Manjula Viljh",
         price: 2500,
@@ -459,6 +461,7 @@ export const servicesLinks = [
         featured: true,
     },
     {
+        id: 3,
         title: "Food Photography by Indraneil",
         provider: "Indraneil Tomar",
         price: 2667,
@@ -467,6 +470,7 @@ export const servicesLinks = [
         featured: true,
     },
     {
+        id: 4,
         title: "Food Photography by Dev",
         provider: "Dev Patel",
         price: 1000,
@@ -475,6 +479,7 @@ export const servicesLinks = [
         featured: true,
     },
     {
+        id: 5,
         title: "Food Photography by Riya",
         provider: "Riya Sharma",
         price: 15000,
@@ -483,6 +488,7 @@ export const servicesLinks = [
         featured: false,
     },
     {
+        id: 6,
         title: "Food Photography by Kabir",
         provider: "Kabir Mehta",
         price: 1750,
@@ -802,200 +808,50 @@ export const servicesData = [
     },
 ];
 
-// export const listingsData = [
-//   {
-//     id: "BR-outlet-001",
-//     price: "₹8 Lakh",
-//     title: "Restaurant for sale in Ghaziabad",
-//     location: "Ghaziabad",
-//     size: "350 sqft",
-//     type: "Restaurant",
-
-//     status: "For Sale",
-//     age: "3 years old",
-//     builtYear: 2021,
-//     monthlySales: "₹3,00,000",
-//     currentRental: "₹30,000",
-//     description:
-//       "Well-running family restaurant with stable monthly revenue and great footfall.",
-//     img: "https://admin.broki.in/storage/1264/7248.jpeg",
-//   },
-//   {
-//     id: "BR-outlet-002",
-//     price: "₹10 Lakh",
-//     title: "Cloud kitchen set up for sale in Powai",
-//     location: "Mumbai",
-//     size: "180 sqft",
-//     type: "Cloud Kitchen",
-//     status: "For Sale",
-//     age: "2 years old",
-//     builtYear: 2022,
-//     monthlySales: "₹2,00,000",
-//     currentRental: "₹25,000",
-//     description:
-//       "Modern cloud kitchen in a prime location with all essential kitchen equipment.",
-//     img: "https://admin.broki.in/storage/1239/7247.jpeg",
-//     featured: true,
-//   },
-//   {
-//     id: "BR-outlet-003",
-//     price: "₹22 Lakh",
-//     title: "Luxury Cafe Space in Delhi",
-//     location: "Delhi",
-//     size: "400 sqft",
-//     type: "Restaurant",
-//     status: "For Rent",
-//     age: "1 year old",
-//     builtYear: 2023,
-//     monthlySales: "₹5,00,000",
-//     currentRental: "₹70,000",
-//     description:
-//       "Premium cafe in South Delhi with designer interiors and steady clientele.",
-//     img: "https://admin.broki.in/storage/1245/1000296914.jpg",
-//     featured: true,
-//   },
-//   {
-//     id: "BR-outlet-004",
-//     price: "₹6 Lakh",
-//     title: "Takeaway Joint in Pune",
-//     location: "Pune",
-//     size: "150 sqft",
-//     type: "Take Away",
-//     status: "For Sale",
-//     age: "2.5 years old",
-//     builtYear: 2021,
-//     monthlySales: "₹1,50,000",
-//     currentRental: "₹15,000",
-//     description:
-//       "Small yet efficient takeaway outlet in a high-traffic commercial area.",
-//     img: "https://admin.broki.in/storage/1264/7248.jpeg",
-//   },
-//   {
-//     id: "BR-outlet-005",
-//     price: "₹8 Lakh",
-//     title: "Restaurant for sale in Ghaziabad",
-//     location: "Ghaziabad",
-//     size: "350 sqft",
-//     type: "Restaurant",
-//     status: "For Sale",
-//     age: "3 years old",
-//     builtYear: 2021,
-//     monthlySales: "₹3,00,000",
-//     currentRental: "₹30,000",
-//     description:
-//       "Duplicate entry with alternate photo. Great potential for dine-in setup.",
-//     img: "https://admin.broki.in/storage/1245/1000296914.jpg",
-//   },
-//   {
-//     id: "BR-outlet-006",
-//     price: "₹10 Lakh",
-//     title: "Cloud kitchen set up for sale in Powai",
-//     location: "Mumbai",
-//     size: "180 sqft",
-//     type: "Cloud Kitchen",
-//     status: "For Sale",
-//     age: "2 years old",
-//     builtYear: 2022,
-//     monthlySales: "₹2,00,000",
-//     currentRental: "₹25,000",
-//     description: "Fully equipped cloud kitchen in thriving delivery zone.",
-//     img: "https://admin.broki.in/storage/1264/7248.jpeg",
-//     featured: true,
-//   },
-//   {
-//     id: "BR-outlet-007",
-//     price: "₹22 Lakh",
-//     title: "Luxury Cafe Space in Delhi",
-//     location: "Delhi",
-//     size: "400 sqft",
-//     type: "Cloud Kitchen",
-//     status: "For Sale",
-//     age: "1.5 years old",
-//     builtYear: 2023,
-//     monthlySales: "₹4,50,000",
-//     currentRental: "₹60,000",
-//     description:
-//       "Spacious kitchen with potential for dine-in or cloud use in central Delhi.",
-//     img: "https://admin.broki.in/storage/1264/7248.jpeg",
-//     featured: true,
-//   },
-//   {
-//     id: "BR-outlet-008",
-//     price: "₹6 Lakh",
-//     title: "Takeaway Joint in Pune",
-//     location: "Pune",
-//     size: "150 sqft",
-//     type: "Take Away",
-//     status: "For Sale",
-//     age: "2.5 years old",
-//     builtYear: 2021,
-//     monthlySales: "₹1,50,000",
-//     currentRental: "₹15,000",
-//     description: "Great opportunity for a startup food venture in IT zone.",
-//     img: "https://admin.broki.in/storage/1245/1000296914.jpg",
-//   },
-//   {
-//     id: "BR-outlet-009",
-//     price: "₹8 Lakh",
-//     title: "Restaurant for sale in Ghaziabad",
-//     location: "Ghaziabad",
-//     size: "350 sqft",
-//     type: "Restaurant",
-//     status: "For Sale",
-//     age: "3 years old",
-//     builtYear: 2021,
-//     monthlySales: "₹3,00,000",
-//     currentRental: "₹30,000",
-//     description:
-//       "Compact and efficient restaurant layout with regular footfall.",
-//     img: "https://admin.broki.in/storage/1264/7248.jpeg",
-//   },
-//   {
-//     id: "BR-outlet-010",
-//     price: "₹10 Lakh",
-//     title: "Cloud kitchen set up for sale in Powai",
-//     location: "Mumbai",
-//     size: "180 sqft",
-//     type: "Cloud Kitchen",
-//     status: "For Rent",
-//     age: "2 years old",
-//     builtYear: 2022,
-//     monthlySales: "₹2,00,000",
-//     currentRental: "₹22,000",
-//     description:
-//       "Rent-based running cloud kitchen ideal for delivery-only brands.",
-//     img: "https://admin.broki.in/storage/1245/1000296914.jpg",
-//     featured: true,
-//   },
-//   {
-//     id: "BR-outlet-011",
-//     price: "₹22 Lakh",
-//     title: "Luxury Cafe Space in Delhi",
-//     location: "Delhi",
-//     size: "400 sqft",
-//     type: "Restaurant",
-//     status: "For Sale",
-//     age: "1 year old",
-//     builtYear: 2023,
-//     monthlySales: "₹5,00,000",
-//     currentRental: "₹65,000",
-//     description: "Elegant and luxurious cafe space for premium clientele.",
-//     img: "https://admin.broki.in/storage/1264/7248.jpeg",
-//     featured: true,
-//   },
-//   {
-//     id: "BR-outlet-012",
-//     price: "₹6 Lakh",
-//     title: "Takeaway Joint in Pune",
-//     location: "Pune",
-//     size: "150 sqft",
-//     type: "Take Away",
-//     status: "For Sale",
-//     age: "2.5 years old",
-//     builtYear: 2021,
-//     monthlySales: "₹1,50,000",
-//     currentRental: "₹15,000",
-//     description: "Consistent customer base from nearby offices and hostels.",
-//     img: "https://admin.broki.in/storage/1245/1000296914.jpg",
-//   },
-// ];
+export const SERVICE_FAQS = [
+    {
+        question: "What does the photoshoot package include?",
+        answer:
+            "Package includes a professional 7–8 hour photoshoot for up to 20 food items. The package covers high-resolution, edited photos that are ready for use in menus, social media, and marketing materials.",
+    },
+    {
+        question: "Can I choose style of photography?",
+        answer:
+            "Yes, you can choose the photography style that best fits your brand. Discuss your preferences before the shoot.",
+    },
+    {
+        question: "How many final photos will I receive?",
+        answer:
+            "You will receive 20 professionally edited, high-resolution images.",
+    },
+    {
+        question: "Do you provide props and backdrops for a shoot?",
+        answer:
+            "Yes, we can provide standard props and backdrops upon request. Custom setups may incur additional charges.",
+    },
+    {
+        question: "Can I book extra time or include more items?",
+        answer:
+            "Absolutely. Additional time and items can be accommodated for an extra fee. Let us know your requirements in advance.",
+    },
+    {
+        question: "Do you shoot on location or at a studio?",
+        answer:
+            "We offer both on-location and studio shoots depending on your preference and availability.",
+    },
+    {
+        question: "How soon will I get the photos?",
+        answer:
+            "You will receive your edited photos within 3–5 business days after the shoot.",
+    },
+    {
+        question: "What is your cancellation or rescheduling policy?",
+        answer:
+            "Cancellations made 48 hours before the shoot are fully refundable. Rescheduling is allowed once with prior notice.",
+    },
+    {
+        question: "How can I get started?",
+        answer:
+            "Simply reach out through the contact form or booking button to schedule a consultation and confirm your session.",
+    },
+];

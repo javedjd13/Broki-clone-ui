@@ -25,7 +25,7 @@ const ContactUs = () => {
     <>
       <div className="relative w-full">
         {/* Google Map Embed */}
-        <div className="absolute top-0 left-0 w-full h-[600px] z-0">
+        <div className="absolute top-0 left-0 w-full h-[500px] sm:h-[600px] z-0">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.4006632054!2d77.0688994424711!3d28.527582007847342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03072bb27f2f%3A0x9bc88a4f034fdf3e!2sBroki%20Services%20Private%20Limited!5e0!3m2!1sen!2sin!4v1716540893883!5m2!1sen!2sin"
             width="100%"
@@ -56,7 +56,7 @@ const ContactUs = () => {
         </div>
 
         {/* Content Section */}
-        <div className="relative z-10 px-4 md:px-10 py-[140px] max-sm:top-[600px]">
+        <div className="relative z-10 px-4 md:px-10 pt-[520px] sm:pt-[640px] md:pt-[140px]">
           {/* Tablet & Desktop Layout */}
           <div className="hidden md:grid md:grid-cols-2 gap-10 items-end">
             {/* Form */}
@@ -115,10 +115,7 @@ const ContactUs = () => {
                     placeholder="E.g. Flashback Cafe Or NA"
                   />
                 </div>
-                <button
-                  className="w-full bg-[#26c4a0] text-white py-2 rounded-md mt-2 font-semibold hover:bg-[#1fae8c] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#26c4a0] focus:ring-opacity-50
-                 transition-all"
-                >
+                <button className="w-full bg-[#26c4a0] text-white py-2 rounded-md mt-2 font-semibold hover:bg-[#1fae8c] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#26c4a0] focus:ring-opacity-50 transition-all">
                   Submit
                 </button>
               </div>
@@ -207,7 +204,7 @@ const ContactUs = () => {
                 />
                 <button
                   type="submit"
-                  className="w-full bg-[#26c4a0] text-white py-2 rounded-md font-semibold ho    ver:bg-[#1fae8c] transition-all"
+                  className="cursor-pointer w-full bg-[#26c4a0] text-white py-2 rounded-md font-semibold hover:bg-[#1fae8c] transition-all"
                 >
                   Submit
                 </button>

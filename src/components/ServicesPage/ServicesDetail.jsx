@@ -1,30 +1,31 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import ServiceHeader from "./ServicesHeader";
 import ServiceImageGallery from "./ServicesImageGallery";
-import ServiceOverview from "./ServicesOverview";
+import ServicesOverview from "./ServicesOverview";
 import ServiceAddOnSidebar from "./ServicesSidebar";
-import { DEFAULT_SERVICE, servicesData } from "../../lib/Constant";
+import {
+  DEFAULT_SERVICE,
+  servicesData,
+  servicesLinks,
+} from "../../lib/Constant";
 
-const ServiceDetail = () => {
-  const { serviceId } = useParams();
+const ServicesDetail = () => {
   const navigate = useNavigate();
-  const { name, price, category, itemsCovered, images, addOns } = {
-    ...DEFAULT_SERVICE,
-    ...servicesData,
-  };
-  console.log(
-    "Service Detail Rendered Here",
-    serviceId,
+  const {
     name,
     price,
     category,
     itemsCovered,
     images,
-    addOns
-  );
-  console.log("default service", DEFAULT_SERVICE, "service data", servicesData);
-
+    addOns,
+    serviceId,
+    image,
+  } = {
+    ...DEFAULT_SERVICE,
+    ...servicesData,
+  };
+  
   const [selectedAddOns, setSelectedAddOns] = useState([]);
   const addOnsTotal = selectedAddOns.reduce((sum, a) => sum + a.price, 0);
   const tax = Math.floor((price + addOnsTotal) * 0.18);
@@ -32,13 +33,7 @@ const ServiceDetail = () => {
 
   const handleProceed = () => {
     navigate(`/service-booking/${serviceId}`, {
-      state: {
-        serviceId,
-        selectedAddOns,
-        addOnsTotal,
-        tax,
-        totalPrice,
-      },
+      state: { serviceId },
     });
   };
 
@@ -58,12 +53,12 @@ const ServiceDetail = () => {
         price={price}
         category={category}
         itemsCovered={itemsCovered}
-        serviceData={servicesData}
+        servicesData={servicesData}
       />
       <div className="flex flex-col md:flex-row gap-8 items-start">
         <div className="flex-1 max-w-full md:max-w-[60%] rounded-lg flex flex-col gap-6">
-          <ServiceImageGallery images={images} serviceData={servicesData} />
-          <ServiceOverview serviceData={servicesData}  />
+          <ServiceImageGallery image={image} servicesData={servicesData} />
+          <ServicesOverview servicesData={servicesData} />
         </div>
         <ServiceAddOnSidebar
           addOns={addOns}
@@ -74,11 +69,11 @@ const ServiceDetail = () => {
           tax={tax}
           totalPrice={totalPrice}
           handleProceed={handleProceed}
-          serviceData={servicesData}
+          servicesData={servicesData}
         />
       </div>
     </div>
   );
 };
 
-export default ServiceDetail;
+export default ServicesDetail;
