@@ -29,7 +29,7 @@ const ProductDetail = () => {
               </h2>
               <div className="flex flex-wrap items-center text-sm text-gray-600 space-x-4 mb-2">
                 <span>{listingProductDetail.location.city}</span>
-                <span className="text-green-500 font-medium">• For Rent</span>
+                <span className="text-[#26c4a0] font-medium">• For Rent</span>
                 <span className="flex items-center space-x-1">
                   <span>• {listingProductDetail.age} Old</span>
                 </span>

@@ -6,7 +6,6 @@ import PropertyCards from "../components/PropertyCards";
 import PhotographySec from "../components/PhotographySec";
 import WhyChooseUs from "../components/WhyChooseUs";
 import Form from "../components/Form";
-import BlogSection from "../components/Home/BlogSection";
 import DownloadSec from "../components/DownloadSec";
 import AdvancedModal from "../components/Home/AdvancedModal";
 import useSearch from "../components/Home/useSearch";
@@ -15,9 +14,11 @@ import HeroImg from "../assets/images/hero-img.webp";
 import subHeroImg from "../assets/images/sub-hero-img.webp";
 import PhotoSec from "../assets/images/photosec.webp";
 import { useState } from "react";
+import BlogPosts from "../components/BlogPosts";
 export default function Home() {
   const search = useSearch();
 
+  const posts = blogPost;
   const content = {
     titleParts: [
       { text: "One Stop Solution For All", highlight: false },
@@ -39,6 +40,7 @@ export default function Home() {
   };
   const [showAdvancedModal, setShowAdvancedModal] = useState(false);
   const handleOpenAdvanced = () => setShowAdvancedModal(true);
+
   return (
     <>
       <HeroSection content={content}>
@@ -50,7 +52,16 @@ export default function Home() {
       <PhotographySec {...content} />
       <WhyChooseUs />
       <Form />
-      <BlogSection posts={blogPost} />
+      <section className="max-w-7xl mx-auto px-4 py-16">
+        <h2 className="text-center text-3xl font-extrabold mb-12">
+          From Our Blog
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {posts.map((post) => (
+            <BlogPosts key={post.id} post={post} />
+          ))}
+        </div>
+      </section>
       <DownloadSec />
       {showAdvancedModal && (
         <AdvancedModal

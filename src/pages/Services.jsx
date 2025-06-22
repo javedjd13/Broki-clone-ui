@@ -1,186 +1,206 @@
+import React, { useState, useEffect } from "react";
 import {
-  faLocationDot,
   faBolt,
-  faRupeeSign,
+  faUserCircle,
+  faChevronDown,
+  faChevronLeft,
+  faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { servicesLinks } from "../lib/Constant";
-import { useEffect, useMemo, useState } from "react";
-import { listingsData, defaultFilters } from "../lib/Constant";
-import Pagination from "../components/Pagination";
-import { Link, useNavigate } from "react-router";
+import { Link } from "react-router-dom";
+import { servicesData } from "../lib/Constant";
 
 const Services = () => {
-  const [viewMode, setViewMode] = useState("grid"); // grid or list
+  const [cards, setCards] = useState([]);
+  const [sortOption, setSortOption] = useState("Newest");
+  const [view, setView] = useState("grid");
   const [currentPage, setCurrentPage] = useState(1);
-  const [listings, setListings] = useState([]);
-  const [filters, setFilters] = useState(defaultFilters);
-  const [sortBy, setSortBy] = useState("Newest");
+  const itemsPerPage = 6;
 
-  const handleFilterChange = (key, value) => {
-    setFilters((prev) => ({ ...prev, [key]: value }));
-    setCurrentPage(1);
-  };
-
-  const resetFilters = () => {
-    setFilters(defaultFilters);
-    setCurrentPage(1);
-  };
-  const listingsPerPage = 6;
-
-  const indexOfLast = currentPage * listingsPerPage;
-  const indexOfFirst = indexOfLast - listingsPerPage;
-  const filteredListings = useMemo(() => {
-    const min = parseInt(filters.minPrice.replace(/[^\d]/g, "")) || 0;
-    const max = parseInt(filters.maxPrice.replace(/[^\d]/g, "")) || Infinity;
-
-    let result = listings.filter((listing) => {
-      const price = parseInt(listing.price.replace(/[^\d]/g, ""));
-      return (
-        (filters.location === "All Locations" ||
-          listing.location === filters.location) &&
-        price >= min &&
-        price <= max
-      );
-    });
-
-    if (sortBy === "Newest") {
-      result = result.reverse(); // Assuming latest are at the end
-    }
-
-    return result;
-  }, [listings, filters, sortBy]);
-  const totalPages = Math.ceil(filteredListings.length / listingsPerPage);
-
-  const currentListings = filteredListings.slice(indexOfFirst, indexOfLast);
   useEffect(() => {
-    setListings(listingsData);
+    setCards(servicesData);
   }, []);
 
-  const navigate = useNavigate();
+  const sortedCards = [...cards].sort((a, b) => {
+    switch (sortOption) {
+      case "Price Low":
+        return a.price - b.price;
+      case "Price High":
+        return b.price - a.price;
+      case "Category A-Z":
+        return a.category.localeCompare(b.category);
+      case "Category Z-A":
+        return b.category.localeCompare(a.category);
+      default:
+        return 0;
+    }
+  });
+
+  const totalPages = Math.ceil(sortedCards.length / itemsPerPage);
+  const paginatedCards = sortedCards.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
 
   return (
-    <div className="container mx-auto py-12 px-4 md:px-8 bg-white">
-      <h2 className="text-3xl font-bold mb-1 text-gray-900">
-        Professional Food Photography for Your F&amp;B Business
-      </h2>
-      <p className="text-sm text-gray-500 mb-6">Home / Food Photography</p>
+    <div className="max-w-[1300px] mx-auto px-2 sm:px-4 py-10">
+      <div className="mb-6">
+        <h1 className="text-4xl font-bold text-left">
+          Professional Food Photography for Your F&B Business
+        </h1>
+        <div className="text-sm text-black-600 mt-5">
+          <Link to="/" className="text-black-600 hover:text-[#26c4a0]">
+            Home
+          </Link>{" "}
+          / Food Photography
+        </div>
+      </div>
 
-      <div className="flex justify-between items-center mb-4">
-        <div></div>
-        <div className="flex items-center space-x-2">
-          <label className="text-sm text-gray-600">Sort by</label>
-          <select className="border rounded px-2 py-1 text-sm">
-            <option>Newest</option>
-            <option>Price High</option>
-            <option>Price Low</option>
-          </select>
+      {/* Sort & View Toggle */}
+      <div className="flex justify-end items-center mb-6 gap-4">
+        <div className="flex items-center gap-1 text-sm text-gray-600">
+          <span className="font-light">Sort by</span>
+          <div className="relative">
+            <select
+              value={sortOption}
+              onChange={(e) => setSortOption(e.target.value)}
+              className="appearance-none bg-transparent pl-2 pr-1 py-1 font-medium text-black focus:outline-none"
+            >
+              <option>Newest</option>
+              <option>Best Seller</option>
+              <option>Best Match</option>
+              <option>Price Low</option>
+              <option>Price High</option>
+              <option>Category A-Z</option>
+              <option>Category Z-A</option>
+            </select>
+            <FontAwesomeIcon
+              icon={faChevronDown}
+              className="absolute right-1 top-1/2 -translate-y-1/2 w-3 h-3 text-gray-500 pointer-events-none"
+            />
+          </div>
+        </div>
+
+        <div className="border-l h-4 mx-1"></div>
+
+        <div className="flex gap-3 text-sm">
           <button
-            className={`text-sm underline ${
-              viewMode === "grid" ? "text-gray-700" : "text-gray-500"
+            onClick={() => setView("grid")}
+            className={`font-medium ${
+              view === "grid" ? "text-teal-500" : "text-gray-800"
             }`}
-            onClick={() => setViewMode("grid")}
           >
             Grid
           </button>
           <button
-            className={`text-sm underline ${
-              viewMode === "list" ? "text-gray-700" : "text-gray-500"
+            onClick={() => setView("list")}
+            className={`font-medium ${
+              view === "list" ? "text-teal-500" : "text-gray-800"
             }`}
-            onClick={() => setViewMode("list")}
           >
             List
           </button>
         </div>
       </div>
 
+      {/* Cards */}
       <div
         className={`${
-          viewMode === "grid"
+          view === "grid"
             ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
             : "grid grid-cols-1 md:grid-cols-2 gap-6"
         }`}
       >
-        {/* Card Section */}
-        {servicesLinks.map((service) => (
+        {paginatedCards.map((card) => (
           <div
-            className={`bg-white cursor-pointer rounded-xl shadow overflow-hidden ${
-              viewMode === "list" ? "flex" : ""
+            key={card.serviceId}
+            className={`bg-white shadow-md rounded-xl overflow-hidden ${
+              view === "list" ? "flex" : "flex flex-col"
             }`}
           >
-            <Link
-              to={{
-                pathname: `/services/${service.id}`,
-                state: { serviceId: service.id, serviceData: service }
-              }}
-            >
-              {/* Image Section */}
-              <div
-                className={`relative ${
-                  viewMode === "list" ? "w-1/2 max-h-48" : ""
+            <div className="relative group overflow-hidden">
+              <img
+                src={card.image}
+                alt={card.name}
+                className={` img-animattion ${
+                  view === "list"
+                    ? "w-100 h-52 object-cover group-hover:scale-105"
+                    : "w-full h-56 object-cover group-hover:scale-105"
                 }`}
-              >
-                <div className="overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className={`img-animattion object-cover ${
-                      viewMode === "list" ? "w-full h-full" : "w-full h-48"
-                    }`}
-                  />
-                </div>
-                {service.featured && (
-                  <span className="absolute top-2 left-2 bg-[#26c4a0] text-white text-[10px] font-semibold px-2 py-1 rounded">
-                    FEATURED
+              />
+              <div className="absolute top-4 left-4 bg-[#26c4a0] text-white text-xs font-bold px-2 py-2 rounded flex items-center gap-1 shadow transition-all duration-300 ease-in-out group-hover:translate-y-full group-hover:opacity-0">
+                <FontAwesomeIcon icon={faBolt} className="w-3.5 h-3.5" />
+                FEATURED
+              </div>
+              <div className="absolute bottom-2 left-2 bg-white text-black text-sm font-semibold px-3 py-1 rounded shadow">
+                ₹{card.price} /item
+              </div>
+            </div>
+
+            <div className="p-4 flex flex-col justify-between gap-2 w-full">
+              <div>
+                <h3 className="text-base font-semibold text-gray-900">
+                  <Link
+                    to={`/services/${card.serviceId}`}
+                    className="text-sm font-semibold text-black hover:text-[#26c4a0] hover:underline"
+                  >
+                    Food Photography by {card.name}
+                  </Link>
+                </h3>
+                <div className="flex items-center text-sm text-gray-500 gap-2 mt-1">
+                  <span className="flex items-center gap-1">
+                    <FontAwesomeIcon icon={faUserCircle} className="w-4 h-4" />
+                    {card.name}
                   </span>
-                )}
-                <span className="absolute bottom-2 left-2 bg-white text-black text-xs font-bold px-2 py-1 rounded shadow">
-                  <FontAwesomeIcon icon={faRupeeSign} className="mr-1" />
-                  {service.price} /item
-                </span>
+                  <span className="mx-1">•</span>
+                  <span>{card.category}</span>
+                </div>
               </div>
 
-              {/* Text Section */}
-              <div
-                className={`p-4 border-t ${
-                  viewMode === "list"
-                    ? "w-1/2 border-t-0 border-l flex flex-col justify-between"
-                    : ""
-                }`}
-              >
-                <h3 className="text-md font-semibold text-gray-900 mb-1">
-                  {service.title}
-                </h3>
-                <div className="text-sm text-gray-600 flex justify-between items-center mb-2">
-                  <div className=" hover:text-[#26c4a0] transition-colors duration-200 cursor-pointer">
-                    <FontAwesomeIcon
-                      icon={faLocationDot}
-                      className="mr-1 text-gray-500  hover:text-[#26c4a0] transition-colors duration-200 "
-                    />
-                    {service.provider}
-                  </div>
-                  <div className=" hover:text-[#26c4a0] transition-colors duration-200 cursor-pointer">
-                    Food Photography
-                  </div>
-                </div>
-                <div className="border-t pt-3 flex items-center justify-between text-sm text-gray-700">
-                  <span>On-Site Service</span>
-                  <button className="text-[#181a20] font-semibold hover:text-[#26c4a0]     transition-colors duration-200 cursor-pointer">
-                    Book Now
-                  </button>
-                </div>
+              <div className="border-t border-gray-300 pt-2 flex justify-between items-center text-sm text-gray-700">
+                <span>On-Site Service</span>
+                <Link
+                  to={`/services/${card.serviceId}`}
+                  className="text-sm font-semibold text-black hover:text-[]"
+                >
+                  Book Now
+                </Link>
               </div>
-            </Link>
+            </div>
           </div>
         ))}
       </div>
 
       {/* Pagination */}
-      <Pagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onPageChange={setCurrentPage}
-      />
+      <div className="flex justify-center mt-10 gap-4 text-sm font-medium">
+        <button
+          onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+          disabled={currentPage === 1}
+          className={`flex items-center gap-1 px-2 py-1 rounded border transition-colors ${
+            currentPage === 1
+              ? "bg-gray-200 text-gray-400 cursor-not-allowed"
+              : "bg-[#26c4a0] text-white hover:bg-[#26c4a0]"
+          }`}
+        >
+          <FontAwesomeIcon icon={faChevronLeft} className="w-4 h-4" />
+        </button>
+        <span className="flex items-center text-[#26c4a0] gap-1">
+          Page {currentPage} of {totalPages}
+        </span>
+        <button
+          onClick={() =>
+            setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+          }
+          disabled={currentPage === totalPages}
+          className={`flex items-center gap-1 px-2 py-1 rounded border transition-colors ${
+            currentPage === totalPages
+              ? "bg-gray-200 text-gray-400 cursor-not-allowed"
+              : "bg-[#26c4a0] text-white hover:bg-[#26c4a0]"
+          }`}
+        >
+          <FontAwesomeIcon icon={faChevronRight} className="w-4 h-4" />
+        </button>
+      </div>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "../../components/navbar/Navbar";
-import Footer from "../../components/footer/Footer";
+import Navbar from "../../components/common/navbar/Navbar";
+import Footer from "../../components/common/footer/Footer";
 import ScrollToTop from "../../hooks/ScrollToTop";
 
 const MainLayout = () => {

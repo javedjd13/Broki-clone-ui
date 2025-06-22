@@ -79,7 +79,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
           <h2 className="text-xl font-bold">Food Photography by {name}</h2>
           <p className="text-gray-500 text-sm">Category: {category}</p>
         </div>
-        <div className="ml-auto text-green-600 font-bold text-xl">
+        <div className="ml-auto text-[#26c4a0] font-bold text-xl">
           ₹{price.toLocaleString(undefined, { minimumFractionDigits: 2 })}
         </div>
       </div>
@@ -132,7 +132,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
           <button
             type="button"
             onClick={handleUseCurrentLocation}
-            className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-teal-700"
+            className="inline-block bg-[#26c4a0] hover:bg-[#26c4a0] text-white font-semibold px-6 py-3 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-teal-700"
           >
             Use Current Location
           </button>
@@ -150,7 +150,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
             </div>
             <div className="flex justify-between">
               <span>Addons:</span>
-              <span className="text-green-600">
+              <span className="text-[#26c4a0]">
                 +₹
                 {addOnsTotal.toLocaleString(undefined, {
                   minimumFractionDigits: 2,
@@ -169,7 +169,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
             </div>
           </div>
 
-          <button className="w-full border border-green-500 text-green-500 font-semibold py-2 rounded-lg hover:bg-teal-50 focus:outline-none focus:ring-2 focus:ring-teal-600 mb-4">
+          <button className="w-full border border-[#26c4a0] text-[#26c4a0] font-semibold py-2 rounded-lg hover:bg-teal-50 focus:outline-none focus:ring-2 focus:ring-teal-600 mb-4">
             Apply Coupon
           </button>
 
@@ -190,7 +190,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
               minimumFractionDigits: 2,
             })}
           </div>
-          <button className="w-full bg-green-500 hover:bg-teal-600 text-white font-semibold py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-700">
+          <button className="w-full bg-[#26c4a0] hover:bg-[#26c4a0] text-white font-semibold py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-700">
             Pay Advance
           </button>
         </section>

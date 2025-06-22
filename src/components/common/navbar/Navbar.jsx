@@ -15,10 +15,10 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
-import Logo from "../../assets/images/BrokiLogo.png";
-import SignInModal from "../../components/auth/SignInModal";
+import Logo from "../../../assets/images/BrokiLogo.png";
+import SignInModal from "../../../components/auth/SignInModal";
 import { Link, NavLink } from "react-router-dom";
-import { navLinks } from "../../lib/Constant";
+import { navLinks } from "../../../lib/Constant";
 
 const Navbar = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);

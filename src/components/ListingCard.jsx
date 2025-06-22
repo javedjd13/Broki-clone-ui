@@ -45,7 +45,7 @@ const ListingCard = ({ data, type = "listing", viewType = "grid" }) => {
           />
         </div>
         {data.featured && (
-          <span className="absolute top-2 left-2 bg-green-600 text-white text-[10px] font-semibold px-2 py-1 rounded">
+          <span className="absolute top-2 left-2 bg-[#26c4a0] text-white text-[10px] font-semibold px-2 py-1 rounded">
             FEATURED
           </span>
         )}
