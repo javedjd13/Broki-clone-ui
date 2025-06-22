@@ -3,13 +3,6 @@ import { useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarWeek } from "@fortawesome/free-solid-svg-icons";
 
-// import monkeyDluffy from "../../assets/services_img/monkeyDluffy.jpg";
-// import indraneil1 from "../../assets/services_img/indraneil_img1.png";
-// import manjula1 from "../../assets/services_img/manjula_img1.png";
-// import Krishnendu1 from "../../assets/services_img/Krishnendu_img1.png";
-// import manish1 from "../../assets/services_img/manish_img1.png";
-// import ishant1 from "../../assets/services_img/ishant_img1.png";
-
 export default function ServiceBooking() {
   const location = useLocation();
   const serviceData = location.state;
@@ -100,7 +93,7 @@ export default function ServiceBooking() {
           <h2 className="text-xl font-bold">{title}</h2>
           <p className="text-gray-500 text-sm">Category: {category}</p>
         </div>
-        <div className="ml-auto text-green-600 font-bold text-xl">
+        <div className="ml-auto text-[#26c4a0] font-bold text-xl">
           ₹{price.toLocaleString(undefined, { minimumFractionDigits: 2 })}
         </div>
       </div>
@@ -126,7 +119,7 @@ export default function ServiceBooking() {
                 type="datetime-local"
                 value={dateTime}
                 onChange={(e) => setDateTime(e.target.value)}
-                className="w-full border border-gray-300 rounded-lg p-3 text-sm pr-10 focus:outline-teal-600 focus:ring-1 focus:ring-teal-600"
+                className="w-full border border-gray-300 rounded-lg p-3 text-sm pr-10 focus:outline-[#26c4a0] focus:ring-1 focus:ring-[#26c4a0] transition-colors duration-200"
               />
               <span className="absolute right-3 top-3.5 text-gray-400 pointer-events-none">
                 <FontAwesomeIcon icon={faCalendarWeek} />
@@ -148,7 +141,7 @@ export default function ServiceBooking() {
             </div>
             <div className="flex justify-between">
               <span>Addons:</span>
-              <span className="text-green-600">
+              <span className="text-[#26c4a0]">
                 +₹
                 {addOnsTotal.toLocaleString(undefined, {
                   minimumFractionDigits: 2,
@@ -167,7 +160,7 @@ export default function ServiceBooking() {
             </div>
           </div>
 
-          <button className="w-full border border-green-500 text-green-500 font-semibold py-2 rounded-lg hover:bg-teal-50 focus:outline-none focus:ring-2 focus:ring-teal-600 mb-4">
+          <button className="w-full border border-[#26c4a0] text-[#fff] bg-[#26c4a0] font-semibold py-2 rounded-lg mb-4">
             Apply Coupon
           </button>
 
@@ -188,7 +181,7 @@ export default function ServiceBooking() {
               minimumFractionDigits: 2,
             })}
           </div>
-          <button className="w-full bg-green-500 hover:bg-teal-600 text-white font-semibold py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-700">
+          <button className="w-full bg-[#26c4a0] hover:bg-[#26c4a0] text-white font-semibold py-3 rounded-lg focus:outline-none focus:ring-2">
             Pay Advance
           </button>
         </section>

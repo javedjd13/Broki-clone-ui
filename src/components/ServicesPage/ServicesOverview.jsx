@@ -4,8 +4,8 @@ import {
   faHouse,
   faCalendar,
   faUserTie,
-  faChevronDown,
-  faChevronUp,
+  faPlus,
+  faMinus,
 } from "@fortawesome/free-solid-svg-icons";
 import { OVERVIEW_FIELDS, SERVICE_FAQS } from "../../lib/Constant";
 
@@ -15,8 +15,8 @@ const ICON_MAP = {
   faUserTie,
 };
 
-const ServicesOverview = ({ serviceData }) => {
-  const [activeFaqIndex, setActiveFaqIndex] = useState(0);
+const ServiceOverview = ({ serviceData }) => {
+  const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
   const toggleFaq = (index) => {
     setActiveFaqIndex(activeFaqIndex === index ? null : index);
@@ -25,7 +25,7 @@ const ServicesOverview = ({ serviceData }) => {
   return (
     <div className="space-y-6">
       {/* Overview Section */}
-      <section className="bg-white p-6 rounded-2xl shadow-md">
+      <section className="bg-white p-6 rounded-2xl shadow border border-gray-200">
         <h2 className="text-xl font-semibold mb-4">Overview</h2>
         <div className="flex flex-col md:flex-row justify-between gap-6">
           {OVERVIEW_FIELDS.map(({ label, value, icon }, i) => {
@@ -51,43 +51,43 @@ const ServicesOverview = ({ serviceData }) => {
       </section>
 
       {/* Provider Description Section */}
-      <section className="bg-white p-6 rounded-2xl shadow-md">
+      <section className="bg-white p-6 rounded-2xl shadow border border-gray-200">
         <h2 className="text-xl font-semibold mb-2">Provider Description</h2>
         <p className="text-gray-700">
-          Shubham is a skilled food photographer with 7 years of experience,
-          specializing in capturing visually stunning, appetizing images for
-          restaurants, brands, and publications. Expert in lighting, styling,
-          and composition, with a proven ability to bring culinary creations to
-          life through photography.
+          {serviceData?.description || "No description available."}
         </p>
       </section>
 
       {/* FAQ Section */}
-      <section className="bg-white p-6 rounded-2xl shadow-md">
+      <section className="bg-white p-6 rounded-2xl shadow border border-gray-200">
         <h2 className="text-xl font-semibold mb-4">
           Frequently Asked Questions
         </h2>
-        <div className="space-y-2">
+        <div className="space-y-2 ">
           {SERVICE_FAQS.map((faq, index) => {
             const isOpen = index === activeFaqIndex;
             return (
               <div
                 key={index}
-                className={`border rounded-xl p-4 ${
-                  isOpen ? "bg-green-50 border-green-300" : "bg-white"
+                className={`border rounded-xl p-4 transition-all duration-300  ${
+                  isOpen ? "bg-[#26c4a0] border-[#26c4a0]" : "bg-white"
                 }`}
               >
                 <button
-                  className="flex justify-between items-center w-full font-semibold text-left text-gray-800"
+                  className="flex justify-between items-center w-full font-semibold text-left cursor-pointer text-gray-800"
                   onClick={() => toggleFaq(index)}
                 >
                   {faq.question}
                   <FontAwesomeIcon
-                    icon={isOpen ? faChevronUp : faChevronDown}
-                    className="ml-2"
+                    icon={isOpen ? faMinus : faPlus}
+                    className="ml-2 text-[#26c4a0] text-lg font-bold"
                   />
                 </button>
-                {isOpen && <p className="mt-2 text-gray-700">{faq.answer}</p>}
+                {isOpen && (
+                  <p className="mt-2 text-gray-700 transition-all duration-200 cursor-pointer">
+                    {faq.answer}
+                  </p>
+                )}
               </div>
             );
           })}
@@ -97,4 +97,4 @@ const ServicesOverview = ({ serviceData }) => {
   );
 };
 
-export default ServicesOverview;
+export default ServiceOverview;

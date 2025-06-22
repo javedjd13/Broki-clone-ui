@@ -1,6 +1,6 @@
 import { ADDON_ICONS, PRICE_LABELS } from "../../lib/Constant";
-
-const ServicesSidebar = ({
+import { Link } from "react-router-dom";
+const ServiceAddOnSidebar = ({
   addOns,
   selectedAddOns,
   toggleAddOn,
@@ -28,15 +28,15 @@ const ServicesSidebar = ({
               />
               <div>
                 <p className="text-gray-800">{addon.title}</p>
-                <p className="text-green-500">₹{addon.price}</p>
+                <p className="text-[#26c4a0] font-semibold">₹{addon.price}</p>
               </div>
             </div>
             <button
               onClick={() => toggleAddOn(addon)}
-              className={`px-4 py-1 rounded-lg text-white ${
+              className={`px-4 py-1 rounded-lg text-white cursor-pointer ${
                 isSelected
                   ? "bg-red-500 hover:bg-red-600"
-                  : "bg-green-500 hover:bg-green-600"
+                  : "bg-[#26c4a0] hover:bg-[#1aa68c] transition-colors duration-200"
               }`}
             >
               {isSelected ? "Remove" : "Add"}
@@ -67,9 +67,11 @@ const ServicesSidebar = ({
       onClick={handleProceed}
       className="w-full bg-[#26c4a0] text-white py-3 rounded-lg hover:bg-[#1aa68c] transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
     >
+      <Link to={"/booking"}>
       Proceed to Booking
+      </Link>
     </button>
   </div>
 );
 
-export default ServicesSidebar;
+export default ServiceAddOnSidebar;

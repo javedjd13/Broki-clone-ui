@@ -669,18 +669,30 @@ export const ADDON_ICONS = {
 };
 
 export const OVERVIEW_FIELDS = [
-    { label: "Price", icon: "faHouse" },
-    { label: "Category", icon: "faCalendar" },
-    { label: "Service Type", value: "On-Site Service", icon: "faUserTie" },
+    { label: "Price", value: "₹2500 per item", icon: "faHouse", description: "Price per item for the service" },
+    { label: "Category", value: "Photography", icon: "faCalendar", description: "Category of the service" },
+    { label: "Service Type", value: "On-Site Service", icon: "faUserTie", description: "Type of service provided" },
 ];
 
 export const DEFAULT_SERVICE = {
-    name: "Harry Bhai",
+    name: "Harry's ",
     price: 0,
     category: "General",
+    description: "Professional food photography service for restaurants and cafes.",
+    serviceId: "AN001",
+    provider: "Anamika Vaishnav",
+    price: 500,
+    category: "Food Photography",
+    serviceType: "On-Site Service",
     itemsCovered: 1,
-    images: [],
-    addOns: [],
+    images: [
+        anamika3, food1, anamika2,
+    ],
+    addOns: [
+        { title: "Extra item", price: 200 },
+        { title: "Props/Crockery/Styling", price: 500 },
+        { title: "Additional Setup Fee", price: 1000 },
+    ],
 };
 
 export const PRICE_LABELS = {
@@ -690,124 +702,6 @@ export const PRICE_LABELS = {
     tax: "Tax (18%)",
     total: "Total Price",
 };
-const food1 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
-const anamika2 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
-const anamika3 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
-const manish1 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
-const manish2 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
-const ishant1 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
-const MonkeyDluffy = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
-const indra1 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
-const indra2 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
-const indra3 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
-const indra4 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
-const Krishnendu1 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
-const Krishnendu2 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
-const manjula1 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
-const manjula2 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
-const manjula3 = "https://services.broki.in/storage/378/Screenshot-2024-12-05-at-6.06.17%E2%80%AFPM.png";
-
-export const servicesData = [
-    {
-        serviceId: "AN001",
-        name: "Anamika",
-        price: 500,
-        category: "Food Photography",
-        itemsCovered: 1,
-        image: food1,
-        images: [food1, anamika2, anamika3],
-        addOns: [
-            { title: "Extra item", price: 200 },
-            { title: "Props/Crockery/Styling", price: 350 },
-            { title: "Additional Setup Fee", price: 500 },
-        ],
-    },
-    {
-        serviceId: "EX005",
-        name: "Manish",
-        price: 1800,
-        category: "Food Photography",
-        itemsCovered: 2,
-        image: manish1,
-        images: [manish1, manish2],
-        addOns: [
-            { title: "Extra item", price: 450 },
-            { title: "Props/Crockery/Styling", price: 900 },
-            { title: "Additional Setup Fee", price: 1200 },
-        ],
-    },
-    {
-        serviceId: "EX006",
-        name: "Ishant",
-        price: 900,
-        category: "Food Photography",
-        itemsCovered: 1,
-        image: ishant1,
-        images: [ishant1],
-        addOns: [
-            { title: "Extra item", price: 250 },
-            { title: "Props/Crockery/Styling", price: 400 },
-            { title: "Additional Setup Fee", price: 600 },
-        ],
-    },
-    {
-        serviceId: "EX007",
-        name: "MonkeyDluffy",
-        price: 2100,
-        category: "Food Photography",
-        itemsCovered: 3,
-        image: MonkeyDluffy,
-        images: [food1],
-        addOns: [
-            { title: "Extra item", price: 500 },
-            { title: "Props/Crockery/Styling", price: 1200 },
-            { title: "Additional Setup Fee", price: 1800 },
-        ],
-    },
-    {
-        serviceId: "IN002",
-        name: "Indraneil",
-        price: 2667,
-        category: "Food Photography",
-        itemsCovered: 2,
-        image: indra1,
-        images: [indra1, indra2, indra3, indra4],
-        addOns: [
-            { title: "Extra item", price: 400 },
-            { title: "Props/Crockery/Styling", price: 900 },
-            { title: "Additional Setup Fee", price: 1500 },
-        ],
-    },
-    {
-        serviceId: "KR004",
-        name: "Krishnendu",
-        price: 1000,
-        category: "Food Photography",
-        itemsCovered: 1,
-        image: Krishnendu1,
-        images: [Krishnendu1, Krishnendu2],
-        addOns: [
-            { title: "Extra item", price: 300 },
-            { title: "Props/Crockery/Styling", price: 600 },
-            { title: "Additional Setup Fee", price: 800 },
-        ],
-    },
-    {
-        serviceId: "MJ003",
-        name: "Manjula",
-        price: 2500,
-        category: "Food Photography",
-        itemsCovered: 1,
-        image: manjula1,
-        images: [manjula1, manjula2, manjula3],
-        addOns: [
-            { title: "Extra item", price: 350 },
-            { title: "Props/Crockery/Styling", price: 850 },
-            { title: "Additional Setup Fee", price: 1000 },
-        ],
-    },
-];
-
 export const SERVICE_FAQS = [
     {
         question: "What does the photoshoot package include?",
@@ -853,5 +747,162 @@ export const SERVICE_FAQS = [
         question: "How can I get started?",
         answer:
             "Simply reach out through the contact form or booking button to schedule a consultation and confirm your session.",
+    },
+];
+
+export const SERVICE_ADDONS = [
+    {
+        title: "Extra item",
+        price: 200,
+        description: "Add an extra food item to your photoshoot.",
+    },
+    {
+        title: "Props/Crockery/Styling",
+        price: 500,
+        description: "Includes props, crockery, and styling for your shoot.",
+    },
+    {
+        title: "Additional Setup Fee",
+        price: 1000,
+        description: "Covers additional setup requirements for the shoot.",
+    },
+];
+
+// Services data
+
+import food1 from "../assets/images/food1.webp";
+
+import anamika2 from "../assets/images/anamika_img2.png";
+import anamika3 from "../assets/images/anamika_img3.png";
+
+import indra1 from "../assets/images/indraneil_img1.png";
+import indra2 from "../assets/images/indraneil_img2.png";
+import indra3 from "../assets/images/indraneil_img3.jpg";
+import indra4 from "../assets/images/indraneil_img4.png";
+
+import manjula1 from "../assets/images/manjula_img1.png";
+import manjula2 from "../assets/images/manjula_img2.png";
+import manjula3 from "../assets/images/manjula_img3.png";
+
+import Krishnendu1 from "../assets/images/Krishnendu_img1.png";
+import Krishnendu2 from "../assets/images/Krishnendu_img2.png";
+
+import manish1 from "../assets/images/manish_img1.png";
+import manish2 from "../assets/images/manish_img2.png";
+
+import ishant1 from "../assets/images/ishant_img1.png";
+
+export const servicesData = [
+    {
+        serviceId: "AN001",
+        name: "Anamika",
+        price: 500,
+        category: "Food Photography",
+        itemsCovered: 1,
+        image: food1,
+        images: [food1, anamika2, anamika3],
+        description:
+            "Anamika is an experienced food photographer known for vibrant and creative compositions that bring out the best in every dish.",
+        addOns: [
+            { title: "Extra item", price: 200 },
+            { title: "Props/Crockery/Styling", price: 350 },
+            { title: "Additional Setup Fee", price: 500 },
+        ],
+    },
+    {
+        serviceId: "EX005",
+        name: "Manish",
+        price: 1800,
+        category: "Food Photography",
+        itemsCovered: 2,
+        image: manish1,
+        images: [manish1, manish2],
+        description:
+            "Manish specializes in high-end food photography for restaurants and gourmet brands, blending technical expertise with artistic flair.",
+        addOns: [
+            { title: "Extra item", price: 450 },
+            { title: "Props/Crockery/Styling", price: 900 },
+            { title: "Additional Setup Fee", price: 1200 },
+        ],
+    },
+    {
+        serviceId: "EX006",
+        name: "Ishant",
+        price: 900,
+        category: "Food Photography",
+        itemsCovered: 1,
+        image: ishant1,
+        images: [ishant1],
+        description:
+            "Ishant delivers clean and appealing food visuals, ideal for cafes, cloud kitchens, and digital menus with quick turnaround time.",
+        addOns: [
+            { title: "Extra item", price: 250 },
+            { title: "Props/Crockery/Styling", price: 400 },
+            { title: "Additional Setup Fee", price: 600 },
+        ],
+    },
+    {
+        serviceId: "EX007",
+        name: "Manish Kumar",
+        price: 2100,
+        category: "Food Photography",
+        itemsCovered: 3,
+        image:manish2 ,
+        images: [food1],
+        description:
+            "MonkeyDluffy is known for dramatic food photography with bold styling and storytelling, perfect for marketing and campaigns.",
+        addOns: [
+            { title: "Extra item", price: 500 },
+            { title: "Props/Crockery/Styling", price: 1200 },
+            { title: "Additional Setup Fee", price: 1800 },
+        ],
+    },
+    {
+        serviceId: "IN002",
+        name: "Indraneil",
+        price: 2667,
+        category: "Food Photography",
+        itemsCovered: 2,
+        image: indra1,
+        images: [indra1, indra2, indra3, indra4],
+        description:
+            "Indraneil is a skilled food photographer with 7 years of experience, known for visually stunning, high-quality images for brands and menus.",
+        addOns: [
+            { title: "Extra item", price: 400 },
+            { title: "Props/Crockery/Styling", price: 900 },
+            { title: "Additional Setup Fee", price: 1500 },
+        ],
+    },
+    {
+        serviceId: "KR004",
+        name: "Krishnendu",
+        price: 1000,
+        category: "Food Photography",
+        itemsCovered: 1,
+        image: Krishnendu1,
+        images: [Krishnendu1, Krishnendu2],
+        description:
+            "Krishnendu provides minimalist, clean photography tailored for delivery apps and product showcases with consistent styling.",
+        addOns: [
+            { title: "Extra item", price: 300 },
+            { title: "Props/Crockery/Styling", price: 600 },
+            { title: "Additional Setup Fee", price: 800 },
+        ],
+    },
+    {
+        serviceId: "MJ003",
+        name: "Manjula",
+        price: 2500,
+        category: "Food Photography",
+        itemsCovered: 1,
+        image: manjula1,
+        images: [manjula1, manjula2, manjula3],
+        description:
+            "Manjula combines artistic angles with top-notch styling to create striking food imagery suitable for campaigns and cookbooks.",
+        addOns: [
+            { title: "Extra item", price: 350 },
+            { title: "Props/Crockery/Styling", price: 850 },
+            { title: "Additional Setup Fee", price: 1000 },
+        ],
     },
 ];
