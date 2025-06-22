@@ -15,7 +15,7 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
-import Logo from "../../../assets/images/BrokiLogo.png";
+import Logo from "../../../assets/images/tenlogo.jpg";
 import SignInModal from "../../../components/auth/SignInModal";
 import { Link, NavLink } from "react-router-dom";
 import { navLinks } from "../../../lib/Constant";
@@ -46,7 +46,7 @@ const Navbar = () => {
         {/* Logo Center */}
         <div className="absolute left-1/2 transform -translate-x-1/2 lg:static lg:transform-none">
           <a href="/">
-            <img src={Logo} alt="Broki logo" className="h-11" />
+            <img src={Logo} alt="Broki logo" className="h-11 rounded-full" />
           </a>
         </div>
 
