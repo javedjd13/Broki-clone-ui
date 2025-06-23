@@ -1,4 +1,4 @@
-import React from "react";
+import { motion } from "framer-motion";
 import { Link } from "react-router";
 
 function PhotographySec({
@@ -10,25 +10,24 @@ function PhotographySec({
   photoText,
 }) {
   return (
-    <section className=" mx-auto px-20 max-lg:px-6 py-20 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-10 bg-[#181a20]">
-      {/* Left Side Content */}
-      <div className="container ">
+    <section className="mx-auto px-20 max-lg:px-6 py-20 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-10 bg-[#181a20]">
+      {/* Left Side Content - animate from left */}
+      <motion.div
+        className="container"
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
         <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight mb-6 text-[white]">
           {photoText.map((part, index) =>
             part.highlight ? (
-              <>
-                &nbsp;
-                <span key={index} className="text-[#26c4a0]">
-                  {part.textMain}
-                  <br />
-                </span>
-              </>
+              <span key={index} className="text-[#26c4a0]">
+                &nbsp;{part.textMain}
+                <br />
+              </span>
             ) : (
-              <>
-                <span key={index} className="">
-                  {part.text}
-                </span>
-              </>
+              <span key={index}>{part.text}</span>
             )
           )}
         </h1>
@@ -43,8 +42,16 @@ function PhotographySec({
             {ButtonText}
           </button>
         </Link>
-      </div>
-      <div className="flex-shrink-0">
+      </motion.div>
+
+      {/* Right Side Image - animate from right */}
+      <motion.div
+        className="flex-shrink-0"
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+        viewport={{ once: true }}
+      >
         <img
           src={imagePhotoSec}
           alt={imageAlt}
@@ -53,7 +60,7 @@ function PhotographySec({
           width="400"
           height="500"
         />
-      </div>
+      </motion.div>
     </section>
   );
 }

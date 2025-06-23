@@ -123,7 +123,7 @@ const ContactUs = () => {
 
             {/* Text Section */}
             <div className="flex items-end justify-center md:justify-start">
-              <div className="text-black md:text-gray-900 md:bg-transparent bg-white bg-opacity-90 p-6 rounded-lg max-w-md">
+              <div className="text-[#181a20]  md:text-[#181a20]  md:bg-transparent bg-white bg-opacity-90 p-6 rounded-lg max-w-md">
                 <h2 className="text-2xl font-bold mb-2">
                   We’d Love To Hear From You.
                 </h2>
@@ -138,7 +138,7 @@ const ContactUs = () => {
           {/* Mobile Layout: Form below map */}
           <div className="md:hidden mt-10 space-y-6">
             {/* Text Section */}
-            <div className="text-black bg-white bg-opacity-90 p-6 rounded-lg shadow max-w-md mx-auto">
+            <div className="text-[#181a20] bg-white bg-opacity-90 p-6 rounded-lg shadow max-w-md mx-auto">
               <h2 className="text-2xl font-bold mb-2">
                 We’d Love To Hear From You.
               </h2>

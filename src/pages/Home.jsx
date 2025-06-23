@@ -15,6 +15,8 @@ import subHeroImg from "../assets/images/sub-hero-img.webp";
 import PhotoSec from "../assets/images/photosec.webp";
 import { useState } from "react";
 import BlogPosts from "../components/BlogPosts";
+import { motion } from "framer-motion";
+
 export default function Home() {
   const search = useSearch();
 
@@ -40,6 +42,23 @@ export default function Home() {
   };
   const [showAdvancedModal, setShowAdvancedModal] = useState(false);
   const handleOpenAdvanced = () => setShowAdvancedModal(true);
+const containerVariants = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 40 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
 
   return (
     <>
@@ -52,16 +71,28 @@ export default function Home() {
       <PhotographySec {...content} />
       <WhyChooseUs />
       <Form />
-      <section className="max-w-7xl mx-auto px-4 py-16">
-        <h2 className="text-center text-3xl font-extrabold mb-12">
+      <motion.section
+        className="max-w-7xl mx-auto px-4 py-16"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+      >
+        <motion.h2
+          className="text-center text-3xl font-extrabold mb-12"
+          variants={itemVariants}
+        >
           From Our Blog
-        </h2>
+        </motion.h2>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {posts.map((post) => (
-            <BlogPosts key={post.id} post={post} />
+            <motion.div key={post.id} variants={itemVariants}>
+              <BlogPosts post={post} />
+            </motion.div>
           ))}
         </div>
-      </section>
+      </motion.section>
       <DownloadSec />
       {showAdvancedModal && (
         <AdvancedModal

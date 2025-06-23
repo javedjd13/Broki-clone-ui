@@ -114,7 +114,7 @@ const Services = () => {
         {paginatedCards.map((card) => (
           <div
             key={card.serviceId}
-            className={`bg-white shadow-md rounded-xl overflow-hidden ${
+            className={`bg-white shadow-md rounded-xl overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300 ${
               view === "list" ? "flex" : "flex flex-col"
             }`}
           >

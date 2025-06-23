@@ -1,12 +1,19 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import PropertyCards from "./PropertyCards"; // import this
 
 const NearbyListings = () => {
   const [activeTab, setActiveTab] = useState("rent");
 
   return (
-    <section className="w-full px-4 md:px-10 lg:px-20 py-12 bg-white">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+    <motion.section
+      className="w-full px-8 md:px-12 lg:px-28 py-12 bg-white "
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 container">
         {/* Left side */}
         <div>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
@@ -45,7 +52,7 @@ const NearbyListings = () => {
 
       {/* Render property cards based on active tab */}
       <PropertyCards activeTab={activeTab} />
-    </section>
+    </motion.section>
   );
 };
 

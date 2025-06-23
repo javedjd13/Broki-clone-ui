@@ -1,13 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faFacebook } from "@fortawesome/free-brands-svg-icons";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 import ContactHelp from "../components/ContactHelp";
 
 const founders = [
   {
     name: "Jatin Anand",
     role: "Founder - CEO",
-    img: "	https://www.broki.in/images/team/jatin_image.jpeg",
+    img: "https://www.broki.in/images/team/jatin_image.jpeg",
     description:
       "Jatin, our Founder, is a seasoned entrepreneur with over 5 years in hospitality and 3 years in finance. He owns multiple restaurants and food brands like The Flashback, Burgelicious, and The Shawarma King. Jatin aims to share his extensive food market expertise with Broki’s users.",
     socials: {
@@ -18,7 +18,7 @@ const founders = [
   {
     name: "Akash Malhotra",
     role: "Founder - CTO",
-    img: "	https://www.broki.in/images/team/akash_image.jpeg",
+    img: "https://www.broki.in/images/team/akash_image.jpeg",
     description:
       "Akash, with 11 years of industry experience, leads all technical implementations at Broki. An MBA graduate from IIM Lucknow, he excels in bridging technical and business needs. Known for his strategic vision and innovative solutions, Akash is a pivotal figure in driving technological advancements.",
     socials: {
@@ -28,20 +28,46 @@ const founders = [
   },
 ];
 
+// Animation variants
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
 const OurTeam = () => {
   return (
     <>
-      <div className="py-12 px-4 md:px-8 bg-white text-center">
-        <h2 className="text-3xl font-bold mb-10 text-gray-900">
+      <motion.div
+        className="py-12 px-4 md:px-8 bg-white text-center"
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={containerVariants}
+      >
+        <motion.h2
+          className="text-3xl font-bold mb-10 text-gray-900"
+          variants={itemVariants}
+        >
           Meet Our Founders
-        </h2>
+        </motion.h2>
+
         <div className="flex flex-col md:flex-row justify-center gap-8">
           {founders.map((founder, idx) => (
-            <div
+            <motion.div
               key={idx}
+              variants={itemVariants}
               className="bg-white rounded-xl shadow p-6 w-full md:w-1/2 lg:w-1/3 mx-auto"
             >
-              <div className="overflow-hidden rounded-full ">
+              <div className="overflow-hidden rounded-full">
                 <img
                   src={founder.img}
                   alt={founder.name}
@@ -62,10 +88,7 @@ const OurTeam = () => {
                   rel="noopener noreferrer"
                   className="text-gray-500 hover:text-blue-600"
                 >
-                  <FontAwesomeIcon
-                    icon={faLinkedin}
-                    className="text-gray-600 hover:text-blue-700"
-                  />
+                  <FontAwesomeIcon icon={faLinkedin} />
                 </a>
                 <a
                   href={founder.socials.facebook}
@@ -73,16 +96,14 @@ const OurTeam = () => {
                   rel="noopener noreferrer"
                   className="text-gray-500 hover:text-blue-800"
                 >
-                  <FontAwesomeIcon
-                    icon={faFacebook}
-                    className="text-gray-600 hover:text-blue-600"
-                  />
+                  <FontAwesomeIcon icon={faFacebook} />
                 </a>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
+
       <ContactHelp />
     </>
   );
