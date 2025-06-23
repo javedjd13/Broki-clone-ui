@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import { servicesData } from "../lib/Constant";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
- function ServicesBooking() {
+function ServicesBooking() {
   const location = useLocation();
   const serviceId = location?.state?.serviceId;
 
@@ -54,7 +54,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
   return (
     <div className="max-w-6xl mx-auto bg-white p-6 mt-4 rounded-xl">
       {/* Header */}
-      <div className="flex items-center bg-gray-50 gap-6 mb-6 p-6 border border-gray-300 rounded-lg">
+      <div className="flex items-center bg-gray-50 gap-6 mb-6 p-6 border border-gray-300 rounded-lg max-sm:flex-col">
         <div className="p-0 bg-white rounded-sm shrink-0">
           <img
             src={mainImage}
@@ -186,4 +186,4 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
   );
 }
 
-export  default ServicesBooking;
+export default ServicesBooking;
