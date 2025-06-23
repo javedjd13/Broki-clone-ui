@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { servicesData, DEFAULT_SERVICE } from "../../lib/Constant";
 import ServiceHeader from "./ServicesHeader";
@@ -9,13 +9,14 @@ import ServiceAddOnSidebar from "./ServicesSidebar";
 const ServiceDetail = () => {
   const { serviceId } = useParams();
   const navigate = useNavigate();
+  const { state } = useLocation();
 
-  const serviceData = servicesData.find((svc) => svc.serviceId === serviceId);
+  const serviceData =
+    state?.serviceData ||
+    servicesData.find((svc) => svc.serviceId === serviceId) ||
+    DEFAULT_SERVICE;
 
-  const { name, price, category, itemsCovered, images, addOns } = {
-    ...DEFAULT_SERVICE,
-    ...servicesData,
-  };
+  const { name, price, category, itemsCovered, images, addOns } = serviceData;
 
   const [selectedAddOns, setSelectedAddOns] = useState([]);
 
@@ -31,6 +32,7 @@ const ServiceDetail = () => {
         addOnsTotal,
         tax,
         totalPrice,
+        serviceData,
       },
     });
   };
@@ -44,7 +46,7 @@ const ServiceDetail = () => {
   };
 
   return (
-    <section className="px-4 py-16 max-w-7xl mx-auto bg-white relative">
+    <section className="px-4 py-10 md:py-12 max-w-7xl mx-auto bg-white">
       <ServiceHeader
         serviceId={serviceId}
         name={name}
@@ -52,21 +54,29 @@ const ServiceDetail = () => {
         category={category}
         itemsCovered={itemsCovered}
       />
-      <div className="flex flex-col md:flex-row gap-8 items-start">
-        <div className="flex-1 max-w-full md:max-w-[60%] rounded-lg flex flex-col gap-6">
+
+      <div className="flex flex-col lg:flex-row gap-8 items-start">
+        {/* Left Side: Images + Overview */}
+        <div className="w-full lg:w-[60%] flex flex-col gap-6">
           <ServiceImageGallery images={images} />
           <ServiceOverview serviceData={serviceData} />
         </div>
-        <ServiceAddOnSidebar
-          addOns={addOns}
-          selectedAddOns={selectedAddOns}
-          toggleAddOn={toggleAddOn}
-          price={price}
-          addOnsTotal={addOnsTotal}
-          tax={tax}
-          totalPrice={totalPrice}
-          handleProceed={handleProceed}
-        />
+
+        {/* Right Side: Add-On Sidebar */}
+        <div className="w-full lg:w-[35%]">
+          <div className="bg-white border border-gray-200 p-4 md:p-6 rounded-xl shadow-md lg:sticky top-6">
+            <ServiceAddOnSidebar
+              addOns={addOns}
+              selectedAddOns={selectedAddOns}
+              toggleAddOn={toggleAddOn}
+              price={price}
+              addOnsTotal={addOnsTotal}
+              tax={tax}
+              totalPrice={totalPrice}
+              handleProceed={handleProceed}
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
