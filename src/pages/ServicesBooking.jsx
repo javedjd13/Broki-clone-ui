@@ -2,10 +2,6 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import { servicesData } from "../lib/Constant";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { FaRegCalendarAlt } from "react-icons/fa";
-
-// import servicesData from "../../components/listings/Constant";
-
  function ServicesBooking() {
   const location = useLocation();
   const serviceId = location?.state?.serviceId;
@@ -13,15 +9,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
   const serviceData = servicesData.find(
     (service) => service.serviceId === serviceId
   );
-
-//   if (!serviceData) {
-//     return (
-//       <div className="max-w-6xl mx-auto bg-white rounded-xl shadow p-6 mt-4 text-center">
-//         <h2 className="text-xl font-semibold mb-4">No service selected</h2>
-//         <p>Please go back and select a service to book.</p>
-//       </div>
-//     );
-//   }
 
   const {
     name,
@@ -104,7 +91,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
                 onChange={(e) => setDateTime(e.target.value)}
                 className="w-full border border-gray-300 rounded-lg p-3 text-sm pr-10 focus:outline-teal-600 focus:ring-1 focus:ring-teal-600"
               />
-              {/* <FaRegCalendarAlt className="absolute right-3 top-3.5 text-gray-400 pointer-events-none" /> */}
               <FontAwesomeIcon
                 icon={["fas", "calendar-alt"]}
                 className="absolute right-3 top-3.5 text-gray-400 pointer-events-none"

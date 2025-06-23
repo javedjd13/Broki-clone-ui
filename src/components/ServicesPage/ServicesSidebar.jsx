@@ -35,7 +35,7 @@ const ServiceAddOnSidebar = ({
               onClick={() => toggleAddOn(addon)}
               className={`px-4 py-1 rounded-lg text-white cursor-pointer ${
                 isSelected
-                  ? "bg-red-500 hover:bg-red-600"
+                  ? "bg-[#ff6b6b]"
                   : "bg-[#26c4a0] hover:bg-[#1aa68c] transition-colors duration-200"
               }`}
             >

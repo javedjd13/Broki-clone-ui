@@ -70,7 +70,7 @@ const ServiceOverview = ({ serviceData }) => {
               <div
                 key={index}
                 className={`border rounded-xl p-4 transition-all duration-300  ${
-                  isOpen ? "bg-[#26c4a0] border-[#26c4a0]" : "bg-white"
+                  isOpen ? "bg-[#e6f9f4] border-[#26c4a0]" : "bg-white"
                 }`}
               >
                 <button
